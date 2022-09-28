@@ -128,5 +128,7 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-build/
+DataVis_JB/_build/
+DataVis_JB/.ipynb_checkpoints
 *.docx
+*.txt
