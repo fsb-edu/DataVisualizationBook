@@ -2,8 +2,8 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
+root: chapters/intro
 chapters:
-- file: importance_of_data_vis
-- file: notebooks
-- file: markdown-notebooks
+- file: chapters/importance_of_data_vis
+- file: chapters/chart_types
+- file: chapters/markdown-notebooks

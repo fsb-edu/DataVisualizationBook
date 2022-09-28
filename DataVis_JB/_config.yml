@@ -2,13 +2,13 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Data Visualization for Food Scientists
-author: Michal Ziemski and Doriela Grabocka
-logo: logoeth.png
+author: Dr. Michal Ziemski and Doriela Grabocka
+logo: img/logoeth.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
-execute:
-  execute_notebooks: force
+#execute:
+#  execute_notebooks: force
 
 # Define the name of the latex output file for PDF builds
 latex:
