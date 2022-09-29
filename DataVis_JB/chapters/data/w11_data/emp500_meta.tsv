@@ -1,0 +1,731 @@
+sample_name	shannon_diversity	env_biome	env_package	empo_4	empo_v2_4b	elevation	ph	water_content
+13114.6.Mock.Community1	5.488934003377762	urban biome	misc environment	Mock community	Mock community	193.0	not applicable	not applicable
+13114.6.Mock.Community4	6.456336037734777	urban biome	misc environment	Mock community	Mock community	193.0	not applicable	not applicable
+13114.7.Mock.Community1	3.800635770506537	urban biome	misc environment	Mock community	Mock community	193.0	not applicable	not applicable
+13114.7.Mock.Community4	3.768911457241135	urban biome	misc environment	Mock community	Mock community	193.0	not applicable	not applicable
+13114.7.Mock.Community5	3.675092212848882	urban biome	misc environment	Mock community	Mock community	193.0	not applicable	not applicable
+13114.BLANK5.5C	4.279459395174535	urban biome	misc environment	Sterile water blank	Sterile water blank	193.0	not applicable	not applicable
+13114.BLANK6.10H	3.781328763355367	urban biome	misc environment	Sterile water blank	Sterile water blank	193.0	not applicable	not applicable
+13114.BLANK6.11B	6.92991750934489	urban biome	misc environment	Sterile water blank	Sterile water blank	193.0	not applicable	not applicable
+13114.BLANK7.7E	6.4127721658591685	urban biome	misc environment	Sterile water blank	Sterile water blank	193.0	not applicable	not applicable
+13114.Negative1.P7	2.937253545402628	urban biome	misc environment	Sterile water blank	Sterile water blank	193.0	not applicable	not applicable
+13114.Negative2.P8	3.314246231835439	urban biome	misc environment	Sterile water blank	Sterile water blank	193.0	not applicable	not applicable
+13114.Negative3.P8	1.916600269889964	urban biome	misc environment	Sterile water blank	Sterile water blank	193.0	not applicable	not applicable
+13114.Negative4.P8	2.9282729197327293	urban biome	misc environment	Sterile water blank	Sterile water blank	193.0	not applicable	not applicable
+13114.Negative5.P7	5.19295929225844	urban biome	misc environment	Sterile water blank	Sterile water blank	193.0	not applicable	not applicable
+13114.Negative5.P8	2.371486481881183	urban biome	misc environment	Sterile water blank	Sterile water blank	193.0	not applicable	not applicable
+13114.Negative6.P6	3.376992613564796	urban biome	misc environment	Sterile water blank	Sterile water blank	193.0	not applicable	not applicable
+13114.Negative6.P7	5.392366799490933	urban biome	misc environment	Sterile water blank	Sterile water blank	193.0	not applicable	not applicable
+13114.Vibrio1.P1	0.0370337461313151	urban biome	misc environment	Single strain	Single strain	193.0	not applicable	not applicable
+13114.Vibrio2.P1	0.0127787083319158	urban biome	misc environment	Single strain	Single strain	193.0	not applicable	not applicable
+13114.Vibrio3.P1	0.0386337461313151	urban biome	misc environment	Single strain	Single strain	193.0	not applicable	not applicable
+13114.Vibrio4.P1	0.0101838641507784	urban biome	misc environment	Single strain	Single strain	193.0	not applicable	not applicable
+13114.angenent.65.s001	4.701025064112323	urban biome	host-associated	Animal proximal gut (non-saline)	Animal proximal gut (non-saline)	123.0	not applicable	not applicable
+13114.angenent.65.s002	4.9261498745358026	urban biome	host-associated	Animal proximal gut (non-saline)	Animal proximal gut (non-saline)	123.0	not applicable	not applicable
+13114.angenent.65.s003	4.457803273155427	urban biome	host-associated	Animal proximal gut (non-saline)	Animal proximal gut (non-saline)	123.0	not applicable	not applicable
+13114.angenent.65.s004	4.838669326476521	urban biome	host-associated	Animal proximal gut (non-saline)	Animal proximal gut (non-saline)	123.0	not applicable	not applicable
+13114.angenent.65.s005	5.290161096822856	urban biome	host-associated	Animal proximal gut (non-saline)	Animal proximal gut (non-saline)	123.0	not applicable	not applicable
+13114.angenent.65.s006	4.425225972417117	urban biome	host-associated	Animal proximal gut (non-saline)	Animal proximal gut (non-saline)	123.0	not applicable	not applicable
+13114.angenent.65.s007	4.478996857626722	urban biome	host-associated	Animal proximal gut (non-saline)	Animal proximal gut (non-saline)	123.0	not applicable	not applicable
+13114.angenent.65.s008	4.531872923264535	urban biome	host-associated	Animal proximal gut (non-saline)	Animal proximal gut (non-saline)	123.0	not applicable	not applicable
+13114.angenent.65.s009	4.406789599734049	urban biome	host-associated	Animal proximal gut (non-saline)	Animal proximal gut (non-saline)	123.0	not applicable	not applicable
+13114.berry.2.s001	8.959053470837457	Small lake biome	sediment	Sediment (non-saline)	Sediment (non-saline)	75.6	not applicable	not applicable
+13114.berry.2.s002	9.146383395286946	Small lake biome	sediment	Sediment (non-saline)	Sediment (non-saline)	75.6	not applicable	not applicable
+13114.berry.2.s003	9.03924698961794	Small lake biome	sediment	Sediment (non-saline)	Sediment (non-saline)	75.6	not applicable	not applicable
+13114.berry.2.s004	9.12652233119542	Small lake biome	sediment	Sediment (non-saline)	Sediment (non-saline)	75.6	not applicable	not applicable
+13114.berry.2.s005	9.152022239202704	Small lake biome	sediment	Sediment (non-saline)	Sediment (non-saline)	75.6	not applicable	not applicable
+13114.berry.2.s007	9.739318501557358	Small lake biome	sediment	Sediment (non-saline)	Sediment (non-saline)	69.8	not applicable	not applicable
+13114.berry.2.s008	9.785404921775248	Small lake biome	sediment	Sediment (non-saline)	Sediment (non-saline)	69.8	not applicable	not applicable
+13114.berry.2.s009	9.462724796742943	Small lake biome	sediment	Sediment (non-saline)	Sediment (non-saline)	69.8	not applicable	not applicable
+13114.berry.2.s010	9.63861247794143	Small lake biome	sediment	Sediment (non-saline)	Sediment (non-saline)	69.8	not applicable	not applicable
+13114.berry.2.s011	9.50116974734486	Small lake biome	sediment	Sediment (non-saline)	Sediment (non-saline)	69.8	not applicable	not applicable
+13114.berry.2.s013	9.811377993282427	Small lake biome	sediment	Sediment (non-saline)	Sediment (non-saline)	92.7	not applicable	not applicable
+13114.berry.2.s014	9.760922355923151	Small lake biome	sediment	Sediment (non-saline)	Sediment (non-saline)	92.7	not applicable	not applicable
+13114.berry.2.s015	4.806457380182338	Small lake biome	sediment	Sediment (non-saline)	Sediment (non-saline)	92.7	not applicable	not applicable
+13114.berry.2.s016	10.282451934973937	Small lake biome	sediment	Sediment (non-saline)	Sediment (non-saline)	92.7	not applicable	not applicable
+13114.berry.2.s017	10.246557236866373	Small lake biome	sediment	Sediment (non-saline)	Sediment (non-saline)	92.7	not applicable	not applicable
+13114.berry.2.s018	9.869701737956133	Small lake biome	sediment	Sediment (non-saline)	Sediment (non-saline)	92.7	not applicable	not applicable
+13114.berry.2.s019	9.32891261222679	Small lake biome	sediment	Sediment (non-saline)	Sediment (non-saline)	92.7	not applicable	not applicable
+13114.berry.2.s020	9.031685310066807	Small lake biome	sediment	Sediment (non-saline)	Sediment (non-saline)	92.7	not applicable	not applicable
+13114.bittleston.68.s001	4.013373497351882	temperate shrubland	plant-associated	Plant surface (non-saline)	Plant surface (non-saline)	29.0	not applicable	not applicable
+13114.bittleston.68.s002	3.548644381118137	temperate shrubland	plant-associated	Plant surface (non-saline)	Plant surface (non-saline)	29.0	not applicable	not applicable
+13114.bittleston.68.s003	3.85047251043098	temperate shrubland	plant-associated	Plant surface (non-saline)	Plant surface (non-saline)	29.0	not applicable	not applicable
+13114.bittleston.68.s004	3.766826377234973	tropical moist broadleaf forest	plant-associated	Plant surface (non-saline)	Plant surface (non-saline)	56.0	not applicable	not applicable
+13114.bittleston.68.s005	5.365861082087734	tropical moist broadleaf forest	plant-associated	Plant surface (non-saline)	Plant surface (non-saline)	56.0	not applicable	not applicable
+13114.bittleston.68.s006	6.069038172757027	tropical moist broadleaf forest	plant-associated	Plant surface (non-saline)	Plant surface (non-saline)	56.0	not applicable	not applicable
+13114.bittleston.68.s007	2.6778069774538005	tropical moist broadleaf forest	plant-associated	Plant surface (non-saline)	Plant surface (non-saline)	1050.0	not applicable	not applicable
+13114.bittleston.68.s008	3.683418271877057	tropical moist broadleaf forest	plant-associated	Plant surface (non-saline)	Plant surface (non-saline)	1050.0	not applicable	not applicable
+13114.bittleston.68.s009	3.426875101401297	tropical moist broadleaf forest	plant-associated	Plant surface (non-saline)	Plant surface (non-saline)	1050.0	not applicable	not applicable
+13114.bittleston.68.s010	3.5245473487504344	flooded savanna	plant-associated	Plant surface (non-saline)	Plant surface (non-saline)	66.0	not applicable	not applicable
+13114.bittleston.68.s011	4.931262567883531	freshwater biome	plant-associated	Plant surface (non-saline)	Plant surface (non-saline)	37.0	not applicable	not applicable
+13114.bittleston.68.s012	4.560968217478413	freshwater biome	plant-associated	Plant surface (non-saline)	Plant surface (non-saline)	6.0	not applicable	not applicable
+13114.bittleston.68.s013	3.645857304199811	temperate shrubland	plant-associated	Plant surface (non-saline)	Plant surface (non-saline)	229.0	not applicable	not applicable
+13114.bowen.74.s001	9.722987894861802	marine salt marsh biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.bowen.74.s002	9.469200538560708	marine salt marsh biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.bowen.74.s003	9.643306826807509	marine salt marsh biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.bowen.74.s004	9.40919279043	marine salt marsh biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.bowen.74.s005	9.78983943450836	marine salt marsh biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.bowen.74.s006	9.409953318057484	marine salt marsh biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.bowen.74.s007	9.198567792860574	marine salt marsh biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.bowen.74.s008	8.922304506487263	marine salt marsh biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.bowen.74.s009	9.813486668466428	marine salt marsh biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.bowen.74.s010	9.74999175958432	marine salt marsh biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.bowen.74.s011	9.819708381495532	marine salt marsh biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.bowen.74.s012	9.625865834976086	marine salt marsh biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.bowen.74.s013	9.329883587538788	marine salt marsh biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.bowen.74.s014	9.6433941665398	marine salt marsh biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.bowen.74.s015	9.676395504549776	marine salt marsh biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.bowen.74.s016	9.81677697431792	marine salt marsh biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.control.soil.under.pine.tree.by.Skaggs	8.281473062960837	urban biome	soil	Soil (non-saline)	Soil (non-saline)	193.0	not applicable	not applicable
+13114.distel.72.s001	0.7984162669019588	marine biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.distel.72.s002	6.204220126528752	marine biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.distel.72.s004	2.3014883327205062	marine biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.distel.72.s006	4.731935953625946	marine biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.distel.72.s007	6.9365286041532	marine biome	host-associated	Animal proximal gut (saline)	Animal proximal gut (saline)	0.0	not applicable	not applicable
+13114.distel.72.s008	7.027594791504272	marine biome	host-associated	Animal proximal gut (saline)	Animal proximal gut (saline)	0.0	not applicable	not applicable
+13114.distel.72.s009	7.056712668966411	marine biome	host-associated	Animal proximal gut (saline)	Animal proximal gut (saline)	0.0	not applicable	not applicable
+13114.distel.72.s010	2.793237596334349	marine biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.distel.72.s011	7.12255855668994	marine biome	host-associated	Animal proximal gut (saline)	Animal proximal gut (saline)	0.0	not applicable	not applicable
+13114.distel.72.s012	6.800619994929677	marine biome	host-associated	Animal proximal gut (saline)	Animal proximal gut (saline)	0.0	not applicable	not applicable
+13114.distel.72.s013	7.112927713346435	marine biome	host-associated	Animal proximal gut (saline)	Animal proximal gut (saline)	0.0	not applicable	not applicable
+13114.distel.72.s014	5.702837225649255	marine biome	host-associated	Surface (saline)	Surface (saline)	0.0	not applicable	not applicable
+13114.distel.72.s015	4.202459588988073	marine biome	host-associated	Surface (saline)	Surface (saline)	0.0	not applicable	not applicable
+13114.girguis.50.s001	6.694906119349404	marine biome	host-associated	Animal distal gut (saline)	Animal distal gut (saline)	0.0	not applicable	not applicable
+13114.girguis.50.s002	5.269880641054303	marine biome	host-associated	Animal distal gut (saline)	Animal distal gut (saline)	0.0	not applicable	not applicable
+13114.girguis.50.s003	5.122595324507891	marine biome	host-associated	Animal distal gut (saline)	Animal distal gut (saline)	0.0	not applicable	not applicable
+13114.girguis.50.s004	4.908175452422787	marine biome	host-associated	Animal distal gut (saline)	Animal distal gut (saline)	0.0	not applicable	not applicable
+13114.girguis.50.s005	6.507917760360861	marine biome	host-associated	Animal distal gut (saline)	Animal distal gut (saline)	0.0	not applicable	not applicable
+13114.girguis.50.s006	2.8385465826964604	marine biome	host-associated	Animal distal gut (saline)	Animal distal gut (saline)	0.0	not applicable	not applicable
+13114.girguis.50.s007	5.040419075102139	marine biome	host-associated	Animal distal gut (saline)	Animal distal gut (saline)	0.0	not applicable	not applicable
+13114.girguis.50.s008	4.5095890321238175	marine biome	host-associated	Animal distal gut (saline)	Animal distal gut (saline)	0.0	not applicable	not applicable
+13114.girguis.50.s009	2.9412249339167147	marine biome	host-associated	Animal distal gut (saline)	Animal distal gut (saline)	0.0	not applicable	not applicable
+13114.girguis.50.s010	4.4519905564004	marine biome	host-associated	Animal distal gut (saline)	Animal distal gut (saline)	0.0	not applicable	not applicable
+13114.girguis.50.s011	6.2922204189392765	marine biome	host-associated	Animal distal gut (saline)	Animal distal gut (saline)	0.0	not applicable	not applicable
+13114.girguis.50.s012	5.766204366637941	marine biome	host-associated	Animal distal gut (saline)	Animal distal gut (saline)	0.0	not applicable	not applicable
+13114.jensen.43.s001	9.227735519696951	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.jensen.43.s002	9.16821389947096	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.jensen.43.s003	9.147377347166325	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.jensen.43.s004	9.345226809497936	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.jensen.43.s005	9.562350838876174	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.jensen.43.s006	9.424797687838586	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.jensen.43.s007	7.742744254944309	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.jensen.43.s008	8.712906179175116	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.jensen.43.s009	8.75842429308693	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.jensen.43.s010	8.583868947527185	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.jensen.43.s011	8.480807231260512	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.jensen.43.s012	8.62947640617406	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.jensen.43.s013	9.117269180676432	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.jensen.43.s014	9.83857156511664	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.jensen.43.s015	9.64114806265583	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.jensen.43.s016	9.466856502763669	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.jensen.43.s017	9.649769508204676	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.jensen.43.s018	9.4396854769733	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.jensen.43.s019	8.827192144856506	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.king.27.s001	7.159239427799083	forest biome	soil	Soil (non-saline)	Soil (non-saline)	1500.0	not applicable	not applicable
+13114.king.27.s002	5.983159359822651	forest biome	soil	Soil (non-saline)	Soil (non-saline)	1500.0	not applicable	not applicable
+13114.king.27.s003	6.965993394503736	forest biome	soil	Soil (non-saline)	Soil (non-saline)	1500.0	not applicable	not applicable
+13114.king.27.s004	6.419566910473101	forest biome	soil	Soil (non-saline)	Soil (non-saline)	1500.0	not applicable	not applicable
+13114.king.27.s005	7.178718834365227	forest biome	soil	Soil (non-saline)	Soil (non-saline)	1500.0	not applicable	not applicable
+13114.king.27.s006	6.082698259992731	forest biome	soil	Soil (non-saline)	Soil (non-saline)	1500.0	not applicable	not applicable
+13114.king.27.s007	5.228773202698864	forest biome	soil	Soil (non-saline)	Soil (non-saline)	1500.0	not applicable	not applicable
+13114.king.27.s008	6.207073654725547	forest biome	soil	Soil (non-saline)	Soil (non-saline)	1500.0	not applicable	not applicable
+13114.king.27.s009	4.432381842632969	forest biome	soil	Soil (non-saline)	Soil (non-saline)	1500.0	not applicable	not applicable
+13114.king.27.s010	6.509774096752276	forest biome	soil	Soil (non-saline)	Soil (non-saline)	1500.0	not applicable	not applicable
+13114.king.27.s011	6.5811054081165015	forest biome	soil	Soil (non-saline)	Soil (non-saline)	1500.0	not applicable	not applicable
+13114.king.27.s012	7.394835597263009	forest biome	soil	Soil (non-saline)	Soil (non-saline)	1500.0	not applicable	not applicable
+13114.king.27.s013	6.137398043394993	forest biome	soil	Soil (non-saline)	Soil (non-saline)	1500.0	not applicable	not applicable
+13114.king.27.s014	6.539536185856857	forest biome	soil	Soil (non-saline)	Soil (non-saline)	1500.0	not applicable	not applicable
+13114.king.27.s015	6.086371638925812	forest biome	soil	Soil (non-saline)	Soil (non-saline)	1500.0	not applicable	not applicable
+13114.king.27.s016	5.457161347615327	forest biome	soil	Soil (non-saline)	Soil (non-saline)	1500.0	not applicable	not applicable
+13114.king.27.s017	4.666853212434858	forest biome	soil	Soil (non-saline)	Soil (non-saline)	1500.0	not applicable	not applicable
+13114.king.27.s018	5.172354072320653	forest biome	soil	Soil (non-saline)	Soil (non-saline)	1500.0	not applicable	not applicable
+13114.king.27.s020	6.534481413241564	forest biome	soil	Soil (non-saline)	Soil (non-saline)	1500.0	not applicable	not applicable
+13114.king.27.s021	3.947660936889375	forest biome	soil	Soil (non-saline)	Soil (non-saline)	1500.0	not applicable	not applicable
+13114.lcms.blank.material.control.01.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.blank.material.control.02.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.blank.material.control.03.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.blank.material.control.04.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.blank.material.control.05.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.blank.material.control.06.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.blank.material.control.07.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.blank.material.control.08.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.blank.material.control.09.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.blank.material.control.10.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.blank.material.control.11.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.blank.material.control.2.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.blank.solvent.01.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.blank.solvent.02.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.blank.solvent.03.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.blank.solvent.04.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.blank.solvent.05.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.blank.solvent.36.rep7		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.blank.solvent.37.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.blank.solvent.38.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.blank.solvent.39.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.blank.solvent.40.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.blank.solvent.41.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.blank.solvent.42.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.blank.solvent.43.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.blank.solvent.44.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.blank.solvent.45.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.blank.solvent.84.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.blank.solvent.87.rep2		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.blank.spe.01.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.blank.spe.02.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.blank.spe.05.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.blank.spe.06.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.blank.spe.10.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.material.control.ctab1.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.material.control.ctab2.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.material.control.ctab3.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.material.control.ctab4.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.material.control.ctab5.2x.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.material.control.ctab6.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.material.control.filter.gpwp1.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.material.control.filter.gpwp2.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.material.control.filter.gpwp3.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.material.control.filter.sterivex.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.material.control.whirlpak1.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.material.control.whirlpak2.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.material.control.ziplock1.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.lcms.material.control.ziplock2.rep1		urban biome	misc environment			193.0	not applicable	not applicable
+13114.macrae.crerar.3.s006	9.474443953585808	montane grasslands and shrubland biome	soil	Soil (non-saline)	Soil (non-saline)	1747.0	7	not applicable
+13114.macrae.crerar.3.s008	9.228099772513282	montane grasslands and shrubland biome	soil	Soil (non-saline)	Soil (non-saline)	1747.0	7.25	not applicable
+13114.macrae.crerar.3.s010	9.07765095339851	montane grasslands and shrubland biome	soil	Soil (non-saline)	Soil (non-saline)	1735.0	7.23	not applicable
+13114.makhalanyane.46.s002	6.954292420197749	tropical desert biome	soil	Soil (non-saline)	Soil (non-saline)	279.0	7.26	not applicable
+13114.makhalanyane.46.s003	6.108161802943114	tropical desert biome	soil	Soil (non-saline)	Soil (non-saline)	457.0	7.18	not applicable
+13114.makhalanyane.46.s006	8.51590733904237	tropical desert biome	soil	Soil (non-saline)	Soil (non-saline)	859.0	7.49	not applicable
+13114.makhalanyane.46.s007	9.214905597855818	tropical desert biome	soil	Soil (non-saline)	Soil (non-saline)	957.0	7.55	not applicable
+13114.makhalanyane.46.s009	9.037918381707064	tropical desert biome	soil	Soil (non-saline)	Soil (non-saline)	1011.0	7.48	not applicable
+13114.makhalanyane.46.s010	9.421936234845852	tropical desert biome	soil	Soil (non-saline)	Soil (non-saline)	1240.0	7.06	not applicable
+13114.mayer.33.s001	7.572238626718821	grassland biome	sediment	Sediment (non-saline)	Sediment (non-saline)	1189.0	7.78	not applicable
+13114.mayer.33.s002	6.919298119890286	grassland biome	sediment	Sediment (non-saline)	Sediment (non-saline)	1142.0	7.02	not applicable
+13114.mayer.33.s003	8.585520914712264	grassland biome	sediment	Sediment (non-saline)	Sediment (non-saline)	1183.0	7.58	not applicable
+13114.mayer.33.s004	9.053452058945934	grassland biome	sediment	Sediment (non-saline)	Sediment (non-saline)	1153.0	7.5	not applicable
+13114.mayer.33.s005	8.760830832592278	grassland biome	sediment	Sediment (non-saline)	Sediment (non-saline)	1169.0	8.85	not applicable
+13114.mayer.33.s006	7.623108486473936	grassland biome	sediment	Sediment (non-saline)	Sediment (non-saline)	1188.0	9.03	not applicable
+13114.mayer.33.s007	8.350463761310593	grassland biome	sediment	Sediment (non-saline)	Sediment (non-saline)	990.0	8.28	not applicable
+13114.mayer.34.s001	3.8413220985925913	Small river biome	sediment	Sediment (non-saline)	Sediment (non-saline)	3212.0	4.05	not applicable
+13114.mayer.34.s002	3.779468300796343	Small river biome	sediment	Sediment (non-saline)	Sediment (non-saline)	3191.0	5.55	not applicable
+13114.mayer.34.s003	5.87261340885704	Small river biome	sediment	Sediment (non-saline)	Sediment (non-saline)	2832.0	3.78	not applicable
+13114.mayer.34.s004	7.819621797599786	Small river biome	sediment	Sediment (non-saline)	Sediment (non-saline)	2852.0	7.68	not applicable
+13114.mayer.34.s005	7.144100805602113	Small river biome	sediment	Sediment (non-saline)	Sediment (non-saline)	1988.0	7.83	not applicable
+13114.mayer.34.s006	7.534770799379675	Small river biome	sediment	Sediment (non-saline)	Sediment (non-saline)	1706.0	8.26	not applicable
+13114.mayer.34.s007	8.276507998621577	Small river biome	sediment	Sediment (non-saline)	Sediment (non-saline)	1609.0	8.44	not applicable
+13114.mayer.34.s008	5.654565771603618	Small river biome	sediment	Sediment (non-saline)	Sediment (non-saline)	1735.0	8.87	not applicable
+13114.mayer.34.s009	8.550035188258745	Small river biome	sediment	Sediment (non-saline)	Sediment (non-saline)	1601.0	8.46	not applicable
+13114.mayer.34.s010	7.946594523918684	Small river biome	sediment	Sediment (non-saline)	Sediment (non-saline)	1598.0	8.25	not applicable
+13114.mcmahon.21.s001	4.704933744684281	urban biome	wastewater/sludge	Water (non-saline)	Bioreactor (non-saline)	1288.0	7.4	not applicable
+13114.mcmahon.21.s003	4.927554764963812	urban biome	wastewater/sludge	Water (non-saline)	Bioreactor (non-saline)	1288.0	7.4	not applicable
+13114.mcmahon.21.s004	5.857812249822945	urban biome	wastewater/sludge	Water (non-saline)	Bioreactor (non-saline)	1288.0	7.4	not applicable
+13114.mcmahon.21.s005	5.1059343543475375	urban biome	wastewater/sludge	Water (non-saline)	Bioreactor (non-saline)	1288.0	7.4	not applicable
+13114.mcmahon.21.s006	5.132944352829633	urban biome	wastewater/sludge	Water (non-saline)	Bioreactor (non-saline)	1288.0	7.4	not applicable
+13114.mcmahon.21.s007	5.201740307052621	urban biome	wastewater/sludge	Water (non-saline)	Bioreactor (non-saline)	1288.0	7.4	not applicable
+13114.mcmahon.21.s008	4.009414589063977	urban biome	wastewater/sludge	Water (non-saline)	Bioreactor (non-saline)	226.0	7.9	not applicable
+13114.mcmahon.21.s009	3.778876535548248	urban biome	wastewater/sludge	Water (non-saline)	Bioreactor (non-saline)	226.0	7.9	not applicable
+13114.mcmahon.21.s010	3.810684491043064	urban biome	wastewater/sludge	Water (non-saline)	Bioreactor (non-saline)	226.0	7.9	not applicable
+13114.mcmahon.21.s011	4.631151806203063	urban biome	wastewater/sludge	Water (non-saline)	Bioreactor (non-saline)	1288.0	7.5	not applicable
+13114.mcmahon.21.s012	3.2405738696077995	urban biome	wastewater/sludge	Water (non-saline)	Bioreactor (non-saline)	1288.0	7.5	not applicable
+13114.mcmahon.21.s013	3.9193986361651807	urban biome	wastewater/sludge	Water (non-saline)	Bioreactor (non-saline)	1288.0	7.5	not applicable
+13114.mcmahon.21.s014	4.820609957012115	urban biome	wastewater/sludge	Water (non-saline)	Bioreactor (non-saline)	1288.0	7.5	not applicable
+13114.mcmahon.21.s015	4.613967466168977	urban biome	wastewater/sludge	Water (non-saline)	Bioreactor (non-saline)	1288.0	7.5	not applicable
+13114.mcmahon.21.s016	4.7871222204045045	urban biome	wastewater/sludge	Water (non-saline)	Bioreactor (non-saline)	1288.0	7.5	not applicable
+13114.mcmahon.21.s017	5.346790294108864	urban biome	wastewater/sludge	Water (non-saline)	Bioreactor (non-saline)	1288.0	7.5	not applicable
+13114.metcalf.40.s001	9.582192347623447	temperate desert biome	soil	Soil (non-saline)	Soil (non-saline)	1624.1	6.53	not applicable
+13114.metcalf.40.s002	9.695126634120568	temperate desert biome	soil	Soil (non-saline)	Soil (non-saline)	1624.1	7.667	not applicable
+13114.metcalf.40.s003	4.658740261751419	temperate desert biome	soil	Soil (non-saline)	Soil (non-saline)	1624.1	8.087	not applicable
+13114.metcalf.40.s004	3.62522531858681	temperate desert biome	soil	Soil (non-saline)	Soil (non-saline)	1624.1	8.407	not applicable
+13114.metcalf.40.s005	8.006548516469753	temperate coniferous forest biome	soil	Soil (non-saline)	Soil (non-saline)	1624.1	5.54	not applicable
+13114.metcalf.40.s006	8.599781575675578	temperate coniferous forest biome	soil	Soil (non-saline)	Soil (non-saline)	1624.1	6.303333333	not applicable
+13114.metcalf.40.s007	3.130481531565767	temperate coniferous forest biome	soil	Soil (non-saline)	Soil (non-saline)	1624.1	8.21	not applicable
+13114.metcalf.40.s008	3.6028336017520184	temperate coniferous forest biome	soil	Soil (non-saline)	Soil (non-saline)	1624.1	8.603333333	not applicable
+13114.metcalf.40.s009	9.213541518838182	temperate grassland biome	soil	Soil (non-saline)	Soil (non-saline)	1624.1	6.78	not applicable
+13114.metcalf.40.s010	9.144915216064035	temperate grassland biome	soil	Soil (non-saline)	Soil (non-saline)	1624.1	6.303333333	not applicable
+13114.metcalf.40.s011	7.950235009322172	temperate grassland biome	soil	Soil (non-saline)	Soil (non-saline)	1624.1	8.773333333	not applicable
+13114.metcalf.40.s012	7.3551138754890655	temperate grassland biome	soil	Soil (non-saline)	Soil (non-saline)	1624.1	9.12	not applicable
+13114.metcalf.40.s013	5.670079595595837	temperate coniferous forest biome	soil	Soil (non-saline)	Soil (non-saline)	113.1	not provided	not applicable
+13114.metcalf.40.s014	8.570644517066958	temperate coniferous forest biome	soil	Soil (non-saline)	Soil (non-saline)	113.1	not provided	not applicable
+13114.metcalf.81.s001	2.2878039856598744	urban biome	host-associated	Animal corpus (non-saline)	Animal corpus (non-saline)	1624.1	not applicable	not applicable
+13114.metcalf.81.s002	3.1128931996796454	urban biome	host-associated	Animal corpus (non-saline)	Animal corpus (non-saline)	1624.1	not applicable	not applicable
+13114.metcalf.81.s003	2.6159189795328643	urban biome	host-associated	Animal corpus (non-saline)	Animal corpus (non-saline)	1624.1	not applicable	not applicable
+13114.minich.76.s001	2.3107048716134857	dense settlement biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	782.0	not applicable	not applicable
+13114.minich.76.s002	6.269371008112084	dense settlement biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	782.0	not applicable	not applicable
+13114.minich.76.s003	5.195934696632963	dense settlement biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	782.0	not applicable	not applicable
+13114.minich.76.s004	4.531228696409813	dense settlement biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	782.0	not applicable	not applicable
+13114.minich.76.s005	5.8095897779844	dense settlement biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	782.0	not applicable	not applicable
+13114.minich.76.s006	3.853455622073757	dense settlement biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	782.0	not applicable	not applicable
+13114.mousseau.88.s001	6.921212017040907	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s002	6.443185706987595	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s003	6.348626683375745	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s004	6.790512403918618	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s005	5.981494369309712	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s006	7.068414962265624	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s007	6.963381723348322	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s008	7.0160955048820925	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s009	7.291869716221377	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s010	6.157083841994078	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s011	6.324433018237686	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s012	6.097256013777754	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s013	5.587703255579982	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s014	6.313815222912253	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s015	6.761483873474791	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s016	4.179339345585063	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s017	6.836442974457558	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s018	6.73286358926626	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s019	6.557104813153046	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s020	5.285045622942465	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s021	6.156123236574287	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s022	5.115496143385798	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s023	6.765310680600674	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s024	6.458019598900392	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s025	5.90500851701278	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s026	5.114897741773469	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s027	6.5761606462314575	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s028	6.213427850840113	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s029	6.913835058510493	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s030	6.703430546249401	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s031	7.443388283375341	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s032	4.977962690994911	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s033	6.496018456913748	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s034	5.3860128601869945	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s035	6.206984640030481	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s036	5.024938822900422	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s037	7.400684426882263	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s038	5.241277249511709	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s039	5.783274593510061	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s040	6.846122317185545	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s041	5.123924801092377	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s042	6.76213348912924	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s043	5.997651502360239	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s044	6.152620805770257	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s045	6.211864839018056	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s046	4.89763630102107	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s047	5.825209721188287	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s048	6.391371263966052	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s049	5.7938437264354565	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s050	5.969300747299542	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s051	6.264147534374335	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s052	6.283822940853646	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s053	6.471742322743398	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s054	7.34846478197716	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s055	6.893884875445924	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s056	5.759848341671624	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s057	5.821986390016209	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s058	5.249855048922272	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s059	6.873433695227953	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s060	6.650622469683102	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s061	6.921022927719157	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s062	7.366017421378889	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s063	6.289912276745149	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s064	6.674523023468887	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s065	6.470966055819571	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s066	6.042952172466118	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s067	6.839566068104711	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s068	6.434814029736184	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s069	6.032841101668956	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s070	7.1357017056801775	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s071	4.99668134086097	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s072	7.013044887209197	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s073	6.96260301345751	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s074	7.051659882601752	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s075	6.460024609671822	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s076	6.177656913798214	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s077	7.016642331961992	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s078	6.569402223466882	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s079	7.17922821584105	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s080	4.775366905169425	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s081	5.8960066533211375	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s082	7.014360280721313	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s083	6.366476692900627	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s084	6.717003222464217	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s085	6.393083762398155	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s086	5.637473921279845	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s087	6.475410513823932	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s088	7.232483908036249	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s089	6.4368420038597165	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s090	4.87541661666969	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s091	5.997920632079324	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s092	4.753421760568526	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s093	6.773894870920787	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s094	5.167595116492767	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s095	6.801409416369761	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s096	6.498116539884046	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s097	4.566199044887568	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s098	4.233904565436147	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s099	5.614652243924734	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s100	5.72251560417462	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s101	4.72495310926	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s102	3.236272605920422	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s103	3.00703247214329	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s104	6.965465548497058	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s105	6.861233855157424	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s106	6.112719657087109	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s107	6.326415718695385	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s108	6.945086210001928	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s109	5.318552017850525	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s110	7.000836551265317	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s111	5.892655860653899	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.mousseau.88.s112	6.678914980967741	temperate mixed forest biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	113.1	not applicable	not applicable
+13114.myrold.5.s004	8.42620675330799	temperate coniferous forest biome	soil	Soil (non-saline)	Soil (non-saline)	313.0	not applicable	2.0964
+13114.myrold.5.s007	9.059976168919532	temperate coniferous forest biome	soil	Soil (non-saline)	Soil (non-saline)	641.0	not applicable	0.5692
+13114.myrold.5.s010	9.173250932259185	temperate coniferous forest biome	soil	Soil (non-saline)	Soil (non-saline)	637.0	not applicable	0.6048
+13114.myrold.5.s011	9.276941884109087	temperate coniferous forest biome	soil	Soil (non-saline)	Soil (non-saline)	665.0	not applicable	0.6144
+13114.myrold.5.s012	8.675564839782462	temperate coniferous forest biome	soil	Soil (non-saline)	Soil (non-saline)	758.0	not applicable	0.531
+13114.myrold.59.s002	8.324859023306393	cropland biome	soil	Soil (non-saline)	Soil (non-saline)	70.0	not applicable	40.87406679
+13114.myrold.59.s005	7.818033610579132	rangeland biome	soil	Soil (non-saline)	Soil (non-saline)	1171.0	not applicable	25.57745123
+13114.myrold.59.s006	9.13753224000986	temperate coniferous forest biome	soil	Soil (non-saline)	Soil (non-saline)	1473.0	not applicable	64.03522285
+13114.myrold.59.s008	9.092450289709848	rangeland biome	soil	Soil (non-saline)	Soil (non-saline)	773.0	not applicable	14.95127057
+13114.myrold.59.s009	8.980233284176814	cropland biome	soil	Soil (non-saline)	Soil (non-saline)	790.0	not applicable	13.41290111
+13114.myrold.59.s010	7.755284459502214	cropland biome	soil	Soil (non-saline)	Soil (non-saline)	457.0	not applicable	11.08752956
+13114.myrold.59.s011	9.199469272389782	cropland biome	soil	Soil (non-saline)	Soil (non-saline)	6.0	not applicable	71.79258607
+13114.myrold.59.s013	8.855789397546395	rangeland biome	soil	Soil (non-saline)	Soil (non-saline)	1355.0	not applicable	10.44359165
+13114.myrold.59.s015	8.11934242656809	temperate woodland biome	soil	Soil (non-saline)	Soil (non-saline)	67.0	not applicable	79.61128738
+13114.myrold.59.s017	8.625151762453587	temperate woodland biome	soil	Soil (non-saline)	Soil (non-saline)	589.0	not applicable	21.12107927
+13114.myrold.59.s018	5.205365095141754	cropland biome	soil	Soil (non-saline)	Soil (non-saline)	1242.0	not applicable	16.22584686
+13114.myrold.59.s020	8.910529891418982	cropland biome	soil	Soil (non-saline)	Soil (non-saline)	104.0	not applicable	14.34269186
+13114.myrold.59.s021	9.079435010936528	temperate coniferous forest biome	soil	Soil (non-saline)	Soil (non-saline)	46.0	not applicable	17.57797233
+13114.myrold.59.s022	8.497053394749337	temperate shrubland biome	soil	Soil (non-saline)	Soil (non-saline)	548.0	not applicable	21.57024981
+13114.palenik.42.s001	6.409233478044952	neritic epipelagic zone biome	water	Water (saline)	Water (saline)	0.0	not provided	not applicable
+13114.palenik.42.s002	6.47760926796138	neritic epipelagic zone biome	water	Water (saline)	Water (saline)	0.0	not provided	not applicable
+13114.palenik.42.s003	6.754690102672536	neritic epipelagic zone biome	water	Water (saline)	Water (saline)	0.0	not provided	not applicable
+13114.palenik.42.s004	6.807095772678273	neritic epipelagic zone biome	water	Water (saline)	Water (saline)	0.0	not provided	not applicable
+13114.palenik.42.s005	6.611467219004279	neritic epipelagic zone biome	water	Water (saline)	Water (saline)	0.0	7.48	not applicable
+13114.palenik.42.s006	6.2513540275283805	neritic epipelagic zone biome	water	Water (saline)	Water (saline)	0.0	7.53	not applicable
+13114.palenik.42.s007	5.809082873320623	neritic epipelagic zone biome	water	Water (saline)	Water (saline)	0.0	7.66	not applicable
+13114.palenik.42.s008	6.116469609591767	neritic epipelagic zone biome	water	Water (saline)	Water (saline)	0.0	7.7	not applicable
+13114.palenik.42.s009	5.83215163557888	neritic epipelagic zone biome	water	Water (saline)	Water (saline)	0.0	7.85	not applicable
+13114.palenik.42.s010	5.789033581016012	neritic epipelagic zone biome	water	Water (saline)	Water (saline)	0.0	7.78	not applicable
+13114.palenik.42.s011	5.844362896111805	neritic epipelagic zone biome	water	Water (saline)	Water (saline)	0.0	7.8	not applicable
+13114.palenik.42.s012	7.040050951475145	neritic epipelagic zone biome	water	Water (saline)	Water (saline)	0.0	not provided	not applicable
+13114.palenik.42.s013	6.161033326824716	neritic epipelagic zone biome	water	Water (saline)	Water (saline)	0.0	not provided	not applicable
+13114.palenik.42.s014	6.388239657435284	neritic bathypelagic zone biome	water	Water (saline)	Water (saline)	0.0	not provided	not applicable
+13114.palenik.42.s015	6.504458734348814	neritic epipelagic zone biome	water	Water (saline)	Water (saline)	0.0	not provided	not applicable
+13114.palenik.42.s016	6.1876388758545815	neritic epipelagic zone biome	water	Water (saline)	Water (saline)	0.0	not provided	not applicable
+13114.palenik.42.s017	5.841710274416581	neritic epipelagic zone biome	water	Water (saline)	Water (saline)	0.0	not provided	not applicable
+13114.palenik.42.s018	5.69140533110007	neritic epipelagic zone biome	water	Water (saline)	Water (saline)	0.0	not provided	not applicable
+13114.palenik.42.s019	6.476266076818619	neritic epipelagic zone biome	water	Water (saline)	Water (saline)	0.0	not provided	not applicable
+13114.palenik.42.s020	6.0861752642453055	neritic epipelagic zone biome	water	Water (saline)	Water (saline)	0.0	not provided	not applicable
+13114.pinto.63.s001	3.5775980937807663	tropical broadleaf forest biome	host-associated	Plant corpus (non-saline)	Plant corpus (non-saline)	62.0	not applicable	not applicable
+13114.pinto.63.s002	7.046358087660624	tropical broadleaf forest biome	host-associated	Plant corpus (non-saline)	Plant corpus (non-saline)	62.0	not applicable	not applicable
+13114.pinto.63.s003	2.78025099026273	tropical broadleaf forest biome	host-associated	Plant corpus (non-saline)	Plant corpus (non-saline)	51.0	not applicable	not applicable
+13114.pinto.63.s004	2.5963675464134552	tropical broadleaf forest biome	host-associated	Plant corpus (non-saline)	Plant corpus (non-saline)	51.0	not applicable	not applicable
+13114.pinto.63.s005	1.5966275641723373	tropical broadleaf forest biome	host-associated	Plant corpus (non-saline)	Plant corpus (non-saline)	65.0	not applicable	not applicable
+13114.pinto.63.s006	4.463035362924686	tropical broadleaf forest biome	host-associated	Plant corpus (non-saline)	Plant corpus (non-saline)	65.0	not applicable	not applicable
+13114.pinto.63.s007	2.0061286736893984	tropical broadleaf forest biome	host-associated	Plant corpus (non-saline)	Plant corpus (non-saline)	29.0	not applicable	not applicable
+13114.pinto.63.s008	1.907323722224019	tropical broadleaf forest biome	host-associated	Plant corpus (non-saline)	Plant corpus (non-saline)	29.0	not applicable	not applicable
+13114.pinto.63.s009	5.829296580699798	tropical broadleaf forest biome	host-associated	Plant corpus (non-saline)	Plant corpus (non-saline)	29.0	not applicable	not applicable
+13114.pinto.63.s010	5.757082978708722	tropical broadleaf forest biome	host-associated	Plant corpus (non-saline)	Plant corpus (non-saline)	29.0	not applicable	not applicable
+13114.pinto.63.s011	3.1160299737697263	tropical broadleaf forest biome	host-associated	Plant corpus (non-saline)	Plant corpus (non-saline)	44.0	not applicable	not applicable
+13114.pinto.63.s012	4.364489613775425	tropical broadleaf forest biome	host-associated	Plant corpus (non-saline)	Plant corpus (non-saline)	44.0	not applicable	not applicable
+13114.pinto.63.s013	3.552305712301034	tropical broadleaf forest biome	host-associated	Plant corpus (non-saline)	Plant corpus (non-saline)	44.0	not applicable	not applicable
+13114.pinto.63.s014	4.442388750107029	tropical broadleaf forest biome	host-associated	Plant corpus (non-saline)	Plant corpus (non-saline)	44.0	not applicable	not applicable
+13114.pinto.63.s015	2.188094429464477	tropical broadleaf forest biome	host-associated	Plant corpus (non-saline)	Plant corpus (non-saline)	42.0	not applicable	not applicable
+13114.pinto.63.s016	3.043845087375413	tropical broadleaf forest biome	host-associated	Plant corpus (non-saline)	Plant corpus (non-saline)	42.0	not applicable	not applicable
+13114.pinto.63.s017	2.723937561976886	tropical broadleaf forest biome	host-associated	Plant corpus (non-saline)	Plant corpus (non-saline)	42.0	not applicable	not applicable
+13114.pinto.63.s018	5.348275370789075	tropical broadleaf forest biome	host-associated	Plant corpus (non-saline)	Plant corpus (non-saline)	42.0	not applicable	not applicable
+13114.pinto.63.s019	2.8787931511196367	tropical broadleaf forest biome	host-associated	Plant corpus (non-saline)	Plant corpus (non-saline)	68.0	not applicable	not applicable
+13114.pinto.63.s020	2.402845558416694	tropical broadleaf forest biome	host-associated	Plant corpus (non-saline)	Plant corpus (non-saline)	68.0	not applicable	not applicable
+13114.pinto.63.s021	4.255535863636909	tropical broadleaf forest biome	host-associated	Plant corpus (non-saline)	Plant corpus (non-saline)	68.0	not applicable	not applicable
+13114.pinto.63.s022	2.247883793943964	tropical broadleaf forest biome	host-associated	Plant corpus (non-saline)	Plant corpus (non-saline)	75.0	not applicable	not applicable
+13114.pinto.63.s023	1.153008679822421	tropical broadleaf forest biome	host-associated	Plant corpus (non-saline)	Plant corpus (non-saline)	75.0	not applicable	not applicable
+13114.pinto.63.s024	6.718066539992111	tropical broadleaf forest biome	host-associated	Plant corpus (non-saline)	Plant corpus (non-saline)	75.0	not applicable	not applicable
+13114.pinto.63.s025	7.099086730859366	tropical broadleaf forest biome	host-associated	Plant corpus (non-saline)	Plant corpus (non-saline)	75.0	not applicable	not applicable
+13114.pinto.63.s026	4.169838136002911	tropical broadleaf forest biome	host-associated	Plant corpus (non-saline)	Plant corpus (non-saline)	51.0	not applicable	not applicable
+13114.pinto.63.s027	2.169481910123805	tropical broadleaf forest biome	host-associated	Plant corpus (non-saline)	Plant corpus (non-saline)	51.0	not applicable	not applicable
+13114.pinto.63.s028	3.526586847100699	tropical broadleaf forest biome	host-associated	Plant corpus (non-saline)	Plant corpus (non-saline)	51.0	not applicable	not applicable
+13114.rohwer.84.s001	8.414600921186336	tundra biome	soil	Soil (non-saline)	Soil (non-saline)	0.0	not applicable	not applicable
+13114.rohwer.84.s002	7.333228363123876	tundra biome	soil	Soil (non-saline)	Soil (non-saline)	0.0	not applicable	not applicable
+13114.rohwer.84.s003	7.3911883062589405	tundra biome	soil	Soil (non-saline)	Soil (non-saline)	0.0	not applicable	not applicable
+13114.rohwer.84.s004	7.13038810826759	tundra biome	soil	Soil (non-saline)	Soil (non-saline)	0.0	not applicable	not applicable
+13114.rohwer.84.s006.rep1		tundra biome	soil			0.0	not applicable	not applicable
+13114.rohwer.84.s007	8.43314600133412	tundra biome	soil	Soil (non-saline)	Soil (non-saline)	0.0	not applicable	not applicable
+13114.rohwer.84.s008	8.891124249426301	tundra biome	soil	Soil (non-saline)	Soil (non-saline)	0.0	not applicable	not applicable
+13114.rohwer.85.s001	3.3157475145699307	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.rohwer.85.s002	4.679831395253212	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.rohwer.85.s003	5.006182375532553	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.rohwer.85.s004	4.038359056306821	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.rohwer.85.s005	3.5519473015938403	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.rohwer.85.s006	2.9941433777742	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.rohwer.85.s007	4.017217830465102	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.rohwer.85.s008	2.1898573827867054	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.rohwer.85.s010	3.214802090856145	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.rohwer.85.s011	4.572720052108981	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.rohwer.85.s012	3.75848399213579	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.rohwer.85.s013	4.378619758003474	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.rohwer.85.s016	2.439224334017398	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.rohwer.85.s017	4.597189555873825	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.rohwer.85.s018	3.523859849558754	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.rohwer.85.s019	3.0870878319687574	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.rohwer.85.s020	4.705259302197978	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.rohwer.85.s021	2.0235069719060603	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.rohwer.85.s022	0.6624663135930761	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.rohwer.85.s023	1.22194003956107	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.rohwer.85.s024	1.1236566058877688	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.rohwer.85.s027	2.779603709193068	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.rohwer.86.s001	6.8287565332791065	marine benthic biome	microbial mat/biofilm	Surface (saline)	Surface (saline)	0.0	not applicable	not applicable
+13114.rohwer.86.s002	2.277455416536689	marine benthic biome	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.rohwer.86.s003	2.7746264523931146	marine benthic biome	microbial mat/biofilm	Surface (saline)	Surface (saline)	0.0	not applicable	not applicable
+13114.roy.chowdhury.45.s001	7.626671426719188	marine salt marsh biome	soil	Soil (saline)	Soil (saline)	4.0	7.3	0.122
+13114.roy.chowdhury.45.s002	7.758153978866565	marine salt marsh biome	soil	Soil (saline)	Soil (saline)	4.0	7.49	0.128
+13114.roy.chowdhury.45.s003	6.874500032136623	marine salt marsh biome	soil	Soil (saline)	Soil (saline)	2.0	8.12	0.316
+13114.roy.chowdhury.45.s004	5.435230655550949	marine salt marsh biome	soil	Soil (saline)	Soil (saline)	2.0	8.24	0.258
+13114.roy.chowdhury.45.s008	7.528992261738812	marine salt marsh biome	soil	Soil (saline)	Soil (saline)	3.0	6.58	0.156
+13114.roy.chowdhury.45.s012	7.669656218885193	marine salt marsh biome	soil	Soil (saline)	Soil (saline)	4.0	7.35	0.17
+13114.roy.chowdhury.45.s016	5.658102917768289	marine salt marsh biome	soil	Soil (saline)	Soil (saline)	2.0	7.7	0.25
+13114.roy.chowdhury.45.s018	5.780233998728118	marine salt marsh biome	soil	Soil (saline)	Soil (saline)	3.0	6.93	0.114
+13114.roy.chowdhury.45.s019	5.816800518223041	marine salt marsh biome	soil	Soil (saline)	Soil (saline)	4.0	6.75	0.104972376
+13114.roy.chowdhury.45.s021	6.681526439062228	marine salt marsh biome	soil	Soil (saline)	Soil (saline)	3.0	6.61	0.081
+13114.roy.chowdhury.45.s022	7.174629820344571	marine salt marsh biome	soil	Soil (saline)	Soil (saline)	3.0	6.52	0.177
+13114.roy.chowdhury.45.s024	6.567749036103201	marine salt marsh biome	soil	Soil (saline)	Soil (saline)	3.0	6.95	0.105
+13114.sandin.54.s003	5.974663234435986	marine biome	host-associated	Animal proximal gut (saline)	Animal proximal gut (saline)	0.0	not applicable	not applicable
+13114.sandin.54.s004	7.0288948707319925	marine biome	host-associated	Animal proximal gut (saline)	Animal proximal gut (saline)	0.0	not applicable	not applicable
+13114.sandin.54.s006	5.3886868981811	marine biome	host-associated	Animal proximal gut (saline)	Animal proximal gut (saline)	0.0	not applicable	not applicable
+13114.sandin.54.s007	2.4852342188944605	marine biome	host-associated	Animal proximal gut (saline)	Animal proximal gut (saline)	0.0	not applicable	not applicable
+13114.sandin.54.s008	2.9244990491792966	marine biome	host-associated	Animal proximal gut (saline)	Animal proximal gut (saline)	0.0	not applicable	not applicable
+13114.sandin.54.s009	0.7493921692870543	marine biome	host-associated	Animal proximal gut (saline)	Animal proximal gut (saline)	0.0	not applicable	not applicable
+13114.sandin.54.s010	1.102180263465359	marine biome	host-associated	Animal proximal gut (saline)	Animal proximal gut (saline)	0.0	not applicable	not applicable
+13114.sandin.54.s011	4.27150611835703	marine biome	host-associated	Animal proximal gut (saline)	Animal proximal gut (saline)	0.0	not applicable	not applicable
+13114.sandin.54.s012	5.739256686838179	marine biome	host-associated	Animal proximal gut (saline)	Animal proximal gut (saline)	0.0	not applicable	not applicable
+13114.sandin.54.s013	4.943596333951339	marine biome	host-associated	Animal proximal gut (saline)	Animal proximal gut (saline)	0.0	not applicable	not applicable
+13114.sandin.54.s014	4.328564488585056	marine biome	host-associated	Animal proximal gut (saline)	Animal proximal gut (saline)	0.0	not applicable	not applicable
+13114.sandin.54.s015	3.7183731664061255	marine biome	host-associated	Animal proximal gut (saline)	Animal proximal gut (saline)	0.0	not applicable	not applicable
+13114.schmidt.56.s001	7.861598259526308	desert biome	soil	Soil (non-saline)	Soil (non-saline)	5110.0	7.99	1.214574899
+13114.schmidt.56.s003	7.3905164968767325	desert biome	soil	Soil (non-saline)	Soil (non-saline)	5110.0	8.1	4.184100418
+13114.schmidt.56.s004	7.29483315119614	desert biome	soil	Soil (non-saline)	Soil (non-saline)	5110.0	8.03	2.880658436
+13114.schmidt.56.s007	7.566926117138591	desert biome	soil	Soil (non-saline)	Soil (non-saline)	5110.0	8.14	2.208835341
+13114.schmidt.56.s014	9.371835763012632	desert biome	soil	Soil (non-saline)	Soil (non-saline)	5090.0	7.63	18.52678571
+13114.schmidt.56.s015	8.007602005850403	desert biome	soil	Soil (non-saline)	Soil (non-saline)	5000.0	8.51	2.371541502
+13114.schmidt.56.s016	7.575737981365756	desert biome	soil	Soil (non-saline)	Soil (non-saline)	5000.0	8.38	3.167420814
+13114.schmidt.56.s020	8.00713711550979	desert biome	soil	Soil (non-saline)	Soil (non-saline)	5000.0	8.04	1.895734597
+13114.schmidt.56.s022	8.232670145185184	desert biome	soil	Soil (non-saline)	Soil (non-saline)	5000.0	8.06	4.824561404
+13114.schmidt.56.s024	8.595582856626574	desert biome	soil	Soil (non-saline)	Soil (non-saline)	5000.0	7.71	19.40298507
+13114.schmidt.56.s025	8.564621851729271	desert biome	soil	Soil (non-saline)	Soil (non-saline)	5000.0	7.53	22.58064516
+13114.schmidt.56.s026	8.862872652943045	desert biome	soil	Soil (non-saline)	Soil (non-saline)	5000.0	7.82	24.23076923
+13114.seedorf.71.s002	9.161538763120488	cropland biome	soil	Soil (non-saline)	Soil (non-saline)	19.0	not applicable	not applicable
+13114.seedorf.71.s004	9.628551365752458	urban biome	soil	Soil (non-saline)	Soil (non-saline)	50.0	not applicable	not applicable
+13114.seedorf.71.s005	8.513907096326026	urban biome	soil	Soil (non-saline)	Soil (non-saline)	50.0	not applicable	not applicable
+13114.seedorf.71.s006	8.835128260845241	cropland biome	soil	Soil (non-saline)	Soil (non-saline)	19.0	not applicable	not applicable
+13114.seedorf.71.s007	9.378196936569626	cropland biome	soil	Soil (non-saline)	Soil (non-saline)	19.0	not applicable	not applicable
+13114.seedorf.71.s008	9.15100154431628	cropland biome	soil	Soil (non-saline)	Soil (non-saline)	19.0	not applicable	not applicable
+13114.seedorf.71.s011	8.561068305388703	urban biome	soil	Soil (non-saline)	Soil (non-saline)	6.7	not applicable	not applicable
+13114.shade.23.s001	7.449327484788029	anthropogenic terrestrial biome	soil	Soil (non-saline)	Soil (non-saline)	465.0	4.6	not applicable
+13114.shade.23.s003	7.7536055199416865	anthropogenic terrestrial biome	soil	Soil (non-saline)	Soil (non-saline)	466.0	4.4	not applicable
+13114.shade.23.s004	5.353118982561624	anthropogenic terrestrial biome	soil	Soil (non-saline)	Soil (non-saline)	476.0	4.9	not applicable
+13114.shade.23.s005	7.051465645891575	anthropogenic terrestrial biome	soil	Soil (non-saline)	Soil (non-saline)	481.0	6.3	not applicable
+13114.shade.23.s006	6.602029909791215	anthropogenic terrestrial biome	soil	Soil (non-saline)	Soil (non-saline)	475.0	5.9	not applicable
+13114.shade.23.s007	8.126213740274512	anthropogenic terrestrial biome	soil	Soil (non-saline)	Soil (non-saline)	480.0	6.2	not applicable
+13114.shade.23.s008	9.467837964874564	anthropogenic terrestrial biome	soil	Soil (non-saline)	Soil (non-saline)	482.0	5.7	not applicable
+13114.shade.23.s010	6.026786400067002	anthropogenic terrestrial biome	soil	Soil (non-saline)	Soil (non-saline)	465.0	5.5	not applicable
+13114.smith.39.s001	6.497532460760555	marine reef biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.smith.39.s002	9.086661124681688	marine reef biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.smith.39.s003	7.283603104686628	marine reef biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.smith.39.s004	8.329251772742623	marine reef biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.smith.39.s005	9.457121242563248	marine reef biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.smith.39.s006	4.579770252443191	marine reef biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.smith.39.s007	8.804760408001837	marine reef biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.smith.39.s008	9.199473996008756	marine reef biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.song.51.s001	5.397843710494089	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	283.0	not applicable	not applicable
+13114.song.51.s002	4.970180844922159	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	283.0	not applicable	not applicable
+13114.song.51.s003	5.824569065219298	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	283.0	not applicable	not applicable
+13114.song.51.s004	4.465916514318371	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	283.0	not applicable	not applicable
+13114.song.51.s005	4.908466873027633	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	16.0	not applicable	not applicable
+13114.song.51.s006	4.710515257766551	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	16.0	not applicable	not applicable
+13114.song.51.s007	1.9317483432396747	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	16.0	not applicable	not applicable
+13114.song.51.s008	7.200952542274003	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	16.0	not applicable	not applicable
+13114.song.51.s009	4.632324936817785	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	16.0	not applicable	not applicable
+13114.song.51.s010	4.5624157535514485	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	16.0	not applicable	not applicable
+13114.song.51.s011	4.601210159407214	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	16.0	not applicable	not applicable
+13114.song.51.s012	4.936204661314089	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	16.0	not applicable	not applicable
+13114.song.51.s013	5.400109673453428	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	16.0	not applicable	not applicable
+13114.song.51.s014	2.168367767198002	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	16.0	not applicable	not applicable
+13114.song.51.s015	6.294660871906341	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	283.0	not applicable	not applicable
+13114.song.51.s016	6.771733014521954	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	283.0	not applicable	not applicable
+13114.song.51.s017	7.302587523149081	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	283.0	not applicable	not applicable
+13114.song.51.s018	6.265274023488548	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	283.0	not applicable	not applicable
+13114.song.51.s019	6.83275334749018	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	283.0	not applicable	not applicable
+13114.song.51.s020	4.9714779511612335	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	16.0	not applicable	not applicable
+13114.song.52.s001	4.926567000355045	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	283.0	not applicable	not applicable
+13114.song.52.s002	5.071117839753389	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	283.0	not applicable	not applicable
+13114.song.52.s003	4.985844677510411	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	283.0	not applicable	not applicable
+13114.song.52.s004	5.9416799052012665	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	16.0	not applicable	not applicable
+13114.song.52.s005	4.908897736018799	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	16.0	not applicable	not applicable
+13114.song.52.s006	5.546154293560173	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	16.0	not applicable	not applicable
+13114.song.52.s007	4.1627106523192365	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	16.0	not applicable	not applicable
+13114.song.52.s008	1.891364520887452	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	16.0	not applicable	not applicable
+13114.song.52.s009	6.195414936647142	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	16.0	not applicable	not applicable
+13114.song.52.s010	2.0430877223402693	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	16.0	not applicable	not applicable
+13114.song.52.s011	5.079290994316026	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	16.0	not applicable	not applicable
+13114.song.52.s012	3.598492613457492	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	283.0	not applicable	not applicable
+13114.song.52.s013	3.7463783899407024	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	283.0	not applicable	not applicable
+13114.song.52.s014	4.850572486612435	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	283.0	not applicable	not applicable
+13114.song.52.s015	4.725179081258623	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	283.0	not applicable	not applicable
+13114.song.53.s001	6.372288328907628	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	283.0	not applicable	not applicable
+13114.song.53.s002	1.7577099248285764	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	283.0	not applicable	not applicable
+13114.song.53.s003	5.243582037583843	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	283.0	not applicable	not applicable
+13114.song.53.s004	6.406980925716188	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	283.0	not applicable	not applicable
+13114.song.53.s005	2.156725898123305	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	283.0	not applicable	not applicable
+13114.song.53.s006	2.7345701539667995	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	283.0	not applicable	not applicable
+13114.song.53.s007	1.939183772168023	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	16.0	not applicable	not applicable
+13114.song.53.s008	5.972656311409931	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	16.0	not applicable	not applicable
+13114.song.53.s009	4.077475395156582	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	16.0	not applicable	not applicable
+13114.song.53.s010	1.747354737031064	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	283.0	not applicable	not applicable
+13114.song.53.s011	2.086331944572251	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	283.0	not applicable	not applicable
+13114.song.53.s012	1.759449079550145	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	283.0	not applicable	not applicable
+13114.song.53.s013	2.820557396201944	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	16.0	not applicable	not applicable
+13114.song.53.s014	3.946047036989883	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	16.0	not applicable	not applicable
+13114.song.53.s015	1.6830731244718369	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	16.0	not applicable	not applicable
+13114.song.75.s001	4.556716055830674	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	283.0	not applicable	not applicable
+13114.song.75.s002	2.7631499045599943	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	283.0	not applicable	not applicable
+13114.song.75.s003	3.282752392915105	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	1.6	not applicable	not applicable
+13114.song.75.s004	3.887264579333719	urban biome	host-associated	Animal distal gut (non-saline)	Animal distal gut (non-saline)	1.6	not applicable	not applicable
+13114.stegen.36.s001	8.464565615682178	subpolar coniferous forest biome	soil	Soil (non-saline)	Soil (non-saline)	240.0	not applicable	not applicable
+13114.stegen.36.s004	8.960839101523279	subpolar coniferous forest biome	soil	Soil (non-saline)	Soil (non-saline)	241.0	not applicable	not applicable
+13114.stegen.36.s007	8.697980864885164	subpolar coniferous forest biome	soil	Soil (non-saline)	Soil (non-saline)	243.0	not applicable	not applicable
+13114.stegen.36.s008	7.664472100061106	subpolar coniferous forest biome	soil	Soil (non-saline)	Soil (non-saline)	243.0	not applicable	not applicable
+13114.stegen.36.s012	7.9268358933331005	subpolar coniferous forest biome	soil	Soil (non-saline)	Soil (non-saline)	244.0	not applicable	not applicable
+13114.stegen.36.s013	8.048200693751339	subpolar coniferous forest biome	soil	Soil (non-saline)	Soil (non-saline)	245.0	not applicable	not applicable
+13114.stegen.37.s001	9.653764556556675	freshwater biome	sediment	Sediment (non-saline)	Sediment (non-saline)	123.0	not applicable	not applicable
+13114.stegen.37.s003	9.402280145113512	freshwater biome	sediment	Sediment (non-saline)	Sediment (non-saline)	123.0	not applicable	not applicable
+13114.stegen.37.s008	9.851930944522952	freshwater biome	sediment	Sediment (non-saline)	Sediment (non-saline)	123.0	not applicable	not applicable
+13114.stegen.37.s010	9.674187568274958	freshwater biome	sediment	Sediment (non-saline)	Sediment (non-saline)	123.0	not applicable	not applicable
+13114.stegen.38.s001	6.072801257102943	subpolar coniferous forest biome	soil	Soil (non-saline)	Soil (non-saline)	248.642813	3.183333333	0.627130918
+13114.stegen.38.s005	6.222064265502847	subpolar coniferous forest biome	soil	Soil (non-saline)	Soil (non-saline)	256.4909619	3.243333333	0.660746875
+13114.stegen.38.s006	8.74268911078536	subpolar coniferous forest biome	soil	Soil (non-saline)	Soil (non-saline)	258.05837760000003	4.116666667	0.733943309
+13114.stegen.38.s008	9.077445748275164	subpolar coniferous forest biome	soil	Soil (non-saline)	Soil (non-saline)	248.608562	4.38	0.916642353
+13114.stegen.38.s009	8.726516051190217	subpolar coniferous forest biome	soil	Soil (non-saline)	Soil (non-saline)	249.2763877	3.38	0.927035747
+13114.stegen.38.s011	7.974198438934834	subpolar coniferous forest biome	soil	Soil (non-saline)	Soil (non-saline)	254.2850805	4.64	0.735494991
+13114.stegen.38.s013	8.96822493076812	subpolar coniferous forest biome	soil	Soil (non-saline)	Soil (non-saline)	247.976081	4.42	0.75513919
+13114.stegen.38.s014	9.042954368226358	subpolar coniferous forest biome	soil	Soil (non-saline)	Soil (non-saline)	248.742415	3.966666667	0.870975839
+13114.stegen.38.s015	8.529100786872345	subpolar coniferous forest biome	soil	Soil (non-saline)	Soil (non-saline)	250.275083	3.553333333	0.793636294
+13114.stegen.38.s017	8.480397296887514	subpolar coniferous forest biome	soil	Soil (non-saline)	Soil (non-saline)	259.9729385	4.053333333	0.744588213
+13114.stewart.26.s001	5.910066769157352	marine pelagic biome	water	Water (saline)	Water (saline)	0.0	not applicable	not applicable
+13114.stewart.26.s002	6.522815892244742	marine pelagic biome	water	Water (saline)	Water (saline)	0.0	not applicable	not applicable
+13114.stewart.26.s003	6.525056917973743	marine pelagic biome	water	Water (saline)	Water (saline)	0.0	not applicable	not applicable
+13114.stewart.26.s004	6.065954171316903	marine pelagic biome	water	Water (saline)	Water (saline)	0.0	not applicable	not applicable
+13114.stewart.26.s005	4.791118385064644	marine pelagic biome	water	Water (saline)	Water (saline)	0.0	not applicable	not applicable
+13114.stewart.26.s006	6.602167677230632	marine pelagic biome	water	Water (saline)	Water (saline)	0.0	not applicable	not applicable
+13114.stewart.26.s007	6.739058189330559	marine pelagic biome	water	Water (saline)	Water (saline)	0.0	not applicable	not applicable
+13114.stewart.26.s008	6.460479201754949	marine pelagic biome	water	Water (saline)	Water (saline)	0.0	not applicable	not applicable
+13114.tait.77.s001	6.745200939053338	marine pelagic biome	water	Water (saline)	Water (saline)	0.0	not applicable	not applicable
+13114.tait.77.s002	7.057971006626815	marine pelagic biome	water	Water (saline)	Water (saline)	0.0	not applicable	not applicable
+13114.tait.77.s003	6.9603363147417525	marine pelagic biome	water	Water (saline)	Water (saline)	0.0	not applicable	not applicable
+13114.tait.77.s004	4.56139345763839	marine pelagic biome	water	Water (saline)	Water (saline)	0.0	not applicable	not applicable
+13114.tait.77.s005	5.345026437998949	marine pelagic biome	water	Water (saline)	Water (saline)	0.0	not applicable	not applicable
+13114.tait.77.s006	4.871344546026418	marine pelagic biome	water	Water (saline)	Water (saline)	0.0	not applicable	not applicable
+13114.tait.77.s007	5.671665103905219	marine pelagic biome	water	Water (saline)	Water (saline)	0.0	not applicable	not applicable
+13114.tait.77.s008	6.564311068326782	marine pelagic biome	water	Water (saline)	Water (saline)	0.0	not applicable	not applicable
+13114.tait.77.s009	6.345188766247232	marine pelagic biome	water	Water (saline)	Water (saline)	0.0	not applicable	not applicable
+13114.tait.78.s001	8.964035416019088	marine sediment	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.tait.78.s002	9.543557883001904	marine sediment	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.tait.78.s003	9.479845809382992	marine sediment	sediment	Sediment (saline)	Sediment (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s001	2.251817464679358	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s002	3.819688184860536	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s003	3.602565074732364	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s004	4.167446249048605	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s007	4.030731143138047	marine subtidal rocky reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s008	3.1151954610383448	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s009	1.0275611218629328	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s010	0.9467442817776172	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s011	5.174310711077726	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s012	4.725244035180292	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s013	3.443776291427059	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s014	4.790609007808857	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s015	4.099597973945734	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s016	3.17881405157701	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s018	3.8669023604583073	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s019	3.978935804570898	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s020	5.011901216069405	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s021	4.992145350317899	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s023	4.729231296506028	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s024	4.841943506884192	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s025	5.202736566067795	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s026	3.062890628190316	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s027	3.023520269981676	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s028	3.109362780780366	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s029	2.571146523238606	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s030	2.8084823728716137	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s031	3.4435523542460613	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s032	2.595529105196573	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s033	3.071715499297268	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s035	0.574362229902924	marine subtidal rocky reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s036	0.4241664467668207	marine subtidal rocky reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s037	1.148739372870085	marine subtidal rocky reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s038	2.076152712983431	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s039	5.748688490418812	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s041	4.622109917956728	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s043	4.003178841253576	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s044	5.246930062284289	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s045	2.5213294665817605	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s046	3.897200492453112	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s047	3.458109664165004	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s048	3.537086541728426	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s049	4.193344094382534	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s050	6.351898895758241	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s051	3.5418560760029125	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s052	4.451193257565545	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s053	3.6079560086042255	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s054	2.870832117869196	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s055	2.5387469869944463	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s056	2.73846468793822	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.18.s057	2.551604374417729	marine coral reef biome	host-associated	Animal corpus (saline)	Animal corpus (saline)	0.0	not applicable	not applicable
+13114.thomas.19.s001	4.412230225177523	marine benthic biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.thomas.19.s002	5.7002158421020495	marine benthic biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.thomas.19.s003	8.14061104881842	marine benthic biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.thomas.19.s004	5.156595925417894	marine benthic biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.thomas.19.s005	6.279284346077386	marine benthic biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.thomas.19.s006	3.5025634754959167	marine benthic biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.thomas.19.s007	6.077579168200121	marine benthic biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.thomas.19.s009	4.707056889248584	marine benthic biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.thomas.19.s010	5.088559920725041	marine benthic biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.thomas.19.s011	3.0962849391765817	marine benthic biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.thomas.19.s013	7.135683215268486	marine benthic biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.thomas.19.s014	8.106374676266688	marine benthic biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.thomas.19.s016	6.600535164123328	marine benthic biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.thomas.19.s018	6.152375660859034	marine benthic biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.thomas.19.s020	6.465679779373597	marine benthic biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.thomas.19.s022	8.474171781398704	marine benthic biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.thomas.19.s024	7.565507652923511	marine benthic biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.thomas.19.s025	5.102618633514158	marine benthic biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.thomas.19.s026	5.9571420331840255	marine benthic biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.thomas.19.s050	5.834424479859475	marine benthic biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.thomas.19.s051	5.802813536432859	marine benthic biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.thomas.19.s052	8.35894507737389	marine benthic biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.thomas.19.s053	6.332473747884779	marine benthic biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.thomas.19.s054	5.7377829657704575	marine benthic biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.thomas.19.s055	3.388251905598486	marine benthic biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.thomas.19.s056	7.429897411978968	marine benthic biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.thomas.19.s057	6.049224780018679	marine benthic biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.thomas.19.s058	4.567519391135333	marine benthic biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.thomas.19.s059	6.667320624520961	marine benthic biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.thomas.19.s060	6.447017654257492	marine benthic biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.thomas.19.s061	7.544970063118825	marine benthic biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.thomas.19.s062	5.970475530822761	marine benthic biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.thomas.19.s063	5.843825483498197	marine benthic biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.thomas.19.s064	6.867204715214374	marine benthic biome	host-associated	Plant surface (saline)	Plant surface (saline)	0.0	not applicable	not applicable
+13114.tucker.58.s006	2.1976668313727017	dense settlement biome	misc environment	Subsurface (non-saline)	Subsurface (non-saline)	952.0	not applicable	not applicable
+13114.tucker.58.s008	5.529997736993926	dense settlement biome	misc environment	Subsurface (non-saline)	Subsurface (non-saline)	952.0	not applicable	not applicable
+13114.tucker.58.s010	5.73034997518258	dense settlement biome	misc environment	Subsurface (non-saline)	Subsurface (non-saline)	952.0	not applicable	not applicable
+13114.tucker.58.s012	3.345391177568042	dense settlement biome	misc environment	Water (non-saline)	Water (non-saline)	136.1	not applicable	not applicable
+13114.tucker.58.s013	4.722611138927968	dense settlement biome	misc environment	Water (non-saline)	Water (non-saline)	81.56	not applicable	not applicable
+13114.tucker.58.s014	5.682854064271168	dense settlement biome	misc environment	Water (non-saline)	Water (non-saline)	66.05	not applicable	not applicable
+13114.tucker.58.s016	4.389362366093872	dense settlement biome	misc environment	Water (non-saline)	Water (non-saline)	46.6	not applicable	not applicable
+13114.uren.82.s001	3.0950723421245305	subpolar coniferous forest biome	plant-associated	Fungus corpus (non-saline)	Fungus corpus (non-saline)	275.0	not applicable	not applicable
+13114.uren.82.s002	4.5136687476588895	subpolar coniferous forest biome	plant-associated	Fungus corpus (non-saline)	Fungus corpus (non-saline)	275.0	not applicable	not applicable
+13114.uren.82.s003	3.976410845424116	subpolar coniferous forest biome	plant-associated	Fungus corpus (non-saline)	Fungus corpus (non-saline)	275.0	not applicable	not applicable
+13114.uren.82.s004	2.3766191090834794	subpolar coniferous forest biome	plant-associated	Fungus corpus (non-saline)	Fungus corpus (non-saline)	275.0	not applicable	not applicable
+13114.uren.82.s005	2.630213889296436	subpolar coniferous forest biome	plant-associated	Fungus corpus (non-saline)	Fungus corpus (non-saline)	275.0	not applicable	not applicable
+13114.uren.82.s006	3.230828006155764	subpolar coniferous forest biome	plant-associated	Fungus corpus (non-saline)	Fungus corpus (non-saline)	275.0	not applicable	not applicable
+13114.uren.82.s008	2.282014086196196	subpolar coniferous forest biome	plant-associated	Fungus corpus (non-saline)	Fungus corpus (non-saline)	275.0	not applicable	not applicable
+13114.uren.82.s009	1.0570495045416737	subpolar coniferous forest biome	plant-associated	Fungus corpus (non-saline)	Fungus corpus (non-saline)	275.0	not applicable	not applicable
+13114.uren.82.s010	3.779634712261344	subpolar coniferous forest biome	plant-associated	Fungus corpus (non-saline)	Fungus corpus (non-saline)	275.0	not applicable	not applicable
+13114.uren.82.s011	3.1545397665363293	subpolar coniferous forest biome	plant-associated	Fungus corpus (non-saline)	Fungus corpus (non-saline)	275.0	not applicable	not applicable
+13114.uren.82.s012	5.010127897276032	subpolar coniferous forest biome	plant-associated	Fungus corpus (non-saline)	Fungus corpus (non-saline)	275.0	not applicable	not applicable
+13114.zaneveld.9.s005	1.27334269002492	marine reef biome	host-associated	Animal secretion (saline)	Animal secretion (saline)	0.0	not applicable	not applicable
+13114.zaneveld.9.s006	4.052200691344238	marine reef biome	host-associated	Animal secretion (saline)	Animal secretion (saline)	0.0	not applicable	not applicable
+13114.zaneveld.9.s007	1.7100216330343043	marine reef biome	host-associated	Animal secretion (saline)	Animal secretion (saline)	0.0	not applicable	not applicable
+13114.zaneveld.9.s008	1.4390478300449807	marine reef biome	host-associated	Animal secretion (saline)	Animal secretion (saline)	0.0	not applicable	not applicable
+13114.zaneveld.9.s014	3.144388798379188	marine reef biome	host-associated	Animal secretion (saline)	Animal secretion (saline)	0.0	not applicable	not applicable
+13114.zaneveld.9.s017	2.1192566451760477	marine reef biome	host-associated	Animal secretion (saline)	Animal secretion (saline)	0.0	not applicable	not applicable
+13114.zaneveld.9.s019	1.3374072517572857	marine reef biome	host-associated	Animal secretion (saline)	Animal secretion (saline)	0.0	not applicable	not applicable
+13114.zaneveld.9.s021	4.900920108881551	marine reef biome	host-associated	Water (saline)	Water (saline)	0.0	not applicable	not applicable
+13114.zaneveld.9.s022	6.775111273625019	marine reef biome	host-associated	Water (saline)	Water (saline)	0.0	not applicable	not applicable
