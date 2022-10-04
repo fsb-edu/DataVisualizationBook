@@ -132,3 +132,7 @@ DataVis_JB/_build/
 DataVis_JB/.ipynb_checkpoints
 *.docx
 *.txt
+markdown.md
+markdown-notebooks.md
+DataVis_JB/markdown.md
+DataVis_JB/markdown-notebooks.md
