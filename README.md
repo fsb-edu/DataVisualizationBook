@@ -9,4 +9,5 @@ JupyterBook on data visualization for Food Scientists.
 	3. `conda env list` - to check if the environment was created
 in the folder containing all files.
 2. Run `jupyer-book build DataVis_JB` inside the parent folder of the folder that contains the files. 
-4. Open the `index.html` file that can be found in the `_build` folder. 
+3. Open the `index.html` file that can be found in the `_build` folder. 
+
