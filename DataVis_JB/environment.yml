@@ -1,0 +1,9 @@
+name: data-vis-jupyter-book
+dependencies:
+ - jupyter-book
+ - python
+ - pandas
+ - numpy
+ - matplotlib
+ - plotly
+ - os
