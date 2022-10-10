@@ -25,4 +25,4 @@ The first JupyterBook called firstbook will be created in the current working di
 ### Build the book
 5.	Run the command: `jupyter-book build firstbook`. A `_build` folder will be created inside 
 the *firstbook* folder. 
-6. Open *index.html* inside *_build* file to see the JupyterBook in the browser of your choice.
+6. Open *index.html* inside *_build* folder to see the JupyterBook in the browser of your choice.
