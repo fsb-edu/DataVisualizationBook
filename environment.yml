@@ -6,4 +6,4 @@ dependencies:
  - numpy
  - matplotlib
  - plotly
- - os
+ - seaborn
