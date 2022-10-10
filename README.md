@@ -15,14 +15,14 @@ in the repository folder.
 
 1. Make sure *python* and *pip* are installed and their *paths* are added to the **PATH** 
 environment variable in the System variables.
-2. Install JupyterBook using *pip install -U jupyer-book*
-3. Check if everything went well with the installation by running: *jupyter-book --help*
+2. Install JupyterBook using `pip install -U jupyer-book`
+3. Check if everything went well with the installation by running: `jupyter-book --help`
 
 ### Creating a book
-4.	Create a JupyterBook by running the following command: *jupyter-book create firstbook/*. 
+4.	Create a JupyterBook by running the following command: `jupyter-book create firstbook/`. 
 The first JupyterBook called firstbook will be created in the current working directory (folder).
 
 ### Build the book
-5.	Run the command: *jupyter-book build firstbook*. A *_build* folder will be created inside 
+5.	Run the command: `jupyter-book build firstbook`. A `_build` folder will be created inside 
 the *firstbook* folder. 
 6. Open *index.html* inside *_build* file to see the JupyterBook in the browser of your choice.
