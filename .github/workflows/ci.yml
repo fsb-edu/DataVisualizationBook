@@ -2,8 +2,8 @@ name: deploy-book
 
 on:
   push:
-    branches:
-      - main
+#    branches:
+#      - main
     # paths:
     # - some-subfolder/**
 
