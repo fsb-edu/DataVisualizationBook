@@ -6,4 +6,4 @@ root: chapters/intro
 chapters:
 - file: chapters/importance_of_data_vis
 - file: chapters/chart_types
-- file: chapters/markdown-notebooks
+- file: chapters/matplotlib_manipulations

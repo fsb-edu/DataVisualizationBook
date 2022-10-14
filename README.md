@@ -11,6 +11,7 @@ in the repository folder.
 2. Run `jupyer-book build DataVis_JB` inside the parent folder of the folder that contains the files. 
 3. Open the `index.html` file that can be found in the `_build` folder. 
 
+
 ### Steps to install JupyterBook on Windows - Full Pipeline (Optional)
 
 1. Make sure *python* and *pip* are installed and their *paths* are added to the **PATH** 
