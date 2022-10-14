@@ -128,12 +128,9 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-DataVis_JB/_build/
-DataVis_JB/.ipynb_checkpoints
+_build/
 *.docx
 *.txt
-markdown.md
-markdown-notebooks.md
-DataVis_JB/markdown.md
-DataVis_JB/markdown-notebooks.md
-.gitignore
+markdown*.md
+
+.idea/
