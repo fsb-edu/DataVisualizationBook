@@ -1,0 +1,9 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: chapters/intro
+chapters:
+- file: chapters/importance_of_data_vis
+- file: chapters/chart_types
+- file: chapters/matplotlib_manipulations
