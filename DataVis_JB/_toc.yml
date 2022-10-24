@@ -7,3 +7,4 @@ chapters:
 - file: chapters/importance_of_data_vis
 - file: chapters/chart_types
 - file: chapters/matplotlib_manipulations
+- file: chapters/dimensionality_reduction
