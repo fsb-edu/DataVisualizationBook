@@ -129,6 +129,7 @@ dmypy.json
 .pyre/
 
 DataVis_JB/_build/
+DataVis_JB/.idea/*
 DataVis_JB/.ipynb_checkpoints
 *.docx
 *.txt
