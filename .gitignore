@@ -130,7 +130,7 @@ dmypy.json
 
 DataVis_JB/_build/
 DataVis_JB/.idea/*
-DataVis_JB/.vis/*
+DataVis_JB/.vscode/
 DataVis_JB/.ipynb_checkpoints
 *.docx
 *.txt
@@ -139,4 +139,3 @@ markdown-notebooks.md
 DataVis_JB/markdown.md
 DataVis_JB/markdown-notebooks.md
 .gitignore
-.vis/*
