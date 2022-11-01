@@ -129,7 +129,7 @@ dmypy.json
 .pyre/
 
 DataVis_JB/_build/
-DataVis_JB/.idea/*
+DataVis_JB/.idea/
 DataVis_JB/.vscode/
 DataVis_JB/.ipynb_checkpoints
 DataVis_JB/.vscode/
@@ -140,4 +140,3 @@ markdown-notebooks.md
 DataVis_JB/markdown.md
 DataVis_JB/markdown-notebooks.md
 .vis/*
-
