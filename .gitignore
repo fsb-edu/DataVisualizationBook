@@ -129,12 +129,12 @@ dmypy.json
 .pyre/
 
 DataVis_JB/_build/
-DataVis_JB/.idea/*
+DataVis_JB/.idea/
 DataVis_JB/.ipynb_checkpoints
+DataVis_JB/.vscode/
 *.docx
 *.txt
 markdown.md
 markdown-notebooks.md
 DataVis_JB/markdown.md
 DataVis_JB/markdown-notebooks.md
-.gitignore
