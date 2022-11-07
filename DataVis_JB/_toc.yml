@@ -8,3 +8,8 @@ chapters:
 - file: chapters/chart_types
 - file: chapters/matplotlib_manipulations
 - file: chapters/dimensionality_reduction
+- file: chapters/tutorial
+- file: chapters/exercises
+  sections:
+  - file: chapters/solutions
+    
