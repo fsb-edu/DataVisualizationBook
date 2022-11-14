@@ -2,10 +2,11 @@ name: data-vis-jupyter-book
 dependencies:
  - jupyter-book
  - python
- - pandas
+ - pandas==1.2.4
  - numpy
- - matplotlib
+ - matplotlib==3.4.3
  - plotly
- - seaborn
+ - seaborn==0.12.1
  - umap-learn
  - numba
+ - geopandas
