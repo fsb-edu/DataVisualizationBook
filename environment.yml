@@ -7,6 +7,6 @@ dependencies:
  - matplotlib==3.4.3
  - plotly
  - seaborn==0.12.1
- - umap-learn
+ - umap-learn==0.5.3
  - numba
  - geopandas
