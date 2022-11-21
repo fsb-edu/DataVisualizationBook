@@ -9,3 +9,7 @@ chapters:
 - file: chapters/matplotlib_manipulations
 - file: chapters/dimensionality_reduction
 - file: chapters/tutorial
+- file: chapters/exercises_intro
+  sections:
+  - file: chapters/exercises
+  - file: chapters/solutions
