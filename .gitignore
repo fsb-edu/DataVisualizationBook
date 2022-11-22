@@ -132,11 +132,7 @@ _build/
 .idea/
 .vscode/
 .ipynb_checkpoints
-.vscode/
 *.docx
 *.txt
-markdown.md
-markdown-notebooks.md
-markdown.md
-markdown-notebooks.md
+markdown*.md
 .vis/*
