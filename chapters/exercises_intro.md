@@ -1,4 +1,4 @@
-# 6. Exercises
+# Exercises
 
 In the past chapters, we learned various techniques of data visualization. As we saw, in order to get some first 
 insights on the data and understand it better, it is really useful to first visualize it. In this part, you will have the
