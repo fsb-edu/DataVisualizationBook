@@ -10,6 +10,7 @@ chapters:
 - file: chapters/chart_types
 - file: chapters/matplotlib_manipulations
 - file: chapters/dimensionality_reduction
+- file: chapters/dos
 - file: chapters/tutorial
 - file: chapters/exercises_intro
   sections:
