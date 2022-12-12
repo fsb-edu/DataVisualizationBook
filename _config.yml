@@ -31,7 +31,7 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
-  favicon: img/eth_logo.svg
+  favicon: img/ethfavico.png
 
 sphinx:
   config:
