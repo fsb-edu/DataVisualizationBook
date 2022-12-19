@@ -1,4 +1,6 @@
-# Welcome to Data Visualization for Food Scientists
+# <center>Welcome to Data Visualization for Food Scientists</center>
+
+![logos](../img/seaborn_matplotlib_logo.jpg)
 
 Throughout this Jupyter book we will be focusing on creating data visualizations using Python. There are many different 
 ways to create plots in Python - we won't be discussing all of them here. Instead, we will see how to 
