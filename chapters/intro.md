@@ -1,4 +1,4 @@
-# <center>Welcome to Data Visualization for Food Scientists</center>
+# Welcome to Data Visualization for Food Scientists
 
 ![logos](../img/seaborn_matplotlib_logo.jpg)
 
