@@ -2,17 +2,17 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: chapters/intro
+root: chapters/00_intro
 options:
     numbered: true
 chapters:
-- file: chapters/importance_of_data_vis
-- file: chapters/chart_types
-- file: chapters/matplotlib_manipulations
-- file: chapters/dimensionality_reduction
-- file: chapters/dos
-- file: chapters/tutorial
-- file: chapters/exercises_intro
+- file: chapters/01_importance_of_data_vis
+- file: chapters/02_chart_types
+- file: chapters/03_matplotlib_manipulations
+- file: chapters/04_dimensionality_reduction
+- file: chapters/05_dos
+- file: chapters/06_tutorial
+- file: chapters/exercises/01_intro
   sections:
-  - file: chapters/exercises
-  - file: chapters/solutions
+  - file: chapters/exercises/02_exercises
+  - file: chapters/exercises/03_solutions
