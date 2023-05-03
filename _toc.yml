@@ -16,3 +16,4 @@ chapters:
   sections:
   - file: chapters/exercises/02_exercises
   - file: chapters/exercises/03_solutions
+- file: chapters/08_bibliography
