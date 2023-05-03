@@ -1,0 +1,1333 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>7.2. Solutions &#8212; Data Visualization for Food Scientists</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/general.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../_static/ethfavico.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="8. References" href="../08_bibliography.html" />
+    <link rel="prev" title="7.1. Exercises" href="02_exercises.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/eth_logo.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Data Visualization for Food Scientists</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../00_intro.html">
+                    Data Visualization for Food Scientists
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01_importance_of_data_vis.html">
+   1. Importance of data visualization
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02_chart_types.html">
+   2. Chart types using Seaborn
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03_matplotlib_manipulations.html">
+   3. Customizing plots with Matplotlib
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04_dimensionality_reduction.html">
+   4. Dimensionality reduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05_dos.html">
+   5. DO’s and DON’Ts of data visualization
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06_tutorial.html">
+   6. Tutorial: sample dataset
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="01_intro.html">
+   7. Exercises
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_exercises.html">
+     7.1. Exercises
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     7.2. Solutions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../08_bibliography.html">
+   8. References
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/bokulich-lab/DataVis_JB/main?urlpath=tree/docs/chapters/exercises/03_solutions.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/bokulich-lab/DataVis_JB"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/bokulich-lab/DataVis_JB/issues/new?title=Issue%20on%20page%20%2Fchapters/exercises/03_solutions.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/chapters/exercises/03_solutions.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#environment-setup">
+   7.2.1. Environment setup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-pre-processing">
+   7.2.2. Data pre-processing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercises">
+   7.2.3. Exercises
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-1">
+     7.2.3.1. Exercise 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-2">
+     7.2.3.2. Exercise 2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-3">
+     7.2.3.3. Exercise 3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-4">
+     7.2.3.4. Exercise 4
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-5">
+     7.2.3.5. Exercise 5
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-6">
+     7.2.3.6. Exercise 6
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-7">
+     7.2.3.7. Exercise 7
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   7.2.4. Conclusion
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Solutions</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#environment-setup">
+   7.2.1. Environment setup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-pre-processing">
+   7.2.2. Data pre-processing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercises">
+   7.2.3. Exercises
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-1">
+     7.2.3.1. Exercise 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-2">
+     7.2.3.2. Exercise 2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-3">
+     7.2.3.3. Exercise 3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-4">
+     7.2.3.4. Exercise 4
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-5">
+     7.2.3.5. Exercise 5
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-6">
+     7.2.3.6. Exercise 6
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-7">
+     7.2.3.7. Exercise 7
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   7.2.4. Conclusion
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="solutions">
+<h1><span class="section-number">7.2. </span>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">#</a></h1>
+<section id="environment-setup">
+<h2><span class="section-number">7.2.1. </span>Environment setup<a class="headerlink" href="#environment-setup" title="Permalink to this headline">#</a></h2>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># this is to silence pandas&#39; warnings</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+<span class="o">%</span><span class="k">config</span> InlineBackend.figure_format=&#39;svg&#39;
+
+<span class="n">FONT_FAMILY</span> <span class="o">=</span> <span class="s1">&#39;DejaVu Sans&#39;</span>
+<span class="n">FONT_SCALE</span> <span class="o">=</span> <span class="mf">1.3</span>
+
+<span class="n">data_dir</span> <span class="o">=</span> <span class="s1">&#39;../data&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="data-pre-processing">
+<h2><span class="section-number">7.2.2. </span>Data pre-processing<a class="headerlink" href="#data-pre-processing" title="Permalink to this headline">#</a></h2>
+<p>All the exercises are based on the Kaggle <a class="reference external" href="https://www.kaggle.com/code/hiralmshah/nutrition-data-analysis-from-80-cereals"><strong>cereals</strong></a> dataset, which has 77 records and 16 columns containing nutritional information on different brands of breakfast cereals. The columns are:</p>
+<ul class="simple">
+<li><p><strong>name</strong> - name of the cereal</p></li>
+<li><p><strong>mfr</strong> - manufacturer of the cereals. You can find the association of the letter in the dataset with the real name in the <code class="docutils literal notranslate"><span class="pre">manufacturers_df</span></code> we have loaded below.</p></li>
+<li><p><strong>type</strong> - hot or cold, the preferred way of eating</p></li>
+<li><p><strong>calories</strong> - amount of calories</p></li>
+<li><p><strong>fat</strong> - grams of fat</p></li>
+<li><p><strong>sodium</strong> - milligrams of sodium</p></li>
+<li><p><strong>fiber</strong> - amount in grams</p></li>
+<li><p><strong>carbo</strong> - amount of carbohydrates in grams</p></li>
+<li><p><strong>sugars</strong> - amount in gram</p></li>
+<li><p><strong>potass</strong> - amount in milligrams</p></li>
+<li><p><strong>vitamins</strong> - vitamins and minerals (0, 25, 100) as a percentage of the Recommended Dietary Intake</p></li>
+<li><p><strong>shelf</strong> - shelf they appear in supermarket (1, 2 or 3 from the floor)</p></li>
+<li><p><strong>weight</strong> - weight in ounces</p></li>
+<li><p><strong>cups</strong> - number of cups</p></li>
+<li><p><strong>rating</strong> - rating of the cereals</p></li>
+</ul>
+<div class="admonition-note admonition">
+<p class="admonition-title">Note</p>
+<p>All the values are expresed per 100g portion.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load main dataset</span>
+<span class="n">cereals_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">data_dir</span><span class="si">}</span><span class="s1">/cereal.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+<span class="n">cereals_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>mfr</th>
+      <th>type</th>
+      <th>calories</th>
+      <th>protein</th>
+      <th>fat</th>
+      <th>sodium</th>
+      <th>fiber</th>
+      <th>carbo</th>
+      <th>sugars</th>
+      <th>potass</th>
+      <th>vitamins</th>
+      <th>shelf</th>
+      <th>weight</th>
+      <th>cups</th>
+      <th>rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>100% Bran</td>
+      <td>N</td>
+      <td>C</td>
+      <td>70</td>
+      <td>4</td>
+      <td>1</td>
+      <td>130</td>
+      <td>10.0</td>
+      <td>5.0</td>
+      <td>6</td>
+      <td>280</td>
+      <td>25</td>
+      <td>3</td>
+      <td>1.0</td>
+      <td>0.33</td>
+      <td>68.402973</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>100% Natural Bran</td>
+      <td>Q</td>
+      <td>C</td>
+      <td>120</td>
+      <td>3</td>
+      <td>5</td>
+      <td>15</td>
+      <td>2.0</td>
+      <td>8.0</td>
+      <td>8</td>
+      <td>135</td>
+      <td>0</td>
+      <td>3</td>
+      <td>1.0</td>
+      <td>1.00</td>
+      <td>33.983679</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>All-Bran</td>
+      <td>K</td>
+      <td>C</td>
+      <td>70</td>
+      <td>4</td>
+      <td>1</td>
+      <td>260</td>
+      <td>9.0</td>
+      <td>7.0</td>
+      <td>5</td>
+      <td>320</td>
+      <td>25</td>
+      <td>3</td>
+      <td>1.0</td>
+      <td>0.33</td>
+      <td>59.425505</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>All-Bran with Extra Fiber</td>
+      <td>K</td>
+      <td>C</td>
+      <td>50</td>
+      <td>4</td>
+      <td>0</td>
+      <td>140</td>
+      <td>14.0</td>
+      <td>8.0</td>
+      <td>0</td>
+      <td>330</td>
+      <td>25</td>
+      <td>3</td>
+      <td>1.0</td>
+      <td>0.50</td>
+      <td>93.704912</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Almond Delight</td>
+      <td>R</td>
+      <td>C</td>
+      <td>110</td>
+      <td>2</td>
+      <td>2</td>
+      <td>200</td>
+      <td>1.0</td>
+      <td>14.0</td>
+      <td>8</td>
+      <td>-1</td>
+      <td>25</td>
+      <td>3</td>
+      <td>1.0</td>
+      <td>0.75</td>
+      <td>34.384843</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load dataset that maps manufacturer letter codes to their names</span>
+<span class="n">manufacturers_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">data_dir</span><span class="si">}</span><span class="s1">/manufacturers.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">manufacturers_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>company_name</th>
+    </tr>
+    <tr>
+      <th>letter</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A</th>
+      <td>American Home Food Products</td>
+    </tr>
+    <tr>
+      <th>G</th>
+      <td>General Mills</td>
+    </tr>
+    <tr>
+      <th>K</th>
+      <td>Kelloggs</td>
+    </tr>
+    <tr>
+      <th>N</th>
+      <td>Nabisco</td>
+    </tr>
+    <tr>
+      <th>P</th>
+      <td>Post</td>
+    </tr>
+    <tr>
+      <th>Q</th>
+      <td>Quaker Oats</td>
+    </tr>
+    <tr>
+      <th>R</th>
+      <td>Ralston Purina</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># merge the two datasets</span>
+<span class="n">cereals</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span>
+    <span class="n">cereals_df</span><span class="p">,</span> <span class="n">manufacturers_df</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="n">cereals_df</span><span class="o">.</span><span class="n">mfr</span><span class="p">,</span> <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+<span class="c1"># remove duplicated column</span>
+<span class="n">cereals</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;key_0&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">cereals</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>mfr</th>
+      <th>type</th>
+      <th>calories</th>
+      <th>protein</th>
+      <th>fat</th>
+      <th>sodium</th>
+      <th>fiber</th>
+      <th>carbo</th>
+      <th>sugars</th>
+      <th>potass</th>
+      <th>vitamins</th>
+      <th>shelf</th>
+      <th>weight</th>
+      <th>cups</th>
+      <th>rating</th>
+      <th>company_name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>100% Bran</td>
+      <td>N</td>
+      <td>C</td>
+      <td>70</td>
+      <td>4</td>
+      <td>1</td>
+      <td>130</td>
+      <td>10.0</td>
+      <td>5.0</td>
+      <td>6</td>
+      <td>280</td>
+      <td>25</td>
+      <td>3</td>
+      <td>1.00</td>
+      <td>0.33</td>
+      <td>68.402973</td>
+      <td>Nabisco</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>Cream of Wheat (Quick)</td>
+      <td>N</td>
+      <td>H</td>
+      <td>100</td>
+      <td>3</td>
+      <td>0</td>
+      <td>80</td>
+      <td>1.0</td>
+      <td>21.0</td>
+      <td>0</td>
+      <td>-1</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>64.533816</td>
+      <td>Nabisco</td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td>Shredded Wheat</td>
+      <td>N</td>
+      <td>C</td>
+      <td>80</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3.0</td>
+      <td>16.0</td>
+      <td>0</td>
+      <td>95</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0.83</td>
+      <td>1.00</td>
+      <td>68.235885</td>
+      <td>Nabisco</td>
+    </tr>
+    <tr>
+      <th>64</th>
+      <td>Shredded Wheat 'n'Bran</td>
+      <td>N</td>
+      <td>C</td>
+      <td>90</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>4.0</td>
+      <td>19.0</td>
+      <td>0</td>
+      <td>140</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1.00</td>
+      <td>0.67</td>
+      <td>74.472949</td>
+      <td>Nabisco</td>
+    </tr>
+    <tr>
+      <th>65</th>
+      <td>Shredded Wheat spoon size</td>
+      <td>N</td>
+      <td>C</td>
+      <td>90</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3.0</td>
+      <td>20.0</td>
+      <td>0</td>
+      <td>120</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1.00</td>
+      <td>0.67</td>
+      <td>72.801787</td>
+      <td>Nabisco</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="exercises">
+<h2><span class="section-number">7.2.3. </span>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">#</a></h2>
+<section id="exercise-1">
+<h3><span class="section-number">7.2.3.1. </span>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">#</a></h3>
+<p>Plot the <strong>number of products per manufacturer</strong> by displaying the manufacturer’s name instead of the letter that appears in the <code class="docutils literal notranslate"><span class="pre">cereals_df</span></code> dataframe. All the data you need is found in the <code class="docutils literal notranslate"><span class="pre">cereals</span></code> DataFrame.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">(</span>
+    <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="s1">&#39;font.family&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">FONT_FAMILY</span><span class="p">]},</span> 
+    <span class="n">style</span><span class="o">=</span><span class="s1">&#39;white&#39;</span>
+<span class="p">)</span>
+<span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">plotting_context</span><span class="p">(</span><span class="s2">&quot;notebook&quot;</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="mf">0.9</span><span class="p">):</span>
+    <span class="c1"># seaborn&#39;s countplot</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span>
+        <span class="n">data</span><span class="o">=</span><span class="n">cereals</span><span class="p">[[</span><span class="s1">&#39;company_name&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">]],</span>
+        <span class="n">y</span><span class="o">=</span><span class="s1">&#39;company_name&#39;</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="s1">&#39;dodgerblue&#39;</span> 
+    <span class="p">)</span>
+
+    <span class="c1"># display the number of products for each company</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">bar_label</span><span class="p">(</span><span class="n">ax</span><span class="o">.</span><span class="n">containers</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Number of products per company&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/03_solutions_9_0.svg" src="../../_images/03_solutions_9_0.svg" /></div>
+</div>
+</section>
+<section id="exercise-2">
+<h3><span class="section-number">7.2.3.2. </span>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this headline">#</a></h3>
+<p>Plot the <strong>distribution of ratings per company</strong> checking at the same time if there are any <strong>outliers</strong>. You can find the necessary data in the <code class="docutils literal notranslate"><span class="pre">data</span></code> DataFrame.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">cereals</span><span class="p">[[</span><span class="s1">&#39;company_name&#39;</span><span class="p">,</span> <span class="s1">&#39;rating&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">(</span>
+    <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="s1">&#39;font.family&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">FONT_FAMILY</span><span class="p">]},</span> 
+    <span class="n">style</span><span class="o">=</span><span class="s1">&#39;white&#39;</span>
+<span class="p">)</span>
+<span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">plotting_context</span><span class="p">(</span><span class="s2">&quot;notebook&quot;</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="n">FONT_SCALE</span><span class="p">):</span>
+    <span class="c1"># seaborn&#39;s boxplot</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span>
+        <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span>
+        <span class="n">x</span><span class="o">=</span><span class="s1">&#39;rating&#39;</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=</span><span class="s1">&#39;company_name&#39;</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="s1">&#39;dodgerblue&#39;</span><span class="p">,</span>
+    <span class="p">)</span>
+    
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Cereal rating per company&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/03_solutions_12_0.svg" src="../../_images/03_solutions_12_0.svg" /></div>
+</div>
+<p>From this chart, we can see that it is not relevant to compare companies that have very few ratings. For example, here the American Home Food Products has received only 1 rating.</p>
+</section>
+<section id="exercise-3">
+<h3><span class="section-number">7.2.3.3. </span>Exercise 3<a class="headerlink" href="#exercise-3" title="Permalink to this headline">#</a></h3>
+<p>Find and visualize the <strong>mean ratings per product</strong>. You will find the necessary data in the <code class="docutils literal notranslate"><span class="pre">data</span></code> DataFrame.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">cereals</span><span class="p">[[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;rating&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">(</span>
+    <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="s1">&#39;font.family&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">FONT_FAMILY</span><span class="p">]},</span> 
+    <span class="n">style</span><span class="o">=</span><span class="s1">&#39;white&#39;</span>
+<span class="p">)</span>
+<span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">plotting_context</span><span class="p">(</span><span class="s2">&quot;notebook&quot;</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="mf">0.7</span><span class="p">):</span>
+    <span class="c1"># seaborn&#39;s countplot</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span>
+        <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=</span><span class="s1">&#39;name&#39;</span><span class="p">,</span>
+        <span class="n">x</span><span class="o">=</span><span class="s1">&#39;rating&#39;</span><span class="p">,</span>
+        <span class="n">order</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;rating&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="s1">&#39;dodgerblue&#39;</span>
+    <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Average rating per product&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/03_solutions_16_0.svg" src="../../_images/03_solutions_16_0.svg" /></div>
+</div>
+</section>
+<section id="exercise-4">
+<h3><span class="section-number">7.2.3.4. </span>Exercise 4<a class="headerlink" href="#exercise-4" title="Permalink to this headline">#</a></h3>
+<p>Find if there is a <strong>correlation between any of the numerical features</strong> we have in the dataset. Again, you will find the data needed in the <code class="docutils literal notranslate"><span class="pre">data</span></code> DataFrame.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">cereals</span><span class="p">[[</span><span class="s1">&#39;calories&#39;</span><span class="p">,</span> <span class="s1">&#39;protein&#39;</span><span class="p">,</span> <span class="s1">&#39;fat&#39;</span><span class="p">,</span> <span class="s1">&#39;sodium&#39;</span><span class="p">,</span> <span class="s1">&#39;fiber&#39;</span><span class="p">,</span> <span class="s1">&#39;carbo&#39;</span><span class="p">,</span> <span class="s1">&#39;sugars&#39;</span><span class="p">,</span> <span class="s1">&#39;potass&#39;</span><span class="p">,</span> <span class="s1">&#39;rating&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">(</span>
+    <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;font.family&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">FONT_FAMILY</span><span class="p">]},</span> 
+    <span class="n">style</span><span class="o">=</span><span class="s1">&#39;white&#39;</span>
+<span class="p">)</span>
+
+<span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">plotting_context</span><span class="p">(</span><span class="s2">&quot;notebook&quot;</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="mf">0.8</span><span class="p">):</span> 
+    <span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span>
+        <span class="n">data</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;scatter&quot;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;Set2&quot;</span><span class="p">,</span> 
+        <span class="n">height</span><span class="o">=</span><span class="mf">1.2</span><span class="p">,</span> <span class="n">plot_kws</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;s&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">},</span>
+        <span class="n">diag_kind</span><span class="o">=</span><span class="s1">&#39;kde&#39;</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/03_solutions_19_0.svg" src="../../_images/03_solutions_19_0.svg" /></div>
+</div>
+<p>As we can see from the plots, the features are mostly not correlated. There is a somewhat weak negative correlation between the amount of sugar and rating, a weak positive correlation between the amount of fiber and potassium and a somewhat weak negative correlation between calories and rating.</p>
+</section>
+<section id="exercise-5">
+<h3><span class="section-number">7.2.3.5. </span>Exercise 5<a class="headerlink" href="#exercise-5" title="Permalink to this headline">#</a></h3>
+<p>Your next task is to find and visualize these correlations in a more <strong>quantitative</strong> way. The data will be ready for you in the <code class="docutils literal notranslate"><span class="pre">data</span></code> DataFrame, you will only have to find the correct visualization method and supply the correct arguments to the function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">cereals</span><span class="p">[[</span><span class="s1">&#39;fiber&#39;</span><span class="p">,</span> <span class="s1">&#39;potass&#39;</span><span class="p">,</span> <span class="s1">&#39;sugars&#39;</span><span class="p">,</span> <span class="s1">&#39;calories&#39;</span><span class="p">,</span><span class="s1">&#39;rating&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">(</span>
+    <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">:(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="s1">&#39;font.family&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">FONT_FAMILY</span><span class="p">]},</span> 
+    <span class="n">style</span><span class="o">=</span><span class="s1">&#39;white&#39;</span>
+<span class="p">)</span>
+
+<span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">plotting_context</span><span class="p">(</span><span class="s2">&quot;notebook&quot;</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="n">FONT_SCALE</span><span class="p">):</span>
+    <span class="n">correlation_matrix</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span>
+        <span class="n">data</span><span class="o">=</span><span class="n">correlation_matrix</span><span class="p">,</span>
+        <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Blues&#39;</span><span class="p">,</span>
+        <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">square</span><span class="o">=</span><span class="kc">True</span>
+    <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">get_xticklabels</span><span class="p">(),</span>
+        <span class="n">rotation</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span>
+        <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">&#39;right&#39;</span>
+    <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">(</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">get_yticklabels</span><span class="p">(),</span>
+        <span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Correlation matrix&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/03_solutions_23_0.svg" src="../../_images/03_solutions_23_0.svg" /></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># here you can find an alternative solution with a diagonal correlation matrix</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span>
+    <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">:(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="s1">&#39;font.family&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">FONT_FAMILY</span><span class="p">]},</span> 
+    <span class="n">style</span><span class="o">=</span><span class="s1">&#39;white&#39;</span>
+<span class="p">)</span>
+
+<span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">plotting_context</span><span class="p">(</span><span class="s2">&quot;notebook&quot;</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="n">FONT_SCALE</span><span class="p">):</span>
+    <span class="n">correlation_matrix</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+    <span class="c1"># Generate a mask to cover the upper triangle</span>
+    <span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">triu</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones_like</span><span class="p">(</span><span class="n">correlation_matrix</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">))</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span>
+        <span class="n">data</span><span class="o">=</span><span class="n">correlation_matrix</span><span class="p">,</span>
+        <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Blues&#39;</span><span class="p">,</span>
+        <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">square</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">mask</span><span class="o">=</span><span class="n">mask</span>
+    <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">get_xticklabels</span><span class="p">(),</span>
+        <span class="n">rotation</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span>
+        <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">&#39;right&#39;</span>
+    <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">(</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">get_yticklabels</span><span class="p">(),</span>
+        <span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Correlation matrix&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/03_solutions_24_0.svg" src="../../_images/03_solutions_24_0.svg" /></div>
+</div>
+</section>
+<section id="exercise-6">
+<h3><span class="section-number">7.2.3.6. </span>Exercise 6<a class="headerlink" href="#exercise-6" title="Permalink to this headline">#</a></h3>
+<p>Using a scatterplot, plot the <strong>potassium amount changes w.r.t. the fiber amount and the rating</strong>. Notice that this requires you to plot three numerical variables at the same time. The data to be used is ready for you in the <code class="docutils literal notranslate"><span class="pre">data</span></code> DataFrame.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">cereals</span><span class="p">[[</span><span class="s1">&#39;potass&#39;</span><span class="p">,</span> <span class="s1">&#39;fiber&#39;</span><span class="p">,</span> <span class="s1">&#39;rating&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span>
+    <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">:(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="s1">&#39;font.family&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">FONT_FAMILY</span><span class="p">]},</span> 
+    <span class="n">style</span><span class="o">=</span><span class="s1">&#39;white&#39;</span>
+<span class="p">)</span>
+
+<span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">plotting_context</span><span class="p">(</span><span class="s2">&quot;notebook&quot;</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="n">FONT_SCALE</span><span class="p">):</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+    <span class="n">sc</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">fiber</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">potass</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">rating</span><span class="p">,</span> 
+        <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;coolwarm&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">75</span>
+    <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Fiber&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Potassium&#39;</span><span class="p">)</span>
+    
+    <span class="n">cbar</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">sc</span><span class="p">)</span>
+    <span class="n">cbar</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s2">&quot;Rating&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/03_solutions_27_0.svg" src="../../_images/03_solutions_27_0.svg" /></div>
+</div>
+</section>
+<section id="exercise-7">
+<h3><span class="section-number">7.2.3.7. </span>Exercise 7<a class="headerlink" href="#exercise-7" title="Permalink to this headline">#</a></h3>
+<p>Using a scatterplot, plot <strong>the potassium amount w.r.t. to the fiber amount, the sugar amount and the rating</strong>. Notice that this will required you to find a visualization allowing to display four variables at once. The data to be used is ready for you in the <code class="docutils literal notranslate"><span class="pre">data</span></code> DataFrame.</p>
+<p>You might find some useful information <a class="reference external" href="https://matplotlib.org/stable/gallery/lines_bars_and_markers/scatter_with_legend.html#sphx-glr-gallery-lines-bars-and-markers-scatter-with-legend-py">here</a> and <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html#matplotlib.pyplot.scatter">here</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">cereals</span><span class="p">[[</span><span class="s1">&#39;potass&#39;</span><span class="p">,</span> <span class="s1">&#39;fiber&#39;</span><span class="p">,</span> <span class="s1">&#39;sugars&#39;</span><span class="p">,</span> <span class="s1">&#39;rating&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># write your code here</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">(</span>
+    <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">:(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="s1">&#39;font.family&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">FONT_FAMILY</span><span class="p">]},</span> 
+    <span class="n">style</span><span class="o">=</span><span class="s1">&#39;white&#39;</span>
+<span class="p">)</span>
+
+<span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">plotting_context</span><span class="p">(</span><span class="s2">&quot;notebook&quot;</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="n">FONT_SCALE</span><span class="p">):</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+    <span class="c1"># multiply the amount of sugar by 15 two make it more obvious from the chart</span>
+    <span class="n">sc</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">fiber</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">potass</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">15</span><span class="o">*</span><span class="n">data</span><span class="o">.</span><span class="n">sugars</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">rating</span><span class="p">,</span> 
+        <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;coolwarm&quot;</span>
+    <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Fiber&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Potassium&#39;</span><span class="p">)</span>
+    <span class="n">cbar</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">sc</span><span class="p">)</span>
+    <span class="n">cbar</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s2">&quot;Rating&quot;</span><span class="p">)</span>
+
+    <span class="c1"># these two lines are used to determine the position of the legend</span>
+    <span class="n">handles</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">legend_elements</span><span class="p">(</span><span class="n">prop</span><span class="o">=</span><span class="s2">&quot;sizes&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
+    <span class="n">legend2</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span>
+        <span class="n">handles</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper left&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Sugar amount&quot;</span><span class="p">,</span> 
+        <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.25</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">borderaxespad</span><span class="o">=</span><span class="mi">0</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/03_solutions_30_0.svg" src="../../_images/03_solutions_30_0.svg" /></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># an alternative solution with seaborn</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">(</span>
+    <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">:(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="s1">&#39;font.family&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">FONT_FAMILY</span><span class="p">]},</span> 
+    <span class="n">style</span><span class="o">=</span><span class="s1">&#39;white&#39;</span>
+<span class="p">)</span>
+
+<span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">plotting_context</span><span class="p">(</span><span class="s2">&quot;notebook&quot;</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="n">FONT_SCALE</span><span class="p">):</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span>
+        <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;fiber&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;potass&quot;</span><span class="p">,</span> 
+        <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;rating&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="s2">&quot;sugars&quot;</span><span class="p">,</span> <span class="n">sizes</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">200</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Fiber&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Potassium&#39;</span><span class="p">)</span>
+    <span class="c1"># this line here is for determining the position of the legend</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.02</span><span class="p">,</span> <span class="mf">0.925</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">,</span> <span class="n">borderaxespad</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/03_solutions_31_0.svg" src="../../_images/03_solutions_31_0.svg" /></div>
+</div>
+</section>
+</section>
+<section id="conclusion">
+<h2><span class="section-number">7.2.4. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">#</a></h2>
+<p>Through a combination of different plotting techniques, we were able to visually identify several interesting properties of this dataset. We found out which are the highest-rated cereal brands and how the ratings compare between different cereal manufacturers. We also looked into correlations between cereal contents and assigned ratings and found that fiber (and, to a smaller extent, potassium) positively correlate with the rating. Conversly, sugar contents seemed to inversly correlate with the cereal rating - a somewhat surprising finding, which you may want to pursue further! If you are interested, here are some additional questions you could try to answer using this dataset (either by applying more/different kinds of visualizations, simply wrangling the DataFrame itself or by doing some literature search):</p>
+<ul class="simple">
+<li><p>is the correlation between fiber and potassium content known? are these two linked? if yes, how?</p></li>
+<li><p>for any of the found correlations - how significant are they?</p></li>
+<li><p>in the last figure you can see a point in the top-right corner which has the highest amount of fiber and potassium, but also a very high rating and a rather low sugar content - can you find out which cereal brand it was?</p></li>
+<li><p>for the same point, can you find out how many ratings it got compared to others? is it even significant?</p></li>
+</ul>
+<p><strong>Thank you for sticking around until the end of the book!</strong></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters/exercises"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="02_exercises.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">7.1. </span>Exercises</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../08_bibliography.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>References</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Dr. Michal Ziemski and Doriela Grabocka<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

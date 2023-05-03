@@ -1,0 +1,1425 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>3. Customizing plots with Matplotlib &#8212; Data Visualization for Food Scientists</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/general.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/ethfavico.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4. Dimensionality reduction" href="04_dimensionality_reduction.html" />
+    <link rel="prev" title="2. Chart types using Seaborn" href="02_chart_types.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/eth_logo.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Data Visualization for Food Scientists</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="00_intro.html">
+                    Data Visualization for Food Scientists
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_importance_of_data_vis.html">
+   1. Importance of data visualization
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_chart_types.html">
+   2. Chart types using Seaborn
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   3. Customizing plots with Matplotlib
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_dimensionality_reduction.html">
+   4. Dimensionality reduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05_dos.html">
+   5. DO’s and DON’Ts of data visualization
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06_tutorial.html">
+   6. Tutorial: sample dataset
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="exercises/01_intro.html">
+   7. Exercises
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exercises/02_exercises.html">
+     7.1. Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exercises/03_solutions.html">
+     7.2. Solutions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08_bibliography.html">
+   8. References
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/bokulich-lab/DataVis_JB/main?urlpath=tree/docs/chapters/03_matplotlib_manipulations.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/bokulich-lab/DataVis_JB"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/bokulich-lab/DataVis_JB/issues/new?title=Issue%20on%20page%20%2Fchapters/03_matplotlib_manipulations.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/chapters/03_matplotlib_manipulations.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#environment-setup">
+   3.1. Environment setup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-figures-and-subplots">
+   3.2. Creating figures and subplots
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#one-subplot">
+     3.2.1. One Subplot
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#many-subplots-horizontal-layout">
+     3.2.2. Many Subplots - Horizontal Layout
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multiple-subplots-grid-layout">
+     3.2.3. Multiple Subplots - Grid Layout
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gridspec">
+     3.2.4. Gridspec
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adding-data-to-specific-subplots">
+   3.3. Adding data to specific subplots
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-single-plot">
+     3.3.1. A single plot
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multiple-plots">
+     3.3.2. Multiple plots
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modifying-elements-of-a-plot">
+   3.4. Modifying elements of a plot
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#axes-labels-and-title">
+     3.4.1. Axes’ labels and title
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#axes-ranges-ticks-and-tick-labels">
+     3.4.2. Axes’ ranges, ticks and tick labels
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#axis-scale">
+     3.4.3. Axis’ scale
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#zooming-in-out-in-a-plot">
+     3.4.4. Zooming in/out in a plot
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#color-maps">
+     3.4.5. Color Maps
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#legend-position-and-title">
+     3.4.6. Legend position and title
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#figure-title">
+     3.4.7. Figure Title
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#layout-of-subplots">
+     3.4.8. Layout of Subplots
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#axis-label-position-and-colorbars">
+     3.4.9. Axis label position and colorbars
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#little-plotting-exercise">
+   3.5. Little Plotting Exercise
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Customizing plots with Matplotlib</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#environment-setup">
+   3.1. Environment setup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-figures-and-subplots">
+   3.2. Creating figures and subplots
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#one-subplot">
+     3.2.1. One Subplot
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#many-subplots-horizontal-layout">
+     3.2.2. Many Subplots - Horizontal Layout
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multiple-subplots-grid-layout">
+     3.2.3. Multiple Subplots - Grid Layout
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gridspec">
+     3.2.4. Gridspec
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adding-data-to-specific-subplots">
+   3.3. Adding data to specific subplots
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-single-plot">
+     3.3.1. A single plot
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multiple-plots">
+     3.3.2. Multiple plots
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modifying-elements-of-a-plot">
+   3.4. Modifying elements of a plot
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#axes-labels-and-title">
+     3.4.1. Axes’ labels and title
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#axes-ranges-ticks-and-tick-labels">
+     3.4.2. Axes’ ranges, ticks and tick labels
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#axis-scale">
+     3.4.3. Axis’ scale
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#zooming-in-out-in-a-plot">
+     3.4.4. Zooming in/out in a plot
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#color-maps">
+     3.4.5. Color Maps
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#legend-position-and-title">
+     3.4.6. Legend position and title
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#figure-title">
+     3.4.7. Figure Title
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#layout-of-subplots">
+     3.4.8. Layout of Subplots
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#axis-label-position-and-colorbars">
+     3.4.9. Axis label position and colorbars
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#little-plotting-exercise">
+   3.5. Little Plotting Exercise
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="customizing-plots-with-matplotlib">
+<h1><span class="section-number">3. </span>Customizing plots with Matplotlib<a class="headerlink" href="#customizing-plots-with-matplotlib" title="Permalink to this headline">#</a></h1>
+<p>While <em>seaborn</em> generates good-looking figures out of the box, most of the time we need to introduce some adjustments. You saw already in the previous chapters that we were relabeling axes and adjusting their range or ticks. In order to do all of this customization, we rely on calling <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> functions directly. Here, we will review some basic concepts of matplotlib figures and see how to adjust their certain elements to our liking.</p>
+<p>The two most important concepts to be aware of when using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> are the <strong>figure</strong> and <strong>axes</strong> objects:</p>
+<ul class="simple">
+<li><p><strong>axes</strong> (also referred to as subplots): the area where we plot the data; has an x- and y-axis which contain ticks, tick locations, labels and other elements</p></li>
+<li><p><strong>figure</strong>: the overall window/page where everything is drawn on; can contain multiple axes (subplots) organized in a form of a grid</p></li>
+</ul>
+<p><strong>Before you begin</strong>: Be sure to check out the official matplotlib cheat sheet (available <a class="reference external" href="https://matplotlib.org/cheatsheets/cheatsheets.pdf">here</a>) - it outlines all of the most useful functionalities discussed below and more!</p>
+<section id="environment-setup">
+<h2><span class="section-number">3.1. </span>Environment setup<a class="headerlink" href="#environment-setup" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="o">%</span><span class="k">config</span> InlineBackend.figure_format=&#39;svg&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="creating-figures-and-subplots">
+<h2><span class="section-number">3.2. </span>Creating figures and subplots<a class="headerlink" href="#creating-figures-and-subplots" title="Permalink to this headline">#</a></h2>
+<p>Let’s see now how to create a figure and its axes. Note: the following examples don’t have any data shown on the (sub)plots - this is to only show you how to create and refer to figures with one or more axes.</p>
+<p>Documentation you might want to check for further information:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://matplotlib.org/stable/gallery/subplots_axes_and_figures/subplots_demo.html">tutorial on creating multiple sublots</a></p></li>
+</ul>
+<section id="one-subplot">
+<h3><span class="section-number">3.2.1. </span>One Subplot<a class="headerlink" href="#one-subplot" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/03_matplotlib_manipulations_7_0.svg" src="../_images/03_matplotlib_manipulations_7_0.svg" /></div>
+</div>
+</section>
+<section id="many-subplots-horizontal-layout">
+<h3><span class="section-number">3.2.2. </span>Many Subplots - Horizontal Layout<a class="headerlink" href="#many-subplots-horizontal-layout" title="Permalink to this headline">#</a></h3>
+<p>We can create multiple subplots by using the function <code class="docutils literal notranslate"><span class="pre">subplot</span></code> of <em>pyplot</em>  module in <em>matplotlib</em>. Here we specify the size of the figure by passing a tuple in the form <code class="docutils literal notranslate"><span class="pre">(width,</span> <span class="pre">height)</span></code> to the <code class="docutils literal notranslate"><span class="pre">figsize</span></code> parameter. In addition, the <code class="docutils literal notranslate"><span class="pre">nrows</span></code> and <code class="docutils literal notranslate"><span class="pre">ncols</span></code> specify how many rows and how many columns the figure should have.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">4</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/03_matplotlib_manipulations_10_0.svg" src="../_images/03_matplotlib_manipulations_10_0.svg" /></div>
+</div>
+</section>
+<section id="multiple-subplots-grid-layout">
+<h3><span class="section-number">3.2.3. </span>Multiple Subplots - Grid Layout<a class="headerlink" href="#multiple-subplots-grid-layout" title="Permalink to this headline">#</a></h3>
+<p>Here we can see an example where, instead of specifying the width and height of the figure, we specify the aspect ratio by setting <code class="docutils literal notranslate"><span class="pre">figsize</span> <span class="pre">=</span> <span class="pre">plt.figaspect(aspect_ratio)</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figaspect</span><span class="p">(</span><span class="mf">0.4</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/03_matplotlib_manipulations_13_0.svg" src="../_images/03_matplotlib_manipulations_13_0.svg" /></div>
+</div>
+</section>
+<section id="gridspec">
+<h3><span class="section-number">3.2.4. </span>Gridspec<a class="headerlink" href="#gridspec" title="Permalink to this headline">#</a></h3>
+<p>Sometimes we may need a grid of plots where some subplots should span multiple rows or columns. The code below shows how to do this using a <code class="docutils literal notranslate"><span class="pre">gridspec</span></code>. Below you will find two examples: a vertical and a horizontal alignment. After creating the <code class="docutils literal notranslate"><span class="pre">GridSpec</span></code> object (line 5), we remove the subplots corresponding to the location of the subplot that will span some rows and some columns. The removal is done by specifying the correct rows and columns in the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop (line 7). Then, we need to add the subplot in the place of the removed subplots. We do this using the function <code class="docutils literal notranslate"><span class="pre">fig.add_subplot(gs[rows,</span> <span class="pre">columns])</span></code>, where <code class="docutils literal notranslate"><span class="pre">gs</span></code> is the Gridspace object created at the beginning. Note that <code class="docutils literal notranslate"><span class="pre">rows</span></code> and <code class="docutils literal notranslate"><span class="pre">columns</span></code> passed to the <code class="docutils literal notranslate"><span class="pre">gs</span></code> should correspond to the locations of the axes that we removed in the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop. Finally, we use the <code class="docutils literal notranslate"><span class="pre">annotate</span></code> method to add text to the subplot that spans some rows/columns.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># vertical alignment</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">ncols</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+
+<span class="c1"># GridSpec object starting at row 1 column 2</span>
+<span class="n">gs</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">get_gridspec</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">ax</span> <span class="ow">in</span> <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
+<span class="n">big_ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">gs</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">big_ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span>
+    <span class="s1">&#39;Big Axes </span><span class="se">\n</span><span class="s1">GridSpec[1:, -1]&#39;</span><span class="p">,</span> <span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span>
+    <span class="n">xycoords</span><span class="o">=</span><span class="s1">&#39;axes fraction&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span>
+<span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/03_matplotlib_manipulations_16_0.svg" src="../_images/03_matplotlib_manipulations_16_0.svg" /></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># horizontal alignment</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">ncols</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+
+<span class="c1"># GridSpec object starting at row 1 column 2</span>
+<span class="n">gs</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">get_gridspec</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">ax</span> <span class="ow">in</span> <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
+<span class="n">ax_big</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">gs</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">ax_big</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span>
+    <span class="s1">&#39;Big Axes </span><span class="se">\n</span><span class="s1">GridSpec[1:, :-1]&#39;</span><span class="p">,</span> <span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span>
+    <span class="n">xycoords</span><span class="o">=</span><span class="s1">&#39;axes fraction&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span>
+<span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/03_matplotlib_manipulations_17_0.svg" src="../_images/03_matplotlib_manipulations_17_0.svg" /></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p><strong>axes</strong>: the area where we plot the data; has an x- and y-axis which contain ticks, tick locations, labels and other elements</p></li>
+<li><p><strong>figure</strong>: the overall window/page where everything is drawn on; can contain multiple axes (subplots) organized in a form of a grid</p></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="adding-data-to-specific-subplots">
+<h2><span class="section-number">3.3. </span>Adding data to specific subplots<a class="headerlink" href="#adding-data-to-specific-subplots" title="Permalink to this headline">#</a></h2>
+<p>When you use <em>seaborn</em>, it will automatically create axes and figures for you so you don’t need to do any of the above. However, when you want to have better control over your plots you may want to first create your own figure with the desired properties and then place specific plots in its axes. Let’s generate some data that we will use in the plots later:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="n">x</span><span class="p">,</span>
+    <span class="s1">&#39;y1&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">1.0</span> <span class="o">*</span> <span class="n">x</span><span class="p">),</span>
+    <span class="s1">&#39;y2&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span>
+<span class="p">})</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>x</th>
+      <th>y1</th>
+      <th>y2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.1</td>
+      <td>0.904837</td>
+      <td>0.951229</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.2</td>
+      <td>0.818731</td>
+      <td>0.904837</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.3</td>
+      <td>0.740818</td>
+      <td>0.860708</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.4</td>
+      <td>0.670320</td>
+      <td>0.818731</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.5</td>
+      <td>0.606531</td>
+      <td>0.778801</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<section id="a-single-plot">
+<h3><span class="section-number">3.3.1. </span>A single plot<a class="headerlink" href="#a-single-plot" title="Permalink to this headline">#</a></h3>
+<p>As you can see from the code below, we can create a figure and the corresponding axes and then we connect the <strong>seaborn</strong> plot with the figure and axes created via the <code class="docutils literal notranslate"><span class="pre">ax</span></code> parameter inside the plot method of the <strong>seaborn</strong> library.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;y1&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/03_matplotlib_manipulations_24_0.svg" src="../_images/03_matplotlib_manipulations_24_0.svg" /></div>
+</div>
+</section>
+<section id="multiple-plots">
+<h3><span class="section-number">3.3.2. </span>Multiple plots<a class="headerlink" href="#multiple-plots" title="Permalink to this headline">#</a></h3>
+<p>When plotting more than one subplot, <code class="docutils literal notranslate"><span class="pre">axes</span></code> becomes a numpy array with a shape <code class="docutils literal notranslate"><span class="pre">(nrows,</span> <span class="pre">ncols)</span></code>. In this case, we need to select which subplot you want to use and pass this one to the plotting function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;y1&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;y2&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/03_matplotlib_manipulations_27_0.svg" src="../_images/03_matplotlib_manipulations_27_0.svg" /></div>
+</div>
+<p>Below is an example when axes is a 2D array.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">axes_style</span><span class="p">(</span><span class="s2">&quot;darkgrid&quot;</span><span class="p">):</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;y1&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;y2&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;y1&#39;</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;y2&#39;</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/03_matplotlib_manipulations_29_0.svg" src="../_images/03_matplotlib_manipulations_29_0.svg" /></div>
+</div>
+</section>
+</section>
+<section id="modifying-elements-of-a-plot">
+<h2><span class="section-number">3.4. </span>Modifying elements of a plot<a class="headerlink" href="#modifying-elements-of-a-plot" title="Permalink to this headline">#</a></h2>
+<p>As you could see so far, we often need to adjust certain elements of a plot. Most of the attributes that we are usually interested in can be modified directly on the <em>Axes</em> object (the one that you passed to or received from a <em>seaborn</em> plotting function). Adjustments that concern e.g. how subplots relate to one another (like spacing between them) or other ones that have to do with the figure itself (like a figure title) can be set on the <em>Figure</em> object directly.</p>
+<section id="axes-labels-and-title">
+<h3><span class="section-number">3.4.1. </span>Axes’ labels and title<a class="headerlink" href="#axes-labels-and-title" title="Permalink to this headline">#</a></h3>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Relevant documentation:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.set_xlabel.html">axes labels</a></p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.axes.Axes.set_title.html">axes title</a></p></li>
+</ul>
+</div>
+</aside>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;y1&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;This is the new x-label&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Y&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Plot title goes here&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/03_matplotlib_manipulations_34_0.svg" src="../_images/03_matplotlib_manipulations_34_0.svg" /></div>
+</div>
+</section>
+<section id="axes-ranges-ticks-and-tick-labels">
+<h3><span class="section-number">3.4.2. </span>Axes’ ranges, ticks and tick labels<a class="headerlink" href="#axes-ranges-ticks-and-tick-labels" title="Permalink to this headline">#</a></h3>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Relevant documentation:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.set_xlim.html">axes range</a></p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.set_xticks.html">ticks</a></p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.set_xticklabels.html">tick labels</a></p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.tick_params.html">other tick parameters</a></p></li>
+</ul>
+</div>
+</aside>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+
+<span class="c1"># add space between subplots</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">(</span><span class="n">pad</span><span class="o">=</span><span class="mf">4.0</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ax</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">axes</span><span class="p">):</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;y1&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">((</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">))</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">((</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">))</span>
+
+    <span class="n">xticks</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">2.1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">xticks</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">&#39;major&#39;</span><span class="p">,</span> <span class="n">bottom</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">&#39;major&#39;</span><span class="p">,</span> <span class="n">left</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">xtick_labels</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;x=</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xticks</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">xtick_labels</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+        <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Horizontal Labels&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">xtick_labels</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+        <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Rotated Labels&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/03_matplotlib_manipulations_37_0.svg" src="../_images/03_matplotlib_manipulations_37_0.svg" /></div>
+</div>
+</section>
+<section id="axis-scale">
+<h3><span class="section-number">3.4.3. </span>Axis’ scale<a class="headerlink" href="#axis-scale" title="Permalink to this headline">#</a></h3>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Relevant documentation:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.set_xscale.html">axis scale</a></p></li>
+</ul>
+</div>
+</aside>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;y1&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+
+<span class="c1"># set x-axis to logarithmic scale</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/03_matplotlib_manipulations_40_0.svg" src="../_images/03_matplotlib_manipulations_40_0.svg" /></div>
+</div>
+</section>
+<section id="zooming-in-out-in-a-plot">
+<h3><span class="section-number">3.4.4. </span>Zooming in/out in a plot<a class="headerlink" href="#zooming-in-out-in-a-plot" title="Permalink to this headline">#</a></h3>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Relevant documentation:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.margins.html">margins</a></p></li>
+</ul>
+</div>
+</aside>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the function that will be plotted</span>
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+<span class="n">axis1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">212</span><span class="p">)</span>
+<span class="n">axis1</span><span class="o">.</span><span class="n">margins</span><span class="p">()</span> <span class="c1"># Default margin is 0.05</span>
+<span class="n">axis1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">axis1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Normal&#39;</span><span class="p">)</span>
+
+<span class="n">axis2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">221</span><span class="p">)</span>
+<span class="c1"># zoom out on both coordinates by a factor of 0.25</span>
+<span class="n">axis2</span><span class="o">.</span><span class="n">margins</span><span class="p">(</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">)</span>
+<span class="n">axis2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">axis2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Zoomed out&#39;</span><span class="p">)</span>
+
+<span class="n">axis3</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">222</span><span class="p">)</span>
+<span class="c1"># zoom in on both coordinates by a factor of 0.25</span>
+<span class="n">axis3</span><span class="o">.</span><span class="n">margins</span><span class="p">(</span><span class="o">-</span><span class="mf">0.25</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="n">axis3</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">axis3</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Zoomed in&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">(</span><span class="n">pad</span><span class="o">=</span><span class="mf">2.0</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/03_matplotlib_manipulations_43_0.svg" src="../_images/03_matplotlib_manipulations_43_0.svg" /></div>
+</div>
+</section>
+<section id="color-maps">
+<h3><span class="section-number">3.4.5. </span>Color Maps<a class="headerlink" href="#color-maps" title="Permalink to this headline">#</a></h3>
+<p>There are many ways to specify colors when plotting. You can either use <a class="reference external" href="https://seaborn.pydata.org/tutorial/color_palettes.html"><em>color palettes</em></a> from the seaborn package or <a class="reference external" href="https://matplotlib.org/stable/tutorials/colors/colormaps.html"><em>color maps</em></a> from the matplotlib library. Below you will find some examples of how to apply both. Please consult respective documentation for more details on both approaches (see links below).</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Relevant documentation:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://seaborn.pydata.org/tutorial/color_palettes.html">seaborn’s color palettes</a></p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/stable/tutorials/colors/colormaps.html">matplotlib’s color maps</a></p></li>
+</ul>
+</div>
+</aside>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we can use seaborn&#39;s built in color palettes </span>
+<span class="c1"># https://seaborn.pydata.org/tutorial/color_palettes.html</span>
+
+<span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">axes_style</span><span class="p">(</span><span class="s2">&quot;darkgrid&quot;</span><span class="p">):</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+    
+    <span class="n">colors</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s2">&quot;rocket&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
+        <span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span>
+            <span class="n">x</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;y1&#39;</span><span class="p">]</span><span class="o">**</span><span class="n">i</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> 
+            <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;i=</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="o">-</span><span class="n">i</span><span class="p">]</span>
+        <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/03_matplotlib_manipulations_46_0.svg" src="../_images/03_matplotlib_manipulations_46_0.svg" /></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># alternatively, we can use matplotlib&#39;s color maps </span>
+<span class="c1"># https://matplotlib.org/stable/tutorials/colors/colormaps.html</span>
+
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">cm</span>
+
+<span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">axes_style</span><span class="p">(</span><span class="s2">&quot;darkgrid&quot;</span><span class="p">):</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+    
+    <span class="n">colors</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s1">&#39;plasma&#39;</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span><span class="o">.</span><span class="n">colors</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
+        <span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span>
+            <span class="n">x</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;y1&#39;</span><span class="p">]</span><span class="o">**</span><span class="n">i</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> 
+            <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;i=</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/03_matplotlib_manipulations_47_0.svg" src="../_images/03_matplotlib_manipulations_47_0.svg" /></div>
+</div>
+</section>
+<section id="legend-position-and-title">
+<h3><span class="section-number">3.4.6. </span>Legend position and title<a class="headerlink" href="#legend-position-and-title" title="Permalink to this headline">#</a></h3>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Relevant documentation:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.legend.html">legend</a></p></li>
+</ul>
+</div>
+</aside>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">axes_style</span><span class="p">(</span><span class="s2">&quot;whitegrid&quot;</span><span class="p">):</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+    
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
+        <span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;y1&#39;</span><span class="p">]</span><span class="o">**</span><span class="n">i</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;i=</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        
+    <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span>
+        <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center left&#39;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span> 
+        <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">title_fontsize</span><span class="o">=</span><span class="mi">14</span>
+    <span class="p">)</span>
+    <span class="n">legend</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_legend</span><span class="p">()</span>
+    <span class="n">legend</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Magical parameter&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/03_matplotlib_manipulations_50_0.svg" src="../_images/03_matplotlib_manipulations_50_0.svg" /></div>
+</div>
+</section>
+<section id="figure-title">
+<h3><span class="section-number">3.4.7. </span>Figure Title<a class="headerlink" href="#figure-title" title="Permalink to this headline">#</a></h3>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Relevant documentation:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.suptitle.html">figure title</a></p></li>
+</ul>
+</div>
+</aside>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;y1&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;y2&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="c1"># we can add title to individual subplots</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ax</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">axes</span><span class="p">):</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Measurement </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="c1"># but also to the entire figure</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Important measurements&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/03_matplotlib_manipulations_53_0.svg" src="../_images/03_matplotlib_manipulations_53_0.svg" /></div>
+</div>
+</section>
+<section id="layout-of-subplots">
+<h3><span class="section-number">3.4.8. </span>Layout of Subplots<a class="headerlink" href="#layout-of-subplots" title="Permalink to this headline">#</a></h3>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Relevant documentation:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.tight_layout.html">tight layout function</a></p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/stable/tutorials/intermediate/tight_layout_guide.html#sphx-glr-tutorials-intermediate-tight-layout-guide-py">tight layout complete guide</a></p></li>
+</ul>
+</div>
+</aside>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;y1&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;y2&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="c1"># we can adjust spacing between individual subplots</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">(</span><span class="n">w_pad</span><span class="o">=</span><span class="mi">10</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/03_matplotlib_manipulations_56_0.svg" src="../_images/03_matplotlib_manipulations_56_0.svg" /></div>
+</div>
+</section>
+<section id="axis-label-position-and-colorbars">
+<h3><span class="section-number">3.4.9. </span>Axis label position and colorbars<a class="headerlink" href="#axis-label-position-and-colorbars" title="Permalink to this headline">#</a></h3>
+<p>Here we create a scatterplot out of a dataset with two points (1,1), (2,2). The argument <code class="docutils literal notranslate"><span class="pre">c</span></code> encodes the color of each of the points.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Relevant documentation:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://matplotlib.org/stable/gallery/subplots_axes_and_figures/axis_labels_demo.html">axis label position and colorbars</a></p></li>
+</ul>
+</div>
+</aside>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="n">sc</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mf">2.2</span><span class="p">,</span> <span class="mf">2.7</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">cbar</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">sc</span><span class="p">)</span>
+<span class="n">cbar</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s2">&quot;z&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/03_matplotlib_manipulations_59_0.svg" src="../_images/03_matplotlib_manipulations_59_0.svg" /></div>
+</div>
+</section>
+</section>
+<section id="little-plotting-exercise">
+<h2><span class="section-number">3.5. </span>Little Plotting Exercise<a class="headerlink" href="#little-plotting-exercise" title="Permalink to this headline">#</a></h2>
+<p>Time for a small exercise! It will allow you to practice some of the concepts we introduced in the chapters. We will use one of seaborn’s built-in datasets to create a simple visualization and customize it to our liking. The dataset contains diamond prices for approx. 54k diamonds with different properties.</p>
+<p>For the sake of this exercise we are only interested in three columns of this dataset: carat, price and cut. Your task is to:</p>
+<ul class="simple">
+<li><p>create a <strong>square</strong> scatter plot depicting the dependence of the price on the carat value</p></li>
+<li><p>adjust the <strong>axes labels</strong> to be capitalized and with an appropriate font size</p></li>
+<li><p>give the plot an appropriate <strong>title</strong></p></li>
+<li><p>if not present, add <strong>major ticks</strong> to both axes</p></li>
+<li><p>change the <strong>transparency</strong> of the points to 0.2 (look out for an alpha parameter)</p></li>
+<li><p>change the <strong>color</strong> of the points to your favourite one</p></li>
+</ul>
+<p><strong>Bonus</strong>: Create one plot where diamonds of ‘cut’ == ‘ideal’ are plotted with a different colour then all the other ones. Hint: you can create two dataframes with the two sub-datasets and plot both on the same ax (you can just call the plotting function twice, passing the same ax to both).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diamonds</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s2">&quot;diamonds&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diamonds</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>carat</th>
+      <th>cut</th>
+      <th>color</th>
+      <th>clarity</th>
+      <th>depth</th>
+      <th>table</th>
+      <th>price</th>
+      <th>x</th>
+      <th>y</th>
+      <th>z</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.23</td>
+      <td>Ideal</td>
+      <td>E</td>
+      <td>SI2</td>
+      <td>61.5</td>
+      <td>55.0</td>
+      <td>326</td>
+      <td>3.95</td>
+      <td>3.98</td>
+      <td>2.43</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.21</td>
+      <td>Premium</td>
+      <td>E</td>
+      <td>SI1</td>
+      <td>59.8</td>
+      <td>61.0</td>
+      <td>326</td>
+      <td>3.89</td>
+      <td>3.84</td>
+      <td>2.31</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.23</td>
+      <td>Good</td>
+      <td>E</td>
+      <td>VS1</td>
+      <td>56.9</td>
+      <td>65.0</td>
+      <td>327</td>
+      <td>4.05</td>
+      <td>4.07</td>
+      <td>2.31</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.29</td>
+      <td>Premium</td>
+      <td>I</td>
+      <td>VS2</td>
+      <td>62.4</td>
+      <td>58.0</td>
+      <td>334</td>
+      <td>4.20</td>
+      <td>4.23</td>
+      <td>2.63</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.31</td>
+      <td>Good</td>
+      <td>J</td>
+      <td>SI2</td>
+      <td>63.3</td>
+      <td>58.0</td>
+      <td>335</td>
+      <td>4.34</td>
+      <td>4.35</td>
+      <td>2.75</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>To reveal the code solution and see what the plot could look like, unfold the cells below:</p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ideal</span> <span class="o">=</span> <span class="n">diamonds</span><span class="p">[</span><span class="n">diamonds</span><span class="p">[</span><span class="s1">&#39;cut&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Ideal&#39;</span><span class="p">]</span>
+<span class="n">other</span> <span class="o">=</span> <span class="n">diamonds</span><span class="p">[</span><span class="n">diamonds</span><span class="p">[</span><span class="s1">&#39;cut&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;Ideal&#39;</span><span class="p">]</span>
+
+<span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">axes_style</span><span class="p">(</span><span class="s2">&quot;white&quot;</span><span class="p">):</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+    <span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">other</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;carat&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;price&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;darkgrey&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">ideal</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;carat&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;price&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;royalblue&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Carat&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Price [USD]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Diamond prices&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+
+    <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">&#39;major&#39;</span><span class="p">,</span> <span class="n">bottom</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">left</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/03_matplotlib_manipulations_65_0.svg" src="../_images/03_matplotlib_manipulations_65_0.svg" /></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="02_chart_types.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">2. </span>Chart types using Seaborn</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="04_dimensionality_reduction.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Dimensionality reduction</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Dr. Michal Ziemski and Doriela Grabocka<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

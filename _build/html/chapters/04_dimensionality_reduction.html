@@ -1,0 +1,1538 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>4. Dimensionality reduction &#8212; Data Visualization for Food Scientists</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/general.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/ethfavico.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5. DO’s and DON’Ts of data visualization" href="05_dos.html" />
+    <link rel="prev" title="3. Customizing plots with Matplotlib" href="03_matplotlib_manipulations.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/eth_logo.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Data Visualization for Food Scientists</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="00_intro.html">
+                    Data Visualization for Food Scientists
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_importance_of_data_vis.html">
+   1. Importance of data visualization
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_chart_types.html">
+   2. Chart types using Seaborn
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_matplotlib_manipulations.html">
+   3. Customizing plots with Matplotlib
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   4. Dimensionality reduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05_dos.html">
+   5. DO’s and DON’Ts of data visualization
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06_tutorial.html">
+   6. Tutorial: sample dataset
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="exercises/01_intro.html">
+   7. Exercises
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exercises/02_exercises.html">
+     7.1. Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exercises/03_solutions.html">
+     7.2. Solutions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08_bibliography.html">
+   8. References
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/bokulich-lab/DataVis_JB/main?urlpath=tree/docs/chapters/04_dimensionality_reduction.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/bokulich-lab/DataVis_JB"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/bokulich-lab/DataVis_JB/issues/new?title=Issue%20on%20page%20%2Fchapters/04_dimensionality_reduction.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/chapters/04_dimensionality_reduction.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#environment-setup">
+   4.1. Environment setup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dataset-pre-processing">
+   4.2. Dataset pre-processing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#principal-component-analysis-pca">
+   4.3. Principal Component Analysis (PCA)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#t-distributed-stochastic-neighbor-embedding-tsne">
+   4.4. t-Distributed Stochastic Neighbor Embedding (tSNE)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#uniform-approximation-and-projection-umap">
+   4.5. Uniform Approximation and Projection (UMAP)
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Dimensionality reduction</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#environment-setup">
+   4.1. Environment setup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dataset-pre-processing">
+   4.2. Dataset pre-processing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#principal-component-analysis-pca">
+   4.3. Principal Component Analysis (PCA)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#t-distributed-stochastic-neighbor-embedding-tsne">
+   4.4. t-Distributed Stochastic Neighbor Embedding (tSNE)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#uniform-approximation-and-projection-umap">
+   4.5. Uniform Approximation and Projection (UMAP)
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="dimensionality-reduction">
+<h1><span class="section-number">4. </span>Dimensionality reduction<a class="headerlink" href="#dimensionality-reduction" title="Permalink to this headline">#</a></h1>
+<p>One of the first and most important steps of analyzing any dataset is visualizing it. However, most of the time datasets which we analyze on a daily basis have more than three dimensions (i.e., they have more than 3 variables; e.g., RNA/DNA sequencing datasets). Human brain is not very good at visualizing data in more than three dimensions. It is very difficult to understand any potential structure of the data because it is impossible to visualize a multi-dimensional hyperplane. However, this does not mean that there is no escape from the <a class="reference external" href="https://en.wikipedia.org/wiki/Curse_of_dimensionality">“Curse of Dimensionality”</a>, as this problem is referred to in the machine learning domain. To circumvent this issue, we can apply certain techniques which have the ability to transform a highly dimensional dataset with thousands of features to a new one with 2, 3 or as many features as are needed. The most fascinating part is that they can do  this by retaining the most important information that the highly-dimensional dataset conveys. Below we will explore some of the most used dimensionality reduction techniques in the <a class="reference external" href="https://doi.org/10.24432/C56S3T">Wine Quality dataset taken from UC Irvine Machine Learning Repository</a>.</p>
+<section id="environment-setup">
+<h2><span class="section-number">4.1. </span>Environment setup<a class="headerlink" href="#environment-setup" title="Permalink to this headline">#</a></h2>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">from</span> <span class="nn">sklearn.manifold</span> <span class="kn">import</span> <span class="n">TSNE</span>
+<span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
+<span class="kn">from</span> <span class="nn">umap</span> <span class="kn">import</span> <span class="n">UMAP</span>
+
+<span class="c1"># this is to silence pandas&#39; warnings</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+<span class="o">%</span><span class="k">config</span> InlineBackend.figure_format=&#39;svg&#39;
+
+<span class="c1"># for plots&#39; appearance</span>
+<span class="n">FONT_FAMILY</span> <span class="o">=</span> <span class="s1">&#39;DejaVu Sans&#39;</span>
+<span class="n">FONT_SCALE</span> <span class="o">=</span> <span class="mf">1.3</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="dataset-pre-processing">
+<h2><span class="section-number">4.2. </span>Dataset pre-processing<a class="headerlink" href="#dataset-pre-processing" title="Permalink to this headline">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">red_wine</span></code> dataset contains 1599 records and 12 columns. The <code class="docutils literal notranslate"><span class="pre">white_whine</span></code> dataset on the other hand contains 4898 rows and 12 columns.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">red_wine</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/winequality-red.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
+<span class="n">white_wine</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/winequality-white.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
+
+<span class="c1"># add the label to distinguish those in the visualization phase</span>
+<span class="n">red_wine</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span>
+<span class="n">white_wine</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;white&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">red_wine</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>fixed acidity</th>
+      <th>volatile acidity</th>
+      <th>citric acid</th>
+      <th>residual sugar</th>
+      <th>chlorides</th>
+      <th>free sulfur dioxide</th>
+      <th>total sulfur dioxide</th>
+      <th>density</th>
+      <th>pH</th>
+      <th>sulphates</th>
+      <th>alcohol</th>
+      <th>quality</th>
+      <th>label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>7.4</td>
+      <td>0.70</td>
+      <td>0.00</td>
+      <td>1.9</td>
+      <td>0.076</td>
+      <td>11.0</td>
+      <td>34.0</td>
+      <td>0.9978</td>
+      <td>3.51</td>
+      <td>0.56</td>
+      <td>9.4</td>
+      <td>5</td>
+      <td>red</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>7.8</td>
+      <td>0.88</td>
+      <td>0.00</td>
+      <td>2.6</td>
+      <td>0.098</td>
+      <td>25.0</td>
+      <td>67.0</td>
+      <td>0.9968</td>
+      <td>3.20</td>
+      <td>0.68</td>
+      <td>9.8</td>
+      <td>5</td>
+      <td>red</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>7.8</td>
+      <td>0.76</td>
+      <td>0.04</td>
+      <td>2.3</td>
+      <td>0.092</td>
+      <td>15.0</td>
+      <td>54.0</td>
+      <td>0.9970</td>
+      <td>3.26</td>
+      <td>0.65</td>
+      <td>9.8</td>
+      <td>5</td>
+      <td>red</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>11.2</td>
+      <td>0.28</td>
+      <td>0.56</td>
+      <td>1.9</td>
+      <td>0.075</td>
+      <td>17.0</td>
+      <td>60.0</td>
+      <td>0.9980</td>
+      <td>3.16</td>
+      <td>0.58</td>
+      <td>9.8</td>
+      <td>6</td>
+      <td>red</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>7.4</td>
+      <td>0.70</td>
+      <td>0.00</td>
+      <td>1.9</td>
+      <td>0.076</td>
+      <td>11.0</td>
+      <td>34.0</td>
+      <td>0.9978</td>
+      <td>3.51</td>
+      <td>0.56</td>
+      <td>9.4</td>
+      <td>5</td>
+      <td>red</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">red_wine</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1599, 13)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">white_wine</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>fixed acidity</th>
+      <th>volatile acidity</th>
+      <th>citric acid</th>
+      <th>residual sugar</th>
+      <th>chlorides</th>
+      <th>free sulfur dioxide</th>
+      <th>total sulfur dioxide</th>
+      <th>density</th>
+      <th>pH</th>
+      <th>sulphates</th>
+      <th>alcohol</th>
+      <th>quality</th>
+      <th>label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>7.0</td>
+      <td>0.27</td>
+      <td>0.36</td>
+      <td>20.7</td>
+      <td>0.045</td>
+      <td>45.0</td>
+      <td>170.0</td>
+      <td>1.0010</td>
+      <td>3.00</td>
+      <td>0.45</td>
+      <td>8.8</td>
+      <td>6</td>
+      <td>white</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>6.3</td>
+      <td>0.30</td>
+      <td>0.34</td>
+      <td>1.6</td>
+      <td>0.049</td>
+      <td>14.0</td>
+      <td>132.0</td>
+      <td>0.9940</td>
+      <td>3.30</td>
+      <td>0.49</td>
+      <td>9.5</td>
+      <td>6</td>
+      <td>white</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>8.1</td>
+      <td>0.28</td>
+      <td>0.40</td>
+      <td>6.9</td>
+      <td>0.050</td>
+      <td>30.0</td>
+      <td>97.0</td>
+      <td>0.9951</td>
+      <td>3.26</td>
+      <td>0.44</td>
+      <td>10.1</td>
+      <td>6</td>
+      <td>white</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>7.2</td>
+      <td>0.23</td>
+      <td>0.32</td>
+      <td>8.5</td>
+      <td>0.058</td>
+      <td>47.0</td>
+      <td>186.0</td>
+      <td>0.9956</td>
+      <td>3.19</td>
+      <td>0.40</td>
+      <td>9.9</td>
+      <td>6</td>
+      <td>white</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>7.2</td>
+      <td>0.23</td>
+      <td>0.32</td>
+      <td>8.5</td>
+      <td>0.058</td>
+      <td>47.0</td>
+      <td>186.0</td>
+      <td>0.9956</td>
+      <td>3.19</td>
+      <td>0.40</td>
+      <td>9.9</td>
+      <td>6</td>
+      <td>white</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">white_wine</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(4898, 13)
+</pre></div>
+</div>
+</div>
+</div>
+<p>After loading, we will combine them in a single dataset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wine_dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">red_wine</span><span class="p">,</span> <span class="n">white_wine</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wine_dataset</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>fixed acidity</th>
+      <th>volatile acidity</th>
+      <th>citric acid</th>
+      <th>residual sugar</th>
+      <th>chlorides</th>
+      <th>free sulfur dioxide</th>
+      <th>total sulfur dioxide</th>
+      <th>density</th>
+      <th>pH</th>
+      <th>sulphates</th>
+      <th>alcohol</th>
+      <th>quality</th>
+      <th>label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>7.4</td>
+      <td>0.70</td>
+      <td>0.00</td>
+      <td>1.9</td>
+      <td>0.076</td>
+      <td>11.0</td>
+      <td>34.0</td>
+      <td>0.9978</td>
+      <td>3.51</td>
+      <td>0.56</td>
+      <td>9.4</td>
+      <td>5</td>
+      <td>red</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>7.8</td>
+      <td>0.88</td>
+      <td>0.00</td>
+      <td>2.6</td>
+      <td>0.098</td>
+      <td>25.0</td>
+      <td>67.0</td>
+      <td>0.9968</td>
+      <td>3.20</td>
+      <td>0.68</td>
+      <td>9.8</td>
+      <td>5</td>
+      <td>red</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>7.8</td>
+      <td>0.76</td>
+      <td>0.04</td>
+      <td>2.3</td>
+      <td>0.092</td>
+      <td>15.0</td>
+      <td>54.0</td>
+      <td>0.9970</td>
+      <td>3.26</td>
+      <td>0.65</td>
+      <td>9.8</td>
+      <td>5</td>
+      <td>red</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>11.2</td>
+      <td>0.28</td>
+      <td>0.56</td>
+      <td>1.9</td>
+      <td>0.075</td>
+      <td>17.0</td>
+      <td>60.0</td>
+      <td>0.9980</td>
+      <td>3.16</td>
+      <td>0.58</td>
+      <td>9.8</td>
+      <td>6</td>
+      <td>red</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>7.4</td>
+      <td>0.70</td>
+      <td>0.00</td>
+      <td>1.9</td>
+      <td>0.076</td>
+      <td>11.0</td>
+      <td>34.0</td>
+      <td>0.9978</td>
+      <td>3.51</td>
+      <td>0.56</td>
+      <td>9.4</td>
+      <td>5</td>
+      <td>red</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wine_dataset</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(6497, 13)
+</pre></div>
+</div>
+</div>
+</div>
+<p>As you can see, the resulting dataset contains 6497 rows and 13 columns, the total of white and red wine rows. Now we are ready to apply dimensionality reduction techniques to visualize this data. There are 13 features (one of which is the label which we will keep for visualizing), which we are going to reduce to 2 (excluding the label, which we are keeping for visualization later on).</p>
+<p><strong>NOTE:</strong> Since some of the methods rely on calculating distances between points in the dataset, we first scale all the attributes using <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html">StandardScaler</a> from scikit learn, so that all dimensions will have the same importance when calculating the low dimensional values.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>StandardScaler will remove the mean from each point and scale it to unit variance.</p>
+</div>
+</aside>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sc</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
+<span class="n">wine_scaled</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">wine_dataset</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="c1"># show the output of some columns after scaling</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">wine_scaled</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">wine_dataset</span><span class="o">.</span><span class="n">columns</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>fixed acidity</th>
+      <th>volatile acidity</th>
+      <th>citric acid</th>
+      <th>residual sugar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.142473</td>
+      <td>2.188833</td>
+      <td>-2.192833</td>
+      <td>-0.744778</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.451036</td>
+      <td>3.282235</td>
+      <td>-2.192833</td>
+      <td>-0.597640</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.451036</td>
+      <td>2.553300</td>
+      <td>-1.917553</td>
+      <td>-0.660699</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3.073817</td>
+      <td>-0.362438</td>
+      <td>1.661085</td>
+      <td>-0.744778</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.142473</td>
+      <td>2.188833</td>
+      <td>-2.192833</td>
+      <td>-0.744778</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>We will not focus here on how any of the dimensionality reduction techniques actually achieve the reduction of dataset complexity. For more formal mathematical information and insights please refer to <a class="reference external" href="https://en.wikipedia.org/wiki/Dimensionality_reduction">this Wikipedia</a> article about PCA, tSNE, UMAP and other dimensionality reduction techniques.</p>
+</div>
+</section>
+<section id="principal-component-analysis-pca">
+<h2><span class="section-number">4.3. </span>Principal Component Analysis (PCA)<a class="headerlink" href="#principal-component-analysis-pca" title="Permalink to this headline">#</a></h2>
+<p>Principal Component Analysis (PCA) is a technique that allows projection of data from a highly dimensional space to a low dimensional one. PCA is very helpful for visualizations because it helps us reduce a dataset from many to 2 or 3 dimensions by retaining most of the information present and then visualize it. Usually, after applying PCA the most uncorrelated features are retained - the algorithm finds the features that give the most information about the data. Below we will see how we can apply PCA to our wine dataset.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For more information please refer to: <a class="reference external" href="https://towardsdatascience.com/principal-component-analysis-for-dimensionality-reduction-115a3d157bad">PCA</a>.</p>
+</div>
+</aside>
+<p>As explained above, we input the scaled data to the PCA algorithm:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">pca_components</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="n">pca</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">wine_scaled</span><span class="p">),</span> 
+    <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;dim_1&#39;</span><span class="p">,</span> <span class="s1">&#39;dim_2&#39;</span><span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pca_components</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dim_1</th>
+      <th>dim_2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-3.348438</td>
+      <td>0.568926</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>-3.228595</td>
+      <td>1.197335</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-3.237468</td>
+      <td>0.952580</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>-1.672561</td>
+      <td>1.600583</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>-3.348438</td>
+      <td>0.568926</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">labels</span> <span class="o">=</span> <span class="n">wine_dataset</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">low_dimensional_data_pca</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">pca_components</span><span class="p">,</span> <span class="n">labels</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">low_dimensional_data_pca</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;index&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dim_1</th>
+      <th>dim_2</th>
+      <th>label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-3.348438</td>
+      <td>0.568926</td>
+      <td>red</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>-3.228595</td>
+      <td>1.197335</td>
+      <td>red</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-3.237468</td>
+      <td>0.952580</td>
+      <td>red</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>-1.672561</td>
+      <td>1.600583</td>
+      <td>red</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>-3.348438</td>
+      <td>0.568926</td>
+      <td>red</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Now, we are ready to see how the dataset looks in 2 dimensions. As a reminder, we started with a dataset comprised of 12 features, excluding the labels. Using PCA we compressed the same dataset in 2 features. Below, the dataset shows how the records mapped in the 2D coordinate system look like. The number of dimensions is a parameter that we can freely choose for the model - we picked 2 dimensions as it is easier for people to perceive things in 2 or 3 dimensions.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span>
+    <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">:(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> 
+        <span class="s1">&#39;font.family&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">FONT_FAMILY</span><span class="p">]},</span> 
+    <span class="n">style</span><span class="o">=</span><span class="s1">&#39;white&#39;</span>
+<span class="p">)</span>
+<span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">plotting_context</span><span class="p">(</span><span class="s2">&quot;notebook&quot;</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="n">FONT_SCALE</span><span class="p">):</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span>
+        <span class="n">data</span><span class="o">=</span><span class="n">low_dimensional_data_pca</span><span class="p">,</span>
+        <span class="n">x</span><span class="o">=</span><span class="s1">&#39;dim_1&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;dim_2&#39;</span><span class="p">,</span>
+        <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;label&#39;</span><span class="p">,</span>
+        <span class="n">palette</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;crimson&#39;</span><span class="p">,</span> <span class="s1">&#39;royalblue&#39;</span><span class="p">]</span>
+    <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;PCA embeddings&#39;</span><span class="p">)</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">move_legend</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="s2">&quot;center left&quot;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/04_dimensionality_reduction_26_0.svg" src="../_images/04_dimensionality_reduction_26_0.svg" /></div>
+</div>
+<p>As we can see from the plot, the two types of wine are clearly separated, with a little overlap.</p>
+</section>
+<section id="t-distributed-stochastic-neighbor-embedding-tsne">
+<h2><span class="section-number">4.4. </span>t-Distributed Stochastic Neighbor Embedding (tSNE)<a class="headerlink" href="#t-distributed-stochastic-neighbor-embedding-tsne" title="Permalink to this headline">#</a></h2>
+<p>t-SNE, just like PCA is another dimensionality reduction technique. However, while PCA tries to put differing points further apart, tSNE focuses on bringing similiar points closer to one another. In addition, tSNE does not preserve inter-cluster distances.</p>
+<p>Now, let us apply t-SNE and see how it will represent the data in the low-dimensional space. Again, distances between points have to be calculated, so we input the scaled version of the dataset to the tSNE object. Next to the <code class="docutils literal notranslate"><span class="pre">n_components</span></code> hyperparameter, there is another parameter that can be tuned, the <code class="docutils literal notranslate"><span class="pre">perplexity</span></code>. It determines the number of neighbors that should be considered when calculating the distance for each point in the dataset (by default, <code class="docutils literal notranslate"><span class="pre">euclidian</span> <span class="pre">distance</span></code> is used). The more data points there are, the highest the perplexity should be. The default is 30.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For more information please refer to: <a class="reference external" href="https://towardsdatascience.com/an-introduction-to-t-sne-with-python-example-5a3a293108d1">tSNE</a>.</p>
+</div>
+</aside>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tsne</span> <span class="o">=</span> <span class="n">TSNE</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">perplexity</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">tsne_components</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">tsne</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">wine_scaled</span><span class="p">),</span> 
+    <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;dim_1&#39;</span><span class="p">,</span> <span class="s1">&#39;dim_2&#39;</span><span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>After t-SNE calculates the components, we need to concatenate the returned DataFrame with the labels to be able to visualize it:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">low_dimensional_data_tsne</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">tsne_components</span><span class="p">,</span> <span class="n">labels</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">low_dimensional_data_tsne</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dim_1</th>
+      <th>dim_2</th>
+      <th>index</th>
+      <th>label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-30.355177</td>
+      <td>-28.724136</td>
+      <td>0</td>
+      <td>red</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>-32.999695</td>
+      <td>-42.039455</td>
+      <td>1</td>
+      <td>red</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-33.256638</td>
+      <td>-41.566692</td>
+      <td>2</td>
+      <td>red</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>-68.207123</td>
+      <td>-55.761543</td>
+      <td>3</td>
+      <td>red</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>-30.355394</td>
+      <td>-28.724407</td>
+      <td>4</td>
+      <td>red</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Now, time to visualize the findings:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span>
+    <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">:(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> 
+        <span class="s1">&#39;font.family&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">FONT_FAMILY</span><span class="p">]},</span> 
+    <span class="n">style</span><span class="o">=</span><span class="s1">&#39;white&#39;</span>
+<span class="p">)</span>
+<span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">plotting_context</span><span class="p">(</span><span class="s2">&quot;notebook&quot;</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="n">FONT_SCALE</span><span class="p">):</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">low_dimensional_data_tsne</span><span class="p">,</span>
+        <span class="n">x</span><span class="o">=</span><span class="s1">&#39;dim_1&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;dim_2&#39;</span><span class="p">,</span> 
+        <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;label&#39;</span><span class="p">,</span>
+        <span class="n">palette</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;crimson&#39;</span><span class="p">,</span> <span class="s1">&#39;royalblue&#39;</span><span class="p">]</span>
+    <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;tSNE embeddings&#39;</span><span class="p">)</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">move_legend</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="s2">&quot;center left&quot;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/04_dimensionality_reduction_34_0.svg" src="../_images/04_dimensionality_reduction_34_0.svg" /></div>
+</div>
+<p>In this case, t-SNE has separated the two groups of wine although there are some points that are on the wrong side. In additiion, we see that the low dimensional data is more spread now.</p>
+</section>
+<section id="uniform-approximation-and-projection-umap">
+<h2><span class="section-number">4.5. </span>Uniform Approximation and Projection (UMAP)<a class="headerlink" href="#uniform-approximation-and-projection-umap" title="Permalink to this headline">#</a></h2>
+<p>UMAP is the third dimensionality reduction method that we are going to explore. Usually it performs better then t-SNE for large datasets and it is known for preserving the global structure of the clusters as well as the inter-cluster distances.</p>
+<p>The hyperparameters that can be set by us here are <code class="docutils literal notranslate"><span class="pre">n_components</span></code>, <code class="docutils literal notranslate"><span class="pre">n_neighbors</span></code> and <code class="docutils literal notranslate"><span class="pre">min_dist</span></code> (although we do not tune this here). The <code class="docutils literal notranslate"><span class="pre">n_components</span></code>, as in PCA and t-SNE, determines the number of dimensions in the low dimensional space. The <code class="docutils literal notranslate"><span class="pre">n_neighbors</span></code> is the number of neighbors that should be considered when calculating the distances. In order to have deterministic results we pass the <code class="docutils literal notranslate"><span class="pre">random_state=0</span></code>. Since the algorithm deals with distances, again the data that we pass to it is scaled using a StandardScaler object.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For more information please refer to: <a class="reference external" href="https://towardsdatascience.com/umap-dimensionality-reduction-an-incredibly-robust-machine-learning-algorithm-b5acb01de568">UMAP</a>.</p>
+</div>
+</aside>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">umap</span> <span class="o">=</span> <span class="n">UMAP</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">n_neighbors</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">umap_components</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">umap</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">wine_scaled</span><span class="p">),</span> 
+    <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;dim_1&#39;</span><span class="p">,</span> <span class="s1">&#39;dim_2&#39;</span><span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Again, we concatenate the low dimensional data with the labels that we will need for the visualization.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">low_dimensional_data_umap</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">umap_components</span><span class="p">,</span> <span class="n">labels</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">low_dimensional_data_umap</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dim_1</th>
+      <th>dim_2</th>
+      <th>index</th>
+      <th>label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2.205933</td>
+      <td>-2.834531</td>
+      <td>0</td>
+      <td>red</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1.666038</td>
+      <td>-2.621844</td>
+      <td>1</td>
+      <td>red</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1.807068</td>
+      <td>-2.548566</td>
+      <td>2</td>
+      <td>red</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>-0.831901</td>
+      <td>-0.173085</td>
+      <td>3</td>
+      <td>red</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2.208013</td>
+      <td>-2.817780</td>
+      <td>4</td>
+      <td>red</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Here you can see how the low dimensional embeddings with UMAP look like in a 2D plot.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span>
+    <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">:(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> 
+        <span class="s1">&#39;font.family&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">FONT_FAMILY</span><span class="p">]},</span> 
+    <span class="n">style</span><span class="o">=</span><span class="s1">&#39;white&#39;</span>
+<span class="p">)</span>
+<span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">plotting_context</span><span class="p">(</span><span class="s2">&quot;notebook&quot;</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="n">FONT_SCALE</span><span class="p">):</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">low_dimensional_data_umap</span><span class="p">,</span>
+        <span class="n">x</span><span class="o">=</span><span class="s1">&#39;dim_1&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;dim_2&#39;</span><span class="p">,</span> 
+        <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;label&#39;</span><span class="p">,</span>
+        <span class="n">palette</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;crimson&#39;</span><span class="p">,</span> <span class="s1">&#39;royalblue&#39;</span><span class="p">]</span>
+    <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;UMAP embeddings&#39;</span><span class="p">)</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">move_legend</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="s2">&quot;center left&quot;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/04_dimensionality_reduction_43_0.svg" src="../_images/04_dimensionality_reduction_43_0.svg" /></div>
+</div>
+<p>This concludes our discussion about the ways to reduce the dimensionality of any dataset. Below you will find a short summary of the three methods presented in this chapter. Next on, we will try to put together some of what we have been discussing so far and use it to look at a new dataset.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Technique</p></th>
+<th class="head"><p>PCA</p></th>
+<th class="head"><p>t-SNE</p></th>
+<th class="head"><p>UMAP</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Method</p></td>
+<td><p>Linear</p></td>
+<td><p>Nonlinear</p></td>
+<td><p>Nonlinear</p></td>
+</tr>
+<tr class="row-odd"><td><p>Speed</p></td>
+<td><p>Fast</p></td>
+<td><p>Relatively slow</p></td>
+<td><p>Fast</p></td>
+</tr>
+<tr class="row-even"><td><p>Global structure</p></td>
+<td><p>Well preserved</p></td>
+<td><p>Poorly preserved</p></td>
+<td><p>Well preserved</p></td>
+</tr>
+<tr class="row-odd"><td><p>Local structure</p></td>
+<td><p>Poorly preserved</p></td>
+<td><p>Well preserved</p></td>
+<td><p>Well preserved</p></td>
+</tr>
+<tr class="row-even"><td><p>Deterministic</p></td>
+<td><p>Yes</p></td>
+<td><p>No (random seed)</p></td>
+<td><p>No</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="03_matplotlib_manipulations.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">3. </span>Customizing plots with Matplotlib</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="05_dos.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>DO’s and DON’Ts of data visualization</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Dr. Michal Ziemski and Doriela Grabocka<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
