@@ -13,11 +13,12 @@ customize new plots or the ones created with seaborn.
 1. Python packages
     - [Seaborn](https://seaborn.pydata.org/) {cite:p}`seaborn`
     - [Matplotlib](https://matplotlib.org/) {cite:p}`matplotlib`
-    - [Plotly](https://plotly.com/) {cite:p}`p`
+    - [Plotly](https://plotly.com/) {cite:p}`plotly`
     - [Pandas](https://pandas.pydata.org/) {cite:p}`pandas`
 
-2. Datasets
+2. Datasets and other Web resources
     - [Earth Microbiome Project](https://earthmicrobiome.org/) {cite:p}`emp`
     - [Wine quality](https://archive-beta.ics.uci.edu/dataset/186/wine+quality) {cite:empty}`wine`
     - [Chocolate ratings](https://www.kaggle.com/datasets/evangower/chocolate-bar-ratings) {cite:empty}`chocolate`
     - [Nutritional properties of cereals](https://www.kaggle.com/code/hiralmshah/nutrition-data-analysis-from-80-cereals) {cite:empty}`cereals`
+    - [From Data to Viz](https://www.data-to-viz.com/#page-top) {cite:p}`dataviz`
