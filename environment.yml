@@ -2,7 +2,6 @@ name: jbook
 channels:
   - conda-forge
   - defaults
-channel_priority: strict
 dependencies:
   - jupyter-book==0.13.1
   - python==3.7.13
