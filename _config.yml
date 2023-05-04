@@ -28,7 +28,7 @@ repository:
 
 # Interactive computing interfaces
 launch_buttons:
-  binderhub_url: "https://binder.let.ethz.ch"
+  binderhub_url: "https://mybinder.org"
   colab_url: "https://colab.research.google.com"
 
 # Add GitHub buttons to your book
