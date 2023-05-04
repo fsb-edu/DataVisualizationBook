@@ -1,4 +1,4 @@
-# DataVis_JB
+# DataVisualizationBook
 JupyterBook on data visualization for Food Scientists.
 
 ## Recreating the book
@@ -8,7 +8,7 @@ JupyterBook on data visualization for Food Scientists.
 	2. `conda activate data-vis-jupyter-book`
 	3. `conda env list` - to check if the environment was created
 in the repository folder.
-2. Run `jupyter-book build DataVis_JB` inside the parent folder of the folder that contains the files. 
+2. Run `jupyter-book build DataVisualizationBook` inside the parent folder of the folder that contains the files. 
 3. Open the `index.html` file that can be found in the `_build` folder. 
 
 
