@@ -483,6 +483,15 @@ title="Print to PDF"
 <p>One of the first and most important steps of analyzing any dataset is visualizing it. However, most of the time datasets which we analyze on a daily basis have more than three dimensions (i.e., they have more than 3 variables; e.g., RNA/DNA sequencing datasets). Human brain is not very good at visualizing data in more than three dimensions. It is very difficult to understand any potential structure of the data because it is impossible to visualize a multi-dimensional hyperplane. However, this does not mean that there is no escape from the <a class="reference external" href="https://en.wikipedia.org/wiki/Curse_of_dimensionality">“Curse of Dimensionality”</a>, as this problem is referred to in the machine learning domain. To circumvent this issue, we can apply certain techniques which have the ability to transform a highly dimensional dataset with thousands of features to a new one with 2, 3 or as many features as are needed. The most fascinating part is that they can do  this by retaining the most important information that the highly-dimensional dataset conveys. Below we will explore some of the most used dimensionality reduction techniques in the <a class="reference external" href="https://doi.org/10.24432/C56S3T">Wine Quality dataset taken from UC Irvine Machine Learning Repository</a>.</p>
 <section id="environment-setup">
 <h2><span class="section-number">4.1. </span>Environment setup<a class="headerlink" href="#environment-setup" title="Permalink to this headline">#</a></h2>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># for Google Colab</span>
+<span class="kn">from</span> <span class="nn">exercises.utils</span> <span class="kn">import</span> <span class="n">ensure_packages</span>
+<span class="n">ensure_packages</span><span class="p">(</span><span class="s1">&#39;../requirements.txt&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -498,10 +507,6 @@ title="Print to PDF"
 <span class="kn">import</span> <span class="nn">warnings</span>
 <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
 <span class="o">%</span><span class="k">config</span> InlineBackend.figure_format=&#39;svg&#39;
-
-<span class="c1"># for Google Colab</span>
-<span class="kn">from</span> <span class="nn">exercises.utils</span> <span class="kn">import</span> <span class="n">ensure_packages</span>
-<span class="n">ensure_packages</span><span class="p">(</span><span class="s1">&#39;../requirements.txt&#39;</span><span class="p">)</span>
 
 <span class="c1"># for plots&#39; appearance</span>
 <span class="n">FONT_FAMILY</span> <span class="o">=</span> <span class="s1">&#39;DejaVu Sans&#39;</span>
@@ -1209,7 +1214,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/04_dimensionality_reduction_26_0.svg" src="../_images/04_dimensionality_reduction_26_0.svg" /></div>
+<img alt="../_images/04_dimensionality_reduction_27_0.svg" src="../_images/04_dimensionality_reduction_27_0.svg" /></div>
 </div>
 <p>As we can see from the plot, the two types of wine are clearly separated, with a little overlap.</p>
 </section>
@@ -1329,7 +1334,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/04_dimensionality_reduction_34_0.svg" src="../_images/04_dimensionality_reduction_34_0.svg" /></div>
+<img alt="../_images/04_dimensionality_reduction_35_0.svg" src="../_images/04_dimensionality_reduction_35_0.svg" /></div>
 </div>
 <p>In this case, t-SNE has separated the two groups of wine although there are some points that are on the wrong side. In additiion, we see that the low dimensional data is more spread now.</p>
 </section>
@@ -1391,36 +1396,36 @@ title="Print to PDF"
   <tbody>
     <tr>
       <th>0</th>
-      <td>14.330790</td>
-      <td>12.315190</td>
+      <td>14.907778</td>
+      <td>10.486069</td>
       <td>0</td>
       <td>red</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>14.735568</td>
-      <td>12.676577</td>
+      <td>14.546148</td>
+      <td>11.189841</td>
       <td>1</td>
       <td>red</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>14.573530</td>
-      <td>12.743734</td>
+      <td>14.477578</td>
+      <td>11.027130</td>
       <td>2</td>
       <td>red</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>11.354591</td>
-      <td>16.671566</td>
+      <td>10.398458</td>
+      <td>14.840589</td>
       <td>3</td>
       <td>red</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>14.321838</td>
-      <td>12.305217</td>
+      <td>14.941893</td>
+      <td>10.456944</td>
       <td>4</td>
       <td>red</td>
     </tr>
@@ -1449,7 +1454,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/04_dimensionality_reduction_43_0.svg" src="../_images/04_dimensionality_reduction_43_0.svg" /></div>
+<img alt="../_images/04_dimensionality_reduction_44_0.svg" src="../_images/04_dimensionality_reduction_44_0.svg" /></div>
 </div>
 <p>This concludes our discussion about the ways to reduce the dimensionality of any dataset. Below you will find a short summary of the three methods presented in this chapter. Next on, we will try to put together some of what we have been discussing so far and use it to look at a new dataset.</p>
 <table class="colwidths-auto table">

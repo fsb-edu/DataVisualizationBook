@@ -651,16 +651,21 @@ title="Print to PDF"
 <p><strong>Before you begin</strong>: Be sure to check out the official matplotlib cheat sheet (available <a class="reference external" href="https://matplotlib.org/cheatsheets/cheatsheets.pdf">here</a>) - it outlines all of the most useful functionalities discussed below and more!</p>
 <section id="environment-setup">
 <h2><span class="section-number">3.1. </span>Environment setup<a class="headerlink" href="#environment-setup" title="Permalink to this headline">#</a></h2>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># for Google Colab</span>
+<span class="kn">from</span> <span class="nn">exercises.utils</span> <span class="kn">import</span> <span class="n">ensure_packages</span>
+<span class="n">ensure_packages</span><span class="p">(</span><span class="s1">&#39;../requirements.txt&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-
-<span class="c1"># for Google Colab</span>
-<span class="kn">from</span> <span class="nn">exercises.utils</span> <span class="kn">import</span> <span class="n">ensure_packages</span>
-<span class="n">ensure_packages</span><span class="p">(</span><span class="s1">&#39;../requirements.txt&#39;</span><span class="p">)</span>
 
 <span class="o">%</span><span class="k">config</span> InlineBackend.figure_format=&#39;svg&#39;
 </pre></div>
@@ -684,7 +689,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03_matplotlib_manipulations_7_0.svg" src="../_images/03_matplotlib_manipulations_7_0.svg" /></div>
+<img alt="../_images/03_matplotlib_manipulations_8_0.svg" src="../_images/03_matplotlib_manipulations_8_0.svg" /></div>
 </div>
 </section>
 <section id="many-subplots-horizontal-layout">
@@ -697,7 +702,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03_matplotlib_manipulations_10_0.svg" src="../_images/03_matplotlib_manipulations_10_0.svg" /></div>
+<img alt="../_images/03_matplotlib_manipulations_11_0.svg" src="../_images/03_matplotlib_manipulations_11_0.svg" /></div>
 </div>
 </section>
 <section id="multiple-subplots-grid-layout">
@@ -710,7 +715,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03_matplotlib_manipulations_13_0.svg" src="../_images/03_matplotlib_manipulations_13_0.svg" /></div>
+<img alt="../_images/03_matplotlib_manipulations_14_0.svg" src="../_images/03_matplotlib_manipulations_14_0.svg" /></div>
 </div>
 </section>
 <section id="gridspec">
@@ -737,7 +742,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03_matplotlib_manipulations_16_0.svg" src="../_images/03_matplotlib_manipulations_16_0.svg" /></div>
+<img alt="../_images/03_matplotlib_manipulations_17_0.svg" src="../_images/03_matplotlib_manipulations_17_0.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -760,7 +765,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03_matplotlib_manipulations_17_0.svg" src="../_images/03_matplotlib_manipulations_17_0.svg" /></div>
+<img alt="../_images/03_matplotlib_manipulations_18_0.svg" src="../_images/03_matplotlib_manipulations_18_0.svg" /></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -857,7 +862,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03_matplotlib_manipulations_24_0.svg" src="../_images/03_matplotlib_manipulations_24_0.svg" /></div>
+<img alt="../_images/03_matplotlib_manipulations_25_0.svg" src="../_images/03_matplotlib_manipulations_25_0.svg" /></div>
 </div>
 </section>
 <section id="multiple-plots">
@@ -875,7 +880,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03_matplotlib_manipulations_27_0.svg" src="../_images/03_matplotlib_manipulations_27_0.svg" /></div>
+<img alt="../_images/03_matplotlib_manipulations_28_0.svg" src="../_images/03_matplotlib_manipulations_28_0.svg" /></div>
 </div>
 <p>Below is an example when axes is a 2D array.</p>
 <div class="cell docutils container">
@@ -892,7 +897,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03_matplotlib_manipulations_29_0.svg" src="../_images/03_matplotlib_manipulations_29_0.svg" /></div>
+<img alt="../_images/03_matplotlib_manipulations_30_0.svg" src="../_images/03_matplotlib_manipulations_30_0.svg" /></div>
 </div>
 </section>
 </section>
@@ -923,7 +928,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03_matplotlib_manipulations_34_0.svg" src="../_images/03_matplotlib_manipulations_34_0.svg" /></div>
+<img alt="../_images/03_matplotlib_manipulations_35_0.svg" src="../_images/03_matplotlib_manipulations_35_0.svg" /></div>
 </div>
 </section>
 <section id="axes-ranges-ticks-and-tick-labels">
@@ -970,7 +975,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03_matplotlib_manipulations_37_0.svg" src="../_images/03_matplotlib_manipulations_37_0.svg" /></div>
+<img alt="../_images/03_matplotlib_manipulations_38_0.svg" src="../_images/03_matplotlib_manipulations_38_0.svg" /></div>
 </div>
 </section>
 <section id="axis-scale">
@@ -996,7 +1001,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03_matplotlib_manipulations_40_0.svg" src="../_images/03_matplotlib_manipulations_40_0.svg" /></div>
+<img alt="../_images/03_matplotlib_manipulations_41_0.svg" src="../_images/03_matplotlib_manipulations_41_0.svg" /></div>
 </div>
 </section>
 <section id="zooming-in-out-in-a-plot">
@@ -1040,7 +1045,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03_matplotlib_manipulations_43_0.svg" src="../_images/03_matplotlib_manipulations_43_0.svg" /></div>
+<img alt="../_images/03_matplotlib_manipulations_44_0.svg" src="../_images/03_matplotlib_manipulations_44_0.svg" /></div>
 </div>
 </section>
 <section id="color-maps">
@@ -1075,7 +1080,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03_matplotlib_manipulations_46_0.svg" src="../_images/03_matplotlib_manipulations_46_0.svg" /></div>
+<img alt="../_images/03_matplotlib_manipulations_47_0.svg" src="../_images/03_matplotlib_manipulations_47_0.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1097,7 +1102,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03_matplotlib_manipulations_47_0.svg" src="../_images/03_matplotlib_manipulations_47_0.svg" /></div>
+<img alt="../_images/03_matplotlib_manipulations_48_0.svg" src="../_images/03_matplotlib_manipulations_48_0.svg" /></div>
 </div>
 </section>
 <section id="legend-position-and-title">
@@ -1130,7 +1135,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03_matplotlib_manipulations_50_0.svg" src="../_images/03_matplotlib_manipulations_50_0.svg" /></div>
+<img alt="../_images/03_matplotlib_manipulations_51_0.svg" src="../_images/03_matplotlib_manipulations_51_0.svg" /></div>
 </div>
 </section>
 <section id="figure-title">
@@ -1162,7 +1167,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03_matplotlib_manipulations_53_0.svg" src="../_images/03_matplotlib_manipulations_53_0.svg" /></div>
+<img alt="../_images/03_matplotlib_manipulations_54_0.svg" src="../_images/03_matplotlib_manipulations_54_0.svg" /></div>
 </div>
 </section>
 <section id="layout-of-subplots">
@@ -1191,7 +1196,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03_matplotlib_manipulations_56_0.svg" src="../_images/03_matplotlib_manipulations_56_0.svg" /></div>
+<img alt="../_images/03_matplotlib_manipulations_57_0.svg" src="../_images/03_matplotlib_manipulations_57_0.svg" /></div>
 </div>
 </section>
 <section id="axis-label-position-and-colorbars">
@@ -1220,7 +1225,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03_matplotlib_manipulations_59_0.svg" src="../_images/03_matplotlib_manipulations_59_0.svg" /></div>
+<img alt="../_images/03_matplotlib_manipulations_60_0.svg" src="../_images/03_matplotlib_manipulations_60_0.svg" /></div>
 </div>
 </section>
 </section>
@@ -1373,7 +1378,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03_matplotlib_manipulations_65_0.svg" src="../_images/03_matplotlib_manipulations_65_0.svg" /></div>
+<img alt="../_images/03_matplotlib_manipulations_66_0.svg" src="../_images/03_matplotlib_manipulations_66_0.svg" /></div>
 </div>
 </section>
 </section>

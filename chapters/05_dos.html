@@ -485,6 +485,15 @@ title="Print to PDF"
 <h2><span class="section-number">5.1. </span>Environment setup<a class="headerlink" href="#environment-setup" title="Permalink to this headline">#</a></h2>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># for Google Colab</span>
+<span class="kn">from</span> <span class="nn">exercises.utils</span> <span class="kn">import</span> <span class="n">ensure_packages</span>
+<span class="n">ensure_packages</span><span class="p">(</span><span class="s1">&#39;../requirements.txt&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
@@ -493,10 +502,6 @@ title="Print to PDF"
 <span class="c1"># this is to silence pandas&#39; warnings</span>
 <span class="kn">import</span> <span class="nn">warnings</span>
 <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
-
-<span class="c1"># for Google Colab</span>
-<span class="kn">from</span> <span class="nn">exercises.utils</span> <span class="kn">import</span> <span class="n">ensure_packages</span>
-<span class="n">ensure_packages</span><span class="p">(</span><span class="s1">&#39;../requirements.txt&#39;</span><span class="p">)</span>
     
 <span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="o">%</span><span class="k">config</span> InlineBackend.figure_format=&#39;svg&#39;
@@ -538,7 +543,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/05_dos_6_0.svg" src="../_images/05_dos_6_0.svg" /></div>
+<img alt="../_images/05_dos_7_0.svg" src="../_images/05_dos_7_0.svg" /></div>
 </div>
 <p>Not so easy to tell them apart, is it? There is, however, a much better way of visualizing the same data that will help us answer all of the questions posed above - a <strong>bar chart</strong>. Below you can see the same data visualized using bars instead of pie slices. Can you now try to answer the same questions about this dataset?</p>
 <div class="cell tag_hide-input docutils container">
@@ -551,7 +556,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/05_dos_8_0.svg" src="../_images/05_dos_8_0.svg" /></div>
+<img alt="../_images/05_dos_9_0.svg" src="../_images/05_dos_9_0.svg" /></div>
 </div>
 </section>
 <section id="sorting-the-data">
@@ -585,7 +590,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/05_dos_11_0.svg" src="../_images/05_dos_11_0.svg" /></div>
+<img alt="../_images/05_dos_12_0.svg" src="../_images/05_dos_12_0.svg" /></div>
 </div>
 </section>
 <section id="overplotting">
@@ -616,7 +621,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/05_dos_14_0.svg" src="../_images/05_dos_14_0.svg" /></div>
+<img alt="../_images/05_dos_15_0.svg" src="../_images/05_dos_15_0.svg" /></div>
 </div>
 <p>There are a few techniques that you may use to make the differences between the datasets more obvious:</p>
 <ul class="simple">
@@ -668,7 +673,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/05_dos_16_0.svg" src="../_images/05_dos_16_0.svg" /></div>
+<img alt="../_images/05_dos_17_0.svg" src="../_images/05_dos_17_0.svg" /></div>
 </div>
 <div class="tip admonition">
 <p class="admonition-title">See also</p>
@@ -723,7 +728,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/05_dos_21_0.svg" src="../_images/05_dos_21_0.svg" /></div>
+<img alt="../_images/05_dos_22_0.svg" src="../_images/05_dos_22_0.svg" /></div>
 </div>
 <p>Fortunately, there are other kinds of visualizations that can help you plot the same data without the risk of misrepresenting anything. If your data is mostly categorical (like in the bar chart on the left), you can substitute the bar char with a simple heatmap. Similarly, for numerical data you can use a bubble plot (a scatter plot with point size representing the 3rd dimension). Both of those plot types were discussed in <a class="reference internal" href="02_chart_types.html"><span class="doc std std-doc">chapter 2</span></a>.</p>
 <div class="cell tag_hide-input docutils container">
@@ -761,7 +766,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/05_dos_23_0.svg" src="../_images/05_dos_23_0.svg" /></div>
+<img alt="../_images/05_dos_24_0.svg" src="../_images/05_dos_24_0.svg" /></div>
 </div>
 </section>
 </section>

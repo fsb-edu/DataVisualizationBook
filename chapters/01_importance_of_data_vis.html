@@ -454,6 +454,15 @@ title="Print to PDF"
 <section id="environment-setup">
 <h2><span class="section-number">1.1. </span>Environment setup<a class="headerlink" href="#environment-setup" title="Permalink to this headline">#</a></h2>
 <p>Here we will import all the required modules and preconfigure some variables, if necessary.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># for Google Colab</span>
+<span class="kn">from</span> <span class="nn">exercises.utils</span> <span class="kn">import</span> <span class="n">ensure_packages</span>
+<span class="n">ensure_packages</span><span class="p">(</span><span class="s1">&#39;../requirements.txt&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
@@ -463,10 +472,6 @@ title="Print to PDF"
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 
 <span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
-
-<span class="c1"># for Google Colab</span>
-<span class="kn">from</span> <span class="nn">exercises.utils</span> <span class="kn">import</span> <span class="n">ensure_packages</span>
-<span class="n">ensure_packages</span><span class="p">(</span><span class="s1">&#39;../requirements.txt&#39;</span><span class="p">)</span>
 
 <span class="o">%</span><span class="k">config</span> InlineBackend.figure_format=&#39;svg&#39;
 <span class="o">%</span><span class="k">matplotlib</span> inline
@@ -716,7 +721,7 @@ Dataset IV:	y=0.5x+3.002	R-coeff=0.667	Correlation-coeff=0.817
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/01_importance_of_data_vis_14_0.svg" src="../_images/01_importance_of_data_vis_14_0.svg" /></div>
+<img alt="../_images/01_importance_of_data_vis_15_0.svg" src="../_images/01_importance_of_data_vis_15_0.svg" /></div>
 </div>
 <p>Now, that is interesting. Each of those looks entirely differently - let’s think about how we could interpret each of those datasets after visual inspection:</p>
 <ol class="simple">
