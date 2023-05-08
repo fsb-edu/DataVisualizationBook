@@ -17,8 +17,9 @@ def ensure_packages(requirements_file: str):
         try:
             get_distribution(pkg.split("==")[0])
         except (DistributionNotFound, RequirementParseError):
-            print(f"{pkg} not found. Will be installed...")
-            to_install += f"{pkg} " if "jupyter" not in pkg else False
+            if "jupyter" not in pkg:
+                print(f"{pkg} not found. Will be installed...")
+                to_install += f"{pkg} "
 
     try:
         print(f"Installing missing dependencies: {to_install}")
