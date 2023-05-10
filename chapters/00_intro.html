@@ -329,12 +329,41 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tools-and-resources-used-in-this-book">
+   Tools and resources used in this book
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#acknowledgements">
+   Acknowledgements
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -346,6 +375,24 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tools-and-resources-used-in-this-book">
+   Tools and resources used in this book
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#acknowledgements">
+   Acknowledgements
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -361,7 +408,8 @@ ways to create plots in Python - we won’t be discussing all of them here. Inst
 create most of the basic plots using the very popular Seaborn library. Following this overview, we
 will look at how one can use matplotlib (which seaborn also uses in the background) to modify and
 customize new plots or the ones created with seaborn.</p>
-<p><strong>Overview of tools and resources used in this book:</strong></p>
+<section id="tools-and-resources-used-in-this-book">
+<h2>Tools and resources used in this book<a class="headerlink" href="#tools-and-resources-used-in-this-book" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
 <li><p>Python packages</p>
 <ul class="simple">
@@ -381,6 +429,12 @@ customize new plots or the ones created with seaborn.</p>
 </ul>
 </li>
 </ol>
+</section>
+<section id="acknowledgements">
+<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">#</a></h2>
+<p>This project was funded through the Innovedum initiative of ETH Zürich.</p>
+<a class="reference external image-reference" href="https://ethz.ch/en/the-eth-zurich/education/innovedum.html"><img alt="Innovedum logo" class="align-center" src="img/innovedum_logo.png" style="width: 500px;" /></a>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
