@@ -8,8 +8,7 @@ create most of the basic plots using the very popular Seaborn library. Following
 will look at how one can use matplotlib (which seaborn also uses in the background) to modify and 
 customize new plots or the ones created with seaborn.
 
-**Overview of tools and resources used in this book:**
-
+### Tools and resources used in this book
 1. Python packages
     - [Seaborn](https://seaborn.pydata.org/) {cite:p}`seaborn`
     - [Matplotlib](https://matplotlib.org/) {cite:p}`matplotlib`
@@ -22,3 +21,12 @@ customize new plots or the ones created with seaborn.
     - [Chocolate ratings](https://www.kaggle.com/datasets/evangower/chocolate-bar-ratings) {cite:empty}`chocolate`
     - [Nutritional properties of cereals](https://www.kaggle.com/code/hiralmshah/nutrition-data-analysis-from-80-cereals) {cite:empty}`cereals`
     - [From Data to Viz](https://www.data-to-viz.com/#page-top) {cite:p}`dataviz`
+
+### Acknowledgements
+This project was funded through the Innovedum initiative of ETH Zürich.
+```{image} ../img/innovedum_logo.png
+:alt: Innovedum logo
+:width: 500px
+:align: center
+:target: https://ethz.ch/en/the-eth-zurich/education/innovedum.html
+```

@@ -1,4 +1,6 @@
 # DataVisualizationBook
+[![Binder](https://binder.let.ethz.ch/badge_logo.svg)](https://binder.let.ethz.ch/v2/gh/bokulich-lab/DataVisualizationBook/main?labpath=chapters)
+
 JupyterBook on data visualization for Food Scientists.
 
 ## Recreating the book
@@ -20,10 +22,10 @@ environment variable in the System variables.
 3. Check if everything went well with the installation by running: `jupyter-book --help`
 
 ## Creating a book
-4.	Create a JupyterBook by running the following command: `jupyter-book create firstbook/`. 
+4. Create a JupyterBook by running the following command: `jupyter-book create firstbook/`. 
 The first JupyterBook called firstbook will be created in the current working directory (folder).
 
 ## Build the book
-5.	Run the command: `jupyter-book build firstbook`. A `_build` folder will be created inside 
+5. Run the command: `jupyter-book build firstbook`. A `_build` folder will be created inside 
 the *firstbook* folder. 
 6. Open *index.html* inside *_build* folder to see the JupyterBook in the browser of your choice.
