@@ -1,6 +1,6 @@
 # DataVisualizationBook
 [![Binder](https://binder.let.ethz.ch/badge_logo.svg)](https://binder.let.ethz.ch/v2/gh/bokulich-lab/DataVisualizationBook/main?labpath=chapters)
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-DataVisBook-brightgreen)](https://bokulich-lab.github.io/DataVisualizationBookBook/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-DataVisBook-brightgreen)](https://bokulich-lab.github.io/DataVisualizationBook/)
 
 JupyterBook on data visualization for Food Scientists.
 
