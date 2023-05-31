@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "Data Visualization for Food Scientists"
+version = "0.1.0"
+description = "Jupyter Book for teaching data visualization to Food Scientists"
+authors = [
+    "Michal Ziemski <mziemski@ethz.ch>",
+    "Doriela Grabocka <dgrabocka@student.ethz.ch>"
+]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9.0"
+jupyter-book = "0.13.1"
+matplotlib = "^3.4.3"
+numpy = "<=1.24"
+pandas = "<2"
+plotly = "5.9.0"
+seaborn = "0.12.1"
+umap-learn = "0.5.3"
+numba = "0.56.3"
+
+[tool.poetry.group.dev.dependencies]
+jupyterlab = "*"
