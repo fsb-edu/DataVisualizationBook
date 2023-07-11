@@ -4,7 +4,8 @@ version = "0.1.0"
 description = "Jupyter Book for teaching data visualization to Food Scientists"
 authors = [
     "Michal Ziemski <mziemski@ethz.ch>",
-    "Doriela Grabocka <dgrabocka@student.ethz.ch>"
+    "Doriela Grabocka <dgrabocka@student.ethz.ch>",
+    "Nicholas Bokulich <nicholas.bokulich@hest.ethz.ch"
 ]
 readme = "README.md"
 

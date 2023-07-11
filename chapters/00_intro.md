@@ -2,11 +2,20 @@
 
 ![logos](../img/seaborn_matplotlib_logo.jpg)
 
-Throughout this Jupyter book we will be focusing on creating data visualizations using Python. There are many different 
-ways to create plots in Python - we won't be discussing all of them here. Instead, we will see how to 
-create most of the basic plots using the very popular Seaborn library. Following this overview, we 
-will look at how one can use matplotlib (which seaborn also uses in the background) to modify and 
-customize new plots or the ones created with seaborn.
+Data visualization is essential to communicate complex information in a form that can be more readily 
+interpreted and understood by humans. As the sciences become increasingly data-intensive, good visualization 
+practices are needed to assist interpretation by scientists, industry professionals, and the general public. 
+The food sciences are no exception: visualization methods assist interpretation of everything from nutritional 
+information to biological, chemical, and physical data about food and food processes. This Jupyter book is 
+designed to give an introduction to data visualization and some applications in the food sciences.  
+
+Throughout this Jupyter book we will focus on creating data visualizations with Python. There are many different 
+ways to create plots in Python and we will not discuss all of them here. Instead, we will see how to 
+create most of the basic plots using the very popular seaborn library. Following this overview, we 
+will learn how to use matplotlib (which seaborn also uses in the background) to modify and 
+customize new plots or to customize plots created with seaborn.
+
+This module requires at least a basic understanding of Python to complete the exercises.
 
 ### Tools and resources used in this book
 1. Python packages
