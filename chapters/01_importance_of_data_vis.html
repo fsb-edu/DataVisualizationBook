@@ -450,7 +450,7 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="importance-of-data-visualization">
 <h1><span class="section-number">1. </span>Importance of data visualization<a class="headerlink" href="#importance-of-data-visualization" title="Permalink to this headline">#</a></h1>
-<p>To demonstrate the importance of data visualization for results interpretation we can use a collection of four datasets known as <strong>Anscombe’s quartet</strong> (after an English statistician Francis Anscombe). Those datasets comprise 11 data points with particular properties: while the points themselves differ between the sets, their summary statistics are (nearly) exactly the same, i.e.: all those datasets have the same mean, standard deviation and regression line with the same parameters and R2 metric. And yet, the shape of the data differs widely between those, as we will see below.</p>
+<p>Before we dive into visualizing domain-specific data (e.g., food data), we must start with the bare fundamentals. To demonstrate the importance of visualization for data interpretation we can use a collection of four datasets known as <strong>Anscombe’s quartet</strong> (after the English statistician <a class="reference external" href="https://en.wikipedia.org/wiki/Frank_Anscombe">Francis Anscombe</a>). Those datasets comprise 11 data points with particular properties: while the points themselves differ between the sets, their summary statistics are (nearly) exactly the same, i.e.: all those datasets have the same mean, standard deviation and regression line with the same parameters and R2 metric. And yet, the shape of the data differs widely between those, as we will see below. This demonstrates beautifully why data visualization is essential to fully comprehend any analysis, as a complement to statistical and numerical methods.</p>
 <section id="environment-setup">
 <h2><span class="section-number">1.1. </span>Environment setup<a class="headerlink" href="#environment-setup" title="Permalink to this headline">#</a></h2>
 <p>Here we will import all the required modules and preconfigure some variables, if necessary.</p>
@@ -555,7 +555,7 @@ title="Print to PDF"
 </table>
 </div></div></div>
 </div>
-<p>We can now explore the summary metrics of the data. Let’s look at the mean, standard deviation and linear regression equation. To achieve this, we can use pandas’ <em>groupby</em> method which allows us to “group” the data points according to the indicated variable - in our case, “dataset”. We can the use the resulting object to calculate some summary statistics on all the groups.</p>
+<p>We can now explore the summary metrics of the data. Let’s look at the mean, standard deviation, and linear regression calculations. To achieve this, we can use pandas’ <em>groupby</em> method, which allows us to “group” the data points according to the indicated variable - in our case, “dataset”. We can then use the resulting object to calculate some summary statistics on all the groups.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">quartet_grouped</span> <span class="o">=</span> <span class="n">quartet</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;dataset&#39;</span><span class="p">)</span>
@@ -787,7 +787,7 @@ Dataset IV:	y=0.5x+3.002	R-coeff=0.667	Correlation-coeff=0.817
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By Dr. Michal Ziemski and Doriela Grabocka<br/>
+    By Dr. Michal Ziemski, Doriela Grabocka, and Dr. Nicholas Bokulich<br/>
   
       &copy; Copyright 2022.<br/>
 </p>

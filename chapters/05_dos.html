@@ -480,7 +480,7 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="do-s-and-don-ts-of-data-visualization">
 <h1><span class="section-number">5. </span>DO’s and DON’Ts of data visualization<a class="headerlink" href="#do-s-and-don-ts-of-data-visualization" title="Permalink to this headline">#</a></h1>
-<p>As there are many ways to visualize data, there are also many things which can go wrong during that process. In this chapter we selected a few examples of practices that you should avoid when working with your own data to make the story you are trying to tell clearer and more explicit.</p>
+<p>As there are many ways to visualize data, there are also many things that can go wrong during that process. In this chapter we selected a few examples of practices that you should avoid when working with your own data to make the story you are trying to tell clearer and more explicit.</p>
 <section id="environment-setup">
 <h2><span class="section-number">5.1. </span>Environment setup<a class="headerlink" href="#environment-setup" title="Permalink to this headline">#</a></h2>
 <div class="cell tag_hide-input docutils container">
@@ -523,7 +523,7 @@ title="Print to PDF"
 </section>
 <section id="pie-charts">
 <h2><span class="section-number">5.2. </span>Pie charts<a class="headerlink" href="#pie-charts" title="Permalink to this headline">#</a></h2>
-<p>One of the visualizations most commonly used to represent compositionality of data is a pie chart. While it may seem very intuitive to look at, it often is very difficult to interpret as human eyes are not particularly good at reading angles. Look at the three pie charts below and try to answer the following questions:</p>
+<p>Pie charts are sometimes used to represent compositional data (ratios). However, pie charts can be difficult to accurately interpret as human eyes are not particularly good at reading angles. Look at the three pie charts below and try to answer the following questions:</p>
 <ul class="simple">
 <li><p>which category (<em>a</em>-<em>e</em>) represents the largest fraction of the data in each plot?</p></li>
 <li><p>in which of the three plots does the <em>c</em> category represent the highest fraction fo samples?</p></li>
@@ -734,7 +734,7 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <img alt="../_images/05_dos_22_0.svg" src="../_images/05_dos_22_0.svg" /></div>
 </div>
-<p>Fortunately, there are other kinds of visualizations that can help you plot the same data without the risk of misrepresenting anything. If your data is mostly categorical (like in the bar chart on the left), you can substitute the bar char with a simple heatmap. Similarly, for numerical data you can use a bubble plot (a scatter plot with point size representing the 3rd dimension). Both of those plot types were discussed in <a class="reference internal" href="02_chart_types.html"><span class="doc std std-doc">chapter 2</span></a>.</p>
+<p>Fortunately, there are other kinds of visualizations that can help you plot the same data without the risk of misrepresenting anything. If your data are mostly categorical (like in the bar chart on the left), you can substitute the bar char with a simple heatmap. Similarly, for numerical data you can use a bubble plot (a scatter plot with point size representing the 3rd dimension). Both of those plot types were discussed in <a class="reference internal" href="02_chart_types.html"><span class="doc std std-doc">chapter 2</span></a>.</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_frame</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;x&#39;</span><span class="p">:</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span><span class="n">y</span><span class="p">,</span> <span class="s1">&#39;z&#39;</span><span class="p">:</span><span class="n">z</span><span class="p">})</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;z&#39;</span><span class="p">)</span>
@@ -823,7 +823,7 @@ title="Print to PDF"
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By Dr. Michal Ziemski and Doriela Grabocka<br/>
+    By Dr. Michal Ziemski, Doriela Grabocka, and Dr. Nicholas Bokulich<br/>
   
       &copy; Copyright 2022.<br/>
 </p>

@@ -642,11 +642,11 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="customizing-plots-with-matplotlib">
 <h1><span class="section-number">3. </span>Customizing plots with Matplotlib<a class="headerlink" href="#customizing-plots-with-matplotlib" title="Permalink to this headline">#</a></h1>
-<p>While <em>seaborn</em> generates good-looking figures out of the box, most of the time we need to introduce some adjustments. You saw already in the previous chapters that we were relabeling axes and adjusting their range or ticks. In order to do all of this customization, we rely on calling <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> functions directly. Here, we will review some basic concepts of matplotlib figures and see how to adjust their certain elements to our liking.</p>
+<p>Although <em>seaborn</em> generates good-looking figures out of the box, most of the time we need to introduce some adjustments. You saw already in the previous chapters that we could relabel axes and adjust their range or ticks by calling <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> functions directly to modify figures that we generated with <code class="docutils literal notranslate"><span class="pre">seaborn</span></code>. Here, we will review some basic concepts of <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> figures and learn how to adjust some of their elements to create custom figures.</p>
 <p>The two most important concepts to be aware of when using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> are the <strong>figure</strong> and <strong>axes</strong> objects:</p>
 <ul class="simple">
-<li><p><strong>axes</strong> (also referred to as subplots): the area where we plot the data; has an x- and y-axis which contain ticks, tick locations, labels and other elements</p></li>
-<li><p><strong>figure</strong>: the overall window/page where everything is drawn on; can contain multiple axes (subplots) organized in a form of a grid</p></li>
+<li><p><strong>axes</strong> (also referred to as subplots): the area where we plot the data; has an x- and y-axis, which contain ticks, tick locations, labels, and other elements.</p></li>
+<li><p><strong>figure</strong>: the overall window/page where everything is drawn; can contain multiple axes (subplots) organized in a form of a grid.</p></li>
 </ul>
 <p><strong>Before you begin</strong>: Be sure to check out the official matplotlib cheat sheet (available <a class="reference external" href="https://matplotlib.org/cheatsheets/cheatsheets.pdf">here</a>) - it outlines all of the most useful functionalities discussed below and more!</p>
 <section id="environment-setup">
@@ -698,7 +698,7 @@ title="Print to PDF"
 </section>
 <section id="many-subplots-horizontal-layout">
 <h3><span class="section-number">3.2.2. </span>Many Subplots - Horizontal Layout<a class="headerlink" href="#many-subplots-horizontal-layout" title="Permalink to this headline">#</a></h3>
-<p>We can create multiple subplots by using the function <code class="docutils literal notranslate"><span class="pre">subplot</span></code> of <em>pyplot</em>  module in <em>matplotlib</em>. Here we specify the size of the figure by passing a tuple in the form <code class="docutils literal notranslate"><span class="pre">(width,</span> <span class="pre">height)</span></code> to the <code class="docutils literal notranslate"><span class="pre">figsize</span></code> parameter. In addition, the <code class="docutils literal notranslate"><span class="pre">nrows</span></code> and <code class="docutils literal notranslate"><span class="pre">ncols</span></code> specify how many rows and how many columns the figure should have.</p>
+<p>We can create multiple subplots by using the function <code class="docutils literal notranslate"><span class="pre">subplot</span></code> of the <code class="docutils literal notranslate"><span class="pre">pyplot</span></code>  module in <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>. Here we specify the size of the figure by passing a tuple in the form <code class="docutils literal notranslate"><span class="pre">(width,</span> <span class="pre">height)</span></code> to the <code class="docutils literal notranslate"><span class="pre">figsize</span></code> parameter. In addition, the <code class="docutils literal notranslate"><span class="pre">nrows</span></code> and <code class="docutils literal notranslate"><span class="pre">ncols</span></code> specify how many rows and how many columns the figure should have.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">4</span><span class="p">));</span>
@@ -774,15 +774,15 @@ title="Print to PDF"
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul class="simple">
-<li><p><strong>axes</strong>: the area where we plot the data; has an x- and y-axis which contain ticks, tick locations, labels and other elements</p></li>
-<li><p><strong>figure</strong>: the overall window/page where everything is drawn on; can contain multiple axes (subplots) organized in a form of a grid</p></li>
+<li><p><strong>axes</strong>: the area where we plot the data; has an x- and y-axis, which contain ticks, tick locations, labels, and other elements.</p></li>
+<li><p><strong>figure</strong>: the overall window/page where everything is drawn; can contain multiple axes (subplots) organized in a form of a grid</p></li>
 </ul>
 </div>
 </section>
 </section>
 <section id="adding-data-to-specific-subplots">
 <h2><span class="section-number">3.3. </span>Adding data to specific subplots<a class="headerlink" href="#adding-data-to-specific-subplots" title="Permalink to this headline">#</a></h2>
-<p>When you use <em>seaborn</em>, it will automatically create axes and figures for you so you don’t need to do any of the above. However, when you want to have better control over your plots you may want to first create your own figure with the desired properties and then place specific plots in its axes. Let’s generate some data that we will use in the plots later:</p>
+<p>When you use <em>seaborn</em>, it will automatically create axes and figures for you so you don’t need to do any of the above. However, when you want to have better control over your plots you may want to first create your own figure with the desired properties and then place specific plots in its axes. To demonstrate, let’s generate some data that we will use in the plots later:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
@@ -871,7 +871,7 @@ title="Print to PDF"
 </section>
 <section id="multiple-plots">
 <h3><span class="section-number">3.3.2. </span>Multiple plots<a class="headerlink" href="#multiple-plots" title="Permalink to this headline">#</a></h3>
-<p>When plotting more than one subplot, <code class="docutils literal notranslate"><span class="pre">axes</span></code> becomes a numpy array with a shape <code class="docutils literal notranslate"><span class="pre">(nrows,</span> <span class="pre">ncols)</span></code>. In this case, we need to select which subplot you want to use and pass this one to the plotting function.</p>
+<p>When plotting more than one subplot, <code class="docutils literal notranslate"><span class="pre">axes</span></code> becomes a numpy array with the shape <code class="docutils literal notranslate"><span class="pre">(nrows,</span> <span class="pre">ncols)</span></code>. In this case, we need to select which subplot you want to use and pass this subplot to the plotting function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
@@ -907,7 +907,7 @@ title="Print to PDF"
 </section>
 <section id="modifying-elements-of-a-plot">
 <h2><span class="section-number">3.4. </span>Modifying elements of a plot<a class="headerlink" href="#modifying-elements-of-a-plot" title="Permalink to this headline">#</a></h2>
-<p>As you could see so far, we often need to adjust certain elements of a plot. Most of the attributes that we are usually interested in can be modified directly on the <em>Axes</em> object (the one that you passed to or received from a <em>seaborn</em> plotting function). Adjustments that concern e.g. how subplots relate to one another (like spacing between them) or other ones that have to do with the figure itself (like a figure title) can be set on the <em>Figure</em> object directly.</p>
+<p>As you could see so far, we often need to adjust certain elements of a plot. Most of the attributes that we are usually interested in can be modified directly on the <code class="docutils literal notranslate"><span class="pre">Axes</span></code> object (the one that you passed to or received from a <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> plotting function). Adjustments that concern, e.g., how subplots relate to one another (like spacing between them) or other ones that have to do with the figure itself (like a figure title) can be set on the <code class="docutils literal notranslate"><span class="pre">Figure</span></code> object directly.</p>
 <section id="axes-labels-and-title">
 <h3><span class="section-number">3.4.1. </span>Axes’ labels and title<a class="headerlink" href="#axes-labels-and-title" title="Permalink to this headline">#</a></h3>
 <aside class="margin sidebar">
@@ -1106,7 +1106,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2713/382733206.py:9: MatplotlibDeprecationWarning: The get_cmap function was deprecated in Matplotlib 3.7 and will be removed two minor releases later. Use ``matplotlib.colormaps[name]`` or ``matplotlib.colormaps.get_cmap(obj)`` instead.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2864/382733206.py:9: MatplotlibDeprecationWarning: The get_cmap function was deprecated in Matplotlib 3.7 and will be removed two minor releases later. Use ``matplotlib.colormaps[name]`` or ``matplotlib.colormaps.get_cmap(obj)`` instead.
   colors = cm.get_cmap(&#39;plasma&#39;, 8).colors
 </pre></div>
 </div>
@@ -1439,7 +1439,7 @@ title="Print to PDF"
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By Dr. Michal Ziemski and Doriela Grabocka<br/>
+    By Dr. Michal Ziemski, Doriela Grabocka, and Dr. Nicholas Bokulich<br/>
   
       &copy; Copyright 2022.<br/>
 </p>
