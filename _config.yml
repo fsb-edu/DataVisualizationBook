@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Data Visualization for Food Scientists
-author: Dr. Michal Ziemski and Doriela Grabocka
+author: Dr. Michal Ziemski, Doriela Grabocka, and Dr. Nicholas Bokulich
 logo: img/eth_logo.svg
 
 # Force re-execution of notebooks on each build.
