@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2024-08-14T13:00:22.030709</dc:date>
+    <dc:date>2025-02-13T10:43:47.187788</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -51,7 +51,7 @@ z
    <g id="matplotlib.axis_2"/>
    <g id="PolyCollection_1">
     <defs>
-     <path id="mf50ae200a4" d="M 40.0268 -286.627997 
+     <path id="m9792197f3c" d="M 40.0268 -286.627997 
 L 40.0268 -286.617914 
 L 41.848693 -286.617914 
 L 43.670585 -286.617914 
@@ -457,7 +457,7 @@ z
 " style="stroke: #90c1c6; stroke-width: 1.5"/>
     </defs>
     <g>
-     <use xlink:href="#mf50ae200a4" x="0" y="329.585656" style="fill: #90c1c6; stroke: #90c1c6; stroke-width: 1.5"/>
+     <use xlink:href="#m9792197f3c" x="0" y="329.585656" style="fill: #90c1c6; stroke: #90c1c6; stroke-width: 1.5"/>
     </g>
    </g>
    <g id="line2d_1">
@@ -701,7 +701,7 @@ z
    <g id="matplotlib.axis_4"/>
    <g id="PolyCollection_2">
     <defs>
-     <path id="mb2517386e0" d="M 111.274317 -259.803872 
+     <path id="m3052423be5" d="M 111.274317 -259.803872 
 L 111.274317 -259.792108 
 L 112.672124 -259.792108 
 L 114.06993 -259.792108 
@@ -1107,7 +1107,7 @@ z
 " style="stroke: #7eb1bc; stroke-width: 1.5"/>
     </defs>
     <g>
-     <use xlink:href="#mb2517386e0" x="0" y="329.585656" style="fill: #7eb1bc; stroke: #7eb1bc; stroke-width: 1.5"/>
+     <use xlink:href="#m3052423be5" x="0" y="329.585656" style="fill: #7eb1bc; stroke: #7eb1bc; stroke-width: 1.5"/>
     </g>
    </g>
    <g id="line2d_3">
@@ -1341,7 +1341,7 @@ z
    <g id="matplotlib.axis_6"/>
    <g id="PolyCollection_3">
     <defs>
-     <path id="m512135e809" d="M 65.55177 -232.984492 
+     <path id="mfd3fdfff96" d="M 65.55177 -232.984492 
 L 65.55177 -232.966301 
 L 67.263115 -232.966301 
 L 68.97446 -232.966301 
@@ -1747,7 +1747,7 @@ z
 " style="stroke: #6ea0b1; stroke-width: 1.5"/>
     </defs>
     <g>
-     <use xlink:href="#m512135e809" x="0" y="329.585656" style="fill: #6ea0b1; stroke: #6ea0b1; stroke-width: 1.5"/>
+     <use xlink:href="#mfd3fdfff96" x="0" y="329.585656" style="fill: #6ea0b1; stroke: #6ea0b1; stroke-width: 1.5"/>
     </g>
    </g>
    <g id="line2d_5">
@@ -1858,7 +1858,7 @@ z
    <g id="matplotlib.axis_8"/>
    <g id="PolyCollection_4">
     <defs>
-     <path id="mfa957c1fb6" d="M 26.222727 -206.160253 
+     <path id="m77ef1945cd" d="M 26.222727 -206.160253 
 L 26.222727 -206.140495 
 L 28.03737 -206.140495 
 L 29.852012 -206.140495 
@@ -2264,7 +2264,7 @@ z
 " style="stroke: #6090a7; stroke-width: 1.5"/>
     </defs>
     <g>
-     <use xlink:href="#mfa957c1fb6" x="0" y="329.585656" style="fill: #6090a7; stroke: #6090a7; stroke-width: 1.5"/>
+     <use xlink:href="#m77ef1945cd" x="0" y="329.585656" style="fill: #6090a7; stroke: #6090a7; stroke-width: 1.5"/>
     </g>
    </g>
    <g id="line2d_7">
@@ -2433,7 +2433,7 @@ z
    <g id="matplotlib.axis_10"/>
    <g id="PolyCollection_5">
     <defs>
-     <path id="m6988d1e8a6" d="M 217.439007 -179.438224 
+     <path id="m205c5eacdf" d="M 217.439007 -179.438224 
 L 217.439007 -179.314689 
 L 218.353769 -179.314689 
 L 219.268532 -179.314689 
@@ -2839,7 +2839,7 @@ z
 " style="stroke: #547d9a; stroke-width: 1.5"/>
     </defs>
     <g>
-     <use xlink:href="#m6988d1e8a6" x="0" y="329.585656" style="fill: #547d9a; stroke: #547d9a; stroke-width: 1.5"/>
+     <use xlink:href="#m205c5eacdf" x="0" y="329.585656" style="fill: #547d9a; stroke: #547d9a; stroke-width: 1.5"/>
     </g>
    </g>
    <g id="line2d_9">
@@ -2988,7 +2988,7 @@ z
    <g id="matplotlib.axis_12"/>
    <g id="PolyCollection_6">
     <defs>
-     <path id="mf3b2786a36" d="M 194.640857 -152.546654 
+     <path id="m7afe5cf283" d="M 194.640857 -152.546654 
 L 194.640857 -152.488882 
 L 195.638763 -152.488882 
 L 196.636668 -152.488882 
@@ -3394,7 +3394,7 @@ z
 " style="stroke: #486b8b; stroke-width: 1.5"/>
     </defs>
     <g>
-     <use xlink:href="#mf3b2786a36" x="0" y="329.585656" style="fill: #486b8b; stroke: #486b8b; stroke-width: 1.5"/>
+     <use xlink:href="#m7afe5cf283" x="0" y="329.585656" style="fill: #486b8b; stroke: #486b8b; stroke-width: 1.5"/>
     </g>
    </g>
    <g id="line2d_11">
@@ -3589,7 +3589,7 @@ z
    <g id="matplotlib.axis_14"/>
    <g id="PolyCollection_7">
     <defs>
-     <path id="mc515a2197b" d="M 210.238568 -125.855075 
+     <path id="mc2d711200f" d="M 210.238568 -125.855075 
 L 210.238568 -125.663076 
 L 211.225697 -125.663076 
 L 212.212827 -125.663076 
@@ -3995,7 +3995,7 @@ z
 " style="stroke: #3e5a7c; stroke-width: 1.5"/>
     </defs>
     <g>
-     <use xlink:href="#mc515a2197b" x="0" y="329.585656" style="fill: #3e5a7c; stroke: #3e5a7c; stroke-width: 1.5"/>
+     <use xlink:href="#mc2d711200f" x="0" y="329.585656" style="fill: #3e5a7c; stroke: #3e5a7c; stroke-width: 1.5"/>
     </g>
    </g>
    <g id="line2d_13">
@@ -4194,7 +4194,7 @@ z
    <g id="matplotlib.axis_16"/>
    <g id="PolyCollection_8">
     <defs>
-     <path id="m60e820c020" d="M 185.826131 -98.868284 
+     <path id="mbd3c739b5f" d="M 185.826131 -98.868284 
 L 185.826131 -98.837269 
 L 186.912627 -98.837269 
 L 187.999122 -98.837269 
@@ -4600,7 +4600,7 @@ z
 " style="stroke: #334769; stroke-width: 1.5"/>
     </defs>
     <g>
-     <use xlink:href="#m60e820c020" x="0" y="329.585656" style="fill: #334769; stroke: #334769; stroke-width: 1.5"/>
+     <use xlink:href="#mbd3c739b5f" x="0" y="329.585656" style="fill: #334769; stroke: #334769; stroke-width: 1.5"/>
     </g>
    </g>
    <g id="line2d_15">
@@ -4738,7 +4738,7 @@ z
    <g id="matplotlib.axis_18"/>
    <g id="PolyCollection_9">
     <defs>
-     <path id="mdb24ff59b6" d="M 227.278053 -72.065498 
+     <path id="mfda6c29af8" d="M 227.278053 -72.065498 
 L 227.278053 -72.011463 
 L 227.947946 -72.011463 
 L 228.61784 -72.011463 
@@ -5144,7 +5144,7 @@ z
 " style="stroke: #2a3656; stroke-width: 1.5"/>
     </defs>
     <g>
-     <use xlink:href="#mdb24ff59b6" x="0" y="329.585656" style="fill: #2a3656; stroke: #2a3656; stroke-width: 1.5"/>
+     <use xlink:href="#mfda6c29af8" x="0" y="329.585656" style="fill: #2a3656; stroke: #2a3656; stroke-width: 1.5"/>
     </g>
    </g>
    <g id="line2d_17">
@@ -5540,7 +5540,7 @@ z
    <g id="matplotlib.axis_20"/>
    <g id="PolyCollection_10">
     <defs>
-     <path id="m9599a277cb" d="M 192.136792 -45.216194 
+     <path id="me1b9f28dfb" d="M 192.136792 -45.216194 
 L 192.136792 -45.185656 
 L 193.01388 -45.185656 
 L 193.890967 -45.185656 
@@ -5946,7 +5946,7 @@ z
 " style="stroke: #1f253f; stroke-width: 1.5"/>
     </defs>
     <g>
-     <use xlink:href="#m9599a277cb" x="0" y="329.585656" style="fill: #1f253f; stroke: #1f253f; stroke-width: 1.5"/>
+     <use xlink:href="#me1b9f28dfb" x="0" y="329.585656" style="fill: #1f253f; stroke: #1f253f; stroke-width: 1.5"/>
     </g>
    </g>
    <g id="line2d_19">
