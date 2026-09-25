@@ -1,114 +1,180 @@
 
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="../" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>2. Chart types using Seaborn &#8212; Data Visualization for Food Scientists</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/general.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/general.css?v=8fc6f707" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/02_chart_types';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="shortcut icon" href="../_static/ethfavico.png"/>
+    <link rel="icon" href="../_static/ethfavico.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="3. Customizing plots with Matplotlib" href="03_matplotlib_manipulations.html" />
     <link rel="prev" title="1. Importance of data visualization" href="01_importance_of_data_vis.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
-    
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="00_intro.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../_static/eth_logo.svg" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Data Visualization for Food Scientists</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="../_static/eth_logo.svg" class="logo__image only-light" alt="Data Visualization for Food Scientists - Home"/>
+    <script>document.write(`<img src="../_static/eth_logo.svg" class="logo__image only-dark" alt="Data Visualization for Food Scientists - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -118,520 +184,312 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="01_importance_of_data_vis.html">
-   1. Importance of data visualization
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   2. Chart types using Seaborn
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="03_matplotlib_manipulations.html">
-   3. Customizing plots with Matplotlib
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="04_dimensionality_reduction.html">
-   4. Dimensionality reduction
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="05_dos.html">
-   5. DO’s and DON’Ts of data visualization
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="06_tutorial.html">
-   6. Tutorial: sample dataset
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="exercises/01_intro.html">
-   7. Exercises
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="exercises/02_exercises.html">
-     7.1. Exercises
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="exercises/03_solutions.html">
-     7.2. Solutions
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="08_bibliography.html">
-   8. References
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="01_importance_of_data_vis.html">1. Importance of data visualization</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Chart types using Seaborn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_matplotlib_manipulations.html">3. Customizing plots with Matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_dimensionality_reduction.html">4. Dimensionality reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_dos.html">5. DO’s and DON’Ts of data visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_tutorial.html">6. Tutorial: sample dataset</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="exercises/01_intro.html">7. Exercises</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="exercises/02_exercises.html">7.1. Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/03_solutions.html">7.2. Solutions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="08_bibliography.html">8. References</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://binder.let.ethz.ch/v2/gh/bokulich-lab/DataVisualizationBook/main?urlpath=tree/chapters/02_chart_types.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://colab.research.google.com/github/bokulich-lab/DataVisualizationBook/blob/main/chapters/02_chart_types.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Colab"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../_static/images/logo_colab.png">
-  </span>
-<span class="headerbtn__text-container">Colab</span>
-</a>
-
-      </li>
-      
-    </ul>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://binder.let.ethz.ch/v2/gh/bokulich-lab/DataVisualizationBook/main?urlpath=tree/chapters/02_chart_types.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/bokulich-lab/DataVisualizationBook/blob/main/chapters/02_chart_types.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
 </div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/bokulich-lab/DataVisualizationBook" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/bokulich-lab/DataVisualizationBook/issues/new?title=Issue%20on%20page%20%2Fchapters/02_chart_types.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/chapters/02_chart_types.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/bokulich-lab/DataVisualizationBook"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
 
-      </li>
-      
-      <li>
-        <a href="https://github.com/bokulich-lab/DataVisualizationBook/issues/new?title=Issue%20on%20page%20%2Fchapters/02_chart_types.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/chapters/02_chart_types.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </button>
-
-      </li>
+</div></div>
       
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
+    </div>
   
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
-
-    </div>
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#environment-setup">
-   2.1. Environment setup
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#loading-the-data">
-   2.2. Loading the data
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#plot-types">
-   2.3. Plot types
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#distribution">
-     2.3.1. Distribution
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#histogram">
-       2.3.1.1. Histogram
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#countplot">
-       2.3.1.2. Countplot
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#box-plot">
-       2.3.1.3. Box plot
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#violin-plot">
-       2.3.1.4. Violin plot
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#ridgeline-plot">
-       2.3.1.5. Ridgeline plot
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#relationship">
-     2.3.2. Relationship
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#scatter-plot">
-       2.3.2.1. Scatter plot
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#bubble-plot">
-       2.3.2.2. Bubble plot
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#heat-map">
-       2.3.2.3. Heat map
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#correlogram">
-       2.3.2.4. Correlogram
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#composition">
-     2.3.3. Composition
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#bar-column-chart">
-       2.3.3.1. Bar/Column Chart
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#stacked-bar-column-plot">
-       2.3.3.2. Stacked bar/column plot
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#tree-map">
-       2.3.3.3. Tree Map
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Chart types using Seaborn</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#environment-setup">
-   2.1. Environment setup
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#loading-the-data">
-   2.2. Loading the data
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#plot-types">
-   2.3. Plot types
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#distribution">
-     2.3.1. Distribution
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#histogram">
-       2.3.1.1. Histogram
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#countplot">
-       2.3.1.2. Countplot
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#box-plot">
-       2.3.1.3. Box plot
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#violin-plot">
-       2.3.1.4. Violin plot
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#ridgeline-plot">
-       2.3.1.5. Ridgeline plot
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#relationship">
-     2.3.2. Relationship
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#scatter-plot">
-       2.3.2.1. Scatter plot
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#bubble-plot">
-       2.3.2.2. Bubble plot
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#heat-map">
-       2.3.2.3. Heat map
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#correlogram">
-       2.3.2.4. Correlogram
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#composition">
-     2.3.3. Composition
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#bar-column-chart">
-       2.3.3.1. Bar/Column Chart
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#stacked-bar-column-plot">
-       2.3.3.2. Stacked bar/column plot
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#tree-map">
-       2.3.3.3. Tree Map
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Chart types using Seaborn</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#environment-setup">2.1. Environment setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-the-data">2.2. Loading the data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-types">2.3. Plot types</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution">2.3.1. Distribution</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#histogram">2.3.1.1. Histogram</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#countplot">2.3.1.2. Countplot</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#box-plot">2.3.1.3. Box plot</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#violin-plot">2.3.1.4. Violin plot</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ridgeline-plot">2.3.1.5. Ridgeline plot</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relationship">2.3.2. Relationship</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#scatter-plot">2.3.2.1. Scatter plot</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bubble-plot">2.3.2.2. Bubble plot</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-map">2.3.2.3. Heat map</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#correlogram">2.3.2.4. Correlogram</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#composition">2.3.3. Composition</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bar-column-chart">2.3.3.1. Bar/Column Chart</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stacked-bar-column-plot">2.3.3.2. Stacked bar/column plot</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tree-map">2.3.3.3. Tree Map</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="chart-types-using-seaborn">
-<h1><span class="section-number">2. </span>Chart types using Seaborn<a class="headerlink" href="#chart-types-using-seaborn" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">2. </span>Chart types using Seaborn<a class="headerlink" href="#chart-types-using-seaborn" title="Link to this heading">#</a></h1>
 <p>There are many different ways to visualize data and not every one of them is suitable for every dataset. Before you venture into creating beautiful visualizations, ask yourself: <strong>“What is it that I am really trying to show?”</strong>. Only then you can find a plot type that best suits your needs. Of course, sometimes you just want to explore first - go ahead and try different chart types but keep in mind that even though some of them may be visually attractive, they do not necessarily convey the information in the best possible way.</p>
 <p>Here, we will look at the basic types of plots and what kind of data they are good for. In this chapter, we will use the <a class="reference external" href="https://seaborn.pydata.org/">seaborn</a> library to visualize (most) of them.</p>
 <p>We will use the <a class="reference external" href="https://earthmicrobiome.org/">Earth Microbiome Project (EMP)</a> dataset for this exercise - let’s start by reading the data in:</p>
 <section id="environment-setup">
-<h2><span class="section-number">2.1. </span>Environment setup<a class="headerlink" href="#environment-setup" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.1. </span>Environment setup<a class="headerlink" href="#environment-setup" title="Link to this heading">#</a></h2>
 <div class="cell tag_hide-input docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell source</p>
+<p class="expanded admonition-title">Hide code cell source</p>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># for Google Colab</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
@@ -643,6 +501,7 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -691,7 +550,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="loading-the-data">
-<h2><span class="section-number">2.2. </span>Loading the data<a class="headerlink" href="#loading-the-data" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.2. </span>Loading the data<a class="headerlink" href="#loading-the-data" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
@@ -836,13 +695,13 @@ dtype: object
 </div>
 </section>
 <section id="plot-types">
-<h2><span class="section-number">2.3. </span>Plot types<a class="headerlink" href="#plot-types" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.3. </span>Plot types<a class="headerlink" href="#plot-types" title="Link to this heading">#</a></h2>
 <section id="distribution">
-<h3><span class="section-number">2.3.1. </span>Distribution<a class="headerlink" href="#distribution" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">2.3.1. </span>Distribution<a class="headerlink" href="#distribution" title="Link to this heading">#</a></h3>
 <p>As you already saw in at least one of the previous exercises (and probably know from other classes), often we are interested in learning about the distribution of the data before we do any kind of analysis. For example, many statistical tests operate under the assumption that the data comes from a certain distribution. We can visually examine what such a distribution may look like - this can be achieved in several ways that are presented below.</p>
-<p><strong>NOTE</strong>: Most of the plots below were first generated using seaborn plotting functions and then customized slightly using matplotlib. Do not worry for now if you don’t understand some of the matplotlib commands - we will look at them in more detail in <a class="reference internal" href="03_matplotlib_manipulations.html"><span class="doc std std-doc">chapter 3</span></a>.</p>
+<p><strong>NOTE</strong>: Most of the plots below were first generated using seaborn plotting functions and then customized slightly using matplotlib. Do not worry for now if you don’t understand some of the matplotlib commands - we will look at them in more detail in <a class="reference internal" href="03_matplotlib_manipulations.html"><span class="std std-doc">chapter 3</span></a>.</p>
 <section id="histogram">
-<h4><span class="section-number">2.3.1.1. </span>Histogram<a class="headerlink" href="#histogram" title="Permalink to this headline">#</a></h4>
+<h4><span class="section-number">2.3.1.1. </span>Histogram<a class="headerlink" href="#histogram" title="Link to this heading">#</a></h4>
 <p>The most basic way to show an approximate distribution of numerical data is with a histogram, which divides the entire range of values into a series of intervals (bins) and then counts how many values fall into each bin. We can also show the <a class="reference external" href="https://en.wikipedia.org/wiki/Kernel_density_estimation">kernel density estimation</a> (kde) which can smooth frequencies over the bins and show those as a continuous line.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -872,11 +731,12 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/02_chart_types_18_0.svg" src="../_images/02_chart_types_18_0.svg" /></div>
+<img alt="../_images/ca6cd7195bb9abfb37ffb647bc9c616a93426b49efaaf046c7f73551bb033401.svg" src="../_images/ca6cd7195bb9abfb37ffb647bc9c616a93426b49efaaf046c7f73551bb033401.svg" />
+</div>
 </div>
 </section>
 <section id="countplot">
-<h4><span class="section-number">2.3.1.2. </span>Countplot<a class="headerlink" href="#countplot" title="Permalink to this headline">#</a></h4>
+<h4><span class="section-number">2.3.1.2. </span>Countplot<a class="headerlink" href="#countplot" title="Link to this heading">#</a></h4>
 <p>The <code class="docutils literal notranslate"><span class="pre">countplot</span></code> is used to show the number of observations for each category in our dataset. It is created using the <code class="docutils literal notranslate"><span class="pre">countplot()</span></code> function. In the <code class="docutils literal notranslate"><span class="pre">data</span></code> parameter we specify the dataset, and in the <code class="docutils literal notranslate"><span class="pre">y</span></code> or <code class="docutils literal notranslate"><span class="pre">x</span></code> parameter, depending on whether we want horizontal or vertical bars respectively, we specify the name of the column in the dataset that we want to count and plot.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -895,11 +755,12 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/02_chart_types_21_0.svg" src="../_images/02_chart_types_21_0.svg" /></div>
+<img alt="../_images/8b491d9f65bc6877ca64e72e458e1b3cd99b3a0c9c82adbf467a2a773b51aacd.svg" src="../_images/8b491d9f65bc6877ca64e72e458e1b3cd99b3a0c9c82adbf467a2a773b51aacd.svg" />
+</div>
 </div>
 </section>
 <section id="box-plot">
-<h4><span class="section-number">2.3.1.3. </span>Box plot<a class="headerlink" href="#box-plot" title="Permalink to this headline">#</a></h4>
+<h4><span class="section-number">2.3.1.3. </span>Box plot<a class="headerlink" href="#box-plot" title="Link to this heading">#</a></h4>
 <p>A box plot can be used to represent the data distibution by visualizing its quartiles. Usually it also contains whiskers, which indicate variability of the data beyond the first and fourth quartile, and can contain individual points depicting outliers. You should always consult the documentation of the plotting library to make sure what the box plot exactly represents, as this may differ slightly between libraries and functions. See <a class="reference external" href="https://seaborn.pydata.org/generated/seaborn.boxplot.html">here</a> for an example from the seaborn library.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -936,11 +797,12 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/02_chart_types_24_0.svg" src="../_images/02_chart_types_24_0.svg" /></div>
+<img alt="../_images/f7313ab11f4dd5bfed236df35a7bf1d686c2588187a5d557ff95ce597dba59ea.svg" src="../_images/f7313ab11f4dd5bfed236df35a7bf1d686c2588187a5d557ff95ce597dba59ea.svg" />
+</div>
 </div>
 </section>
 <section id="violin-plot">
-<h4><span class="section-number">2.3.1.4. </span>Violin plot<a class="headerlink" href="#violin-plot" title="Permalink to this headline">#</a></h4>
+<h4><span class="section-number">2.3.1.4. </span>Violin plot<a class="headerlink" href="#violin-plot" title="Link to this heading">#</a></h4>
 <p>A violin plot is very similar to a box plot with the addition of a kde. You can think of it as a box plot combined with a histogram: usually you can see the quartile features plus a smoothed frequency distribution.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -960,7 +822,7 @@ dtype: object
     <span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">violinplot</span><span class="p">(</span>
         <span class="n">data</span><span class="o">=</span><span class="n">subset</span><span class="p">,</span> 
         <span class="n">x</span><span class="o">=</span><span class="s1">'env_biome'</span><span class="p">,</span> 
-        <span class="n">y</span><span class="o">=</span><span class="s1">'shannon_diversity'</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>
+        <span class="n">y</span><span class="o">=</span><span class="s1">'shannon_diversity'</span>
     <span class="p">)</span>
     
     <span class="c1"># matplotlib's customization</span>
@@ -977,11 +839,12 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/02_chart_types_27_0.svg" src="../_images/02_chart_types_27_0.svg" /></div>
+<img alt="../_images/4db47d136342cafac86b025362feb3721bc0eea5cb66a2a9203eab46ebe75e50.svg" src="../_images/4db47d136342cafac86b025362feb3721bc0eea5cb66a2a9203eab46ebe75e50.svg" />
+</div>
 </div>
 </section>
 <section id="ridgeline-plot">
-<h4><span class="section-number">2.3.1.5. </span>Ridgeline plot<a class="headerlink" href="#ridgeline-plot" title="Permalink to this headline">#</a></h4>
+<h4><span class="section-number">2.3.1.5. </span>Ridgeline plot<a class="headerlink" href="#ridgeline-plot" title="Link to this heading">#</a></h4>
 <p>A ridgeline plot, also know as Joyplot, shows the distribution of a numerical variable across many different groups. Distributions can be expressed using histograms or densitity plots, aligned to the same horizontal scale and presented with a slight overlap.</p>
 <p>Here we will show the ridgeline plot of Shannon diversity for each of the selection groups.</p>
 <div class="cell docutils container">
@@ -1050,15 +913,16 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/02_chart_types_31_0.svg" src="../_images/02_chart_types_31_0.svg" /></div>
+<img alt="../_images/3764a087826ef48d352e46ca67c68d881fc3c4a7658380e6647c33cb82b41043.svg" src="../_images/3764a087826ef48d352e46ca67c68d881fc3c4a7658380e6647c33cb82b41043.svg" />
+</div>
 </div>
 </section>
 </section>
 <section id="relationship">
-<h3><span class="section-number">2.3.2. </span>Relationship<a class="headerlink" href="#relationship" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">2.3.2. </span>Relationship<a class="headerlink" href="#relationship" title="Link to this heading">#</a></h3>
 <p>There are several ways to visualize relationships between two (or more) variables. Most of the time, the scatter plot will be enough to show how two variables relate to one another. If a third variable is to be added to the picture, consider using a bubble plot or a heatmap rather than, e.g., a 3D bar plot. 3D plots may work well as interactive visualizations but very often are not suitable for 2D prints/presentations as they can obscure parts of information.</p>
 <section id="scatter-plot">
-<h4><span class="section-number">2.3.2.1. </span>Scatter plot<a class="headerlink" href="#scatter-plot" title="Permalink to this headline">#</a></h4>
+<h4><span class="section-number">2.3.2.1. </span>Scatter plot<a class="headerlink" href="#scatter-plot" title="Link to this heading">#</a></h4>
 <p>In its most simple form, a scatter plot uses points to represent numerical values for a number of variables, where each variable is represented by an independent axis.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1089,11 +953,12 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/02_chart_types_36_0.svg" src="../_images/02_chart_types_36_0.svg" /></div>
+<img alt="../_images/1e2d526c6acd27647a17045ac46ea07da3151f81a8d7d101133174ac36557482.svg" src="../_images/1e2d526c6acd27647a17045ac46ea07da3151f81a8d7d101133174ac36557482.svg" />
+</div>
 </div>
 </section>
 <section id="bubble-plot">
-<h4><span class="section-number">2.3.2.2. </span>Bubble plot<a class="headerlink" href="#bubble-plot" title="Permalink to this headline">#</a></h4>
+<h4><span class="section-number">2.3.2.2. </span>Bubble plot<a class="headerlink" href="#bubble-plot" title="Link to this heading">#</a></h4>
 <p>This is a slight modification of a scatter plot to add a third variable to the visualization without using a third axis (by doing which we would end up with a 3D plot). Instead, the scale of the third variable can be reflected by adjusting the size of individual points.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1132,11 +997,12 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/02_chart_types_39_0.svg" src="../_images/02_chart_types_39_0.svg" /></div>
+<img alt="../_images/29152c7d57dc063e0b5a8ca3b89831721c82ea9412635b24a7d830544979a871.svg" src="../_images/29152c7d57dc063e0b5a8ca3b89831721c82ea9412635b24a7d830544979a871.svg" />
+</div>
 </div>
 </section>
 <section id="heat-map">
-<h4><span class="section-number">2.3.2.3. </span>Heat map<a class="headerlink" href="#heat-map" title="Permalink to this headline">#</a></h4>
+<h4><span class="section-number">2.3.2.3. </span>Heat map<a class="headerlink" href="#heat-map" title="Link to this heading">#</a></h4>
 <p>A heat map is a visualization that can be used to represent the magnitude of a phenomenon in two dimensions using a color scale. Below you can find two versions of a heat map. The first one is a simple heat map and the second one is a heat map annotated with values of the third variable.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1209,11 +1075,12 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/02_chart_types_44_0.svg" src="../_images/02_chart_types_44_0.svg" /></div>
+<img alt="../_images/f83754af3ece83688fec587fad4ac55de20cbb0870ec0ce781ca21aac3a23574.svg" src="../_images/f83754af3ece83688fec587fad4ac55de20cbb0870ec0ce781ca21aac3a23574.svg" />
+</div>
 </div>
 </section>
 <section id="correlogram">
-<h4><span class="section-number">2.3.2.4. </span>Correlogram<a class="headerlink" href="#correlogram" title="Permalink to this headline">#</a></h4>
+<h4><span class="section-number">2.3.2.4. </span>Correlogram<a class="headerlink" href="#correlogram" title="Link to this heading">#</a></h4>
 <p>A correlogram or correlation matrix allows us to analyse the relationship between each pair of <strong>numeric</strong> variables of a matrix. The correlation is visualised as a scatterplot. The diagonal represents the distribution of each variable with a histogram or a density plot.</p>
 <p>In the seaborns <code class="docutils literal notranslate"><span class="pre">pairplot()</span></code> function you can specify the following parameters:</p>
 <ul class="simple">
@@ -1248,15 +1115,16 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/02_chart_types_47_0.svg" src="../_images/02_chart_types_47_0.svg" /></div>
+<img alt="../_images/3a858bd36ddebc6f31c89b3da2b9ef70dcfe4ffa48e45ae529bd4ef5ed7b565c.svg" src="../_images/3a858bd36ddebc6f31c89b3da2b9ef70dcfe4ffa48e45ae529bd4ef5ed7b565c.svg" />
+</div>
 </div>
 </section>
 </section>
 <section id="composition">
-<h3><span class="section-number">2.3.3. </span>Composition<a class="headerlink" href="#composition" title="Permalink to this headline">#</a></h3>
-<p>Often we may be interested in visualizing composition in our dataset. An example would be taxonomic composition of our samples (e.g., number or proportion of species observed in each site). A pie chart is a visualization very often used for this type of information - unfortunately, it is rarely a good choice as the human eye is not very good at reading angles (see <a class="reference internal" href="05_dos.html"><span class="doc std std-doc">Chapter 5</span></a>). For this reason, we will not consider this visualization below. Instead, we will explore other plot types that we can use (and reliably interpret!) for visualizing compositions, e.g., stacked bar charts.</p>
+<h3><span class="section-number">2.3.3. </span>Composition<a class="headerlink" href="#composition" title="Link to this heading">#</a></h3>
+<p>Often we may be interested in visualizing composition in our dataset. An example would be taxonomic composition of our samples (e.g., number or proportion of species observed in each site). A pie chart is a visualization very often used for this type of information - unfortunately, it is rarely a good choice as the human eye is not very good at reading angles (see <a class="reference internal" href="05_dos.html"><span class="std std-doc">Chapter 5</span></a>). For this reason, we will not consider this visualization below. Instead, we will explore other plot types that we can use (and reliably interpret!) for visualizing compositions, e.g., stacked bar charts.</p>
 <section id="bar-column-chart">
-<h4><span class="section-number">2.3.3.1. </span>Bar/Column Chart<a class="headerlink" href="#bar-column-chart" title="Permalink to this headline">#</a></h4>
+<h4><span class="section-number">2.3.3.1. </span>Bar/Column Chart<a class="headerlink" href="#bar-column-chart" title="Link to this heading">#</a></h4>
 <p>A bar chart is a chart that presents categorical data with rectangular bars with heights or lengths proportional to the values that they represent. They can also represent aggregated metrics (e.g., the mean of a variable - see below). The bars can be displayed vertically or horizontally.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1292,11 +1160,12 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/02_chart_types_52_0.svg" src="../_images/02_chart_types_52_0.svg" /></div>
+<img alt="../_images/581b8a3d12f424bbda4e9da44258987b61378c13fb7271a60fe1276fd73394eb.svg" src="../_images/581b8a3d12f424bbda4e9da44258987b61378c13fb7271a60fe1276fd73394eb.svg" />
+</div>
 </div>
 </section>
 <section id="stacked-bar-column-plot">
-<h4><span class="section-number">2.3.3.2. </span>Stacked bar/column plot<a class="headerlink" href="#stacked-bar-column-plot" title="Permalink to this headline">#</a></h4>
+<h4><span class="section-number">2.3.3.2. </span>Stacked bar/column plot<a class="headerlink" href="#stacked-bar-column-plot" title="Link to this heading">#</a></h4>
 <p>This is an extension of a simple bar chart to include numeric values from more than one variable. A set of distinct categorical values can be depicted as sub-bars that are stacked into a single bar, each one corresponding to a specific value of that second variable. Values can be plotted unnormalized (as they are in the data set; see the first plot below) or normalized (e.g., as relative abundances; see the second plot below).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1337,7 +1206,8 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/02_chart_types_55_0.svg" src="../_images/02_chart_types_55_0.svg" /></div>
+<img alt="../_images/db2cb82501e8c47a10a48844da922148c83b52b8a535c12ebd6097933789fce9.svg" src="../_images/db2cb82501e8c47a10a48844da922148c83b52b8a535c12ebd6097933789fce9.svg" />
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1380,11 +1250,12 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/02_chart_types_56_0.svg" src="../_images/02_chart_types_56_0.svg" /></div>
+<img alt="../_images/de2d4bfd21c0c0ccb5078b08e9bf04af3a6a29c31402f48539758132d6131751.svg" src="../_images/de2d4bfd21c0c0ccb5078b08e9bf04af3a6a29c31402f48539758132d6131751.svg" />
+</div>
 </div>
 </section>
 <section id="tree-map">
-<h4><span class="section-number">2.3.3.3. </span>Tree Map<a class="headerlink" href="#tree-map" title="Permalink to this headline">#</a></h4>
+<h4><span class="section-number">2.3.3.3. </span>Tree Map<a class="headerlink" href="#tree-map" title="Link to this heading">#</a></h4>
 <p><strong>NOTE:</strong> In this section we use <em>plotly</em> instead of the <em>seaborn</em> library to generate the treemap. You can find more information on the <a class="reference external" href="https://plotly.com/python/">Plotly documentation</a>.</p>
 <p>A Treemap displays hierarchical data as a set of nested rectangles. Each group is represented by a rectangle. The area of the recatngle’s group is proportional to the value of the group for the particular numerical feature that is being visualized. Multiple groups and subgroups can be visualized by using different color schemes and interactivity.</p>
 <p>Treemaps can show two types of information simultaneously:</p>
@@ -1507,9 +1378,9 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
         });
         }
         </script>
-</div><div class="output text_html"><div>                            <div id="39a8e716-7db1-484d-9b57-8ddd1842784c" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("39a8e716-7db1-484d-9b57-8ddd1842784c")) {                    Plotly.newPlot(                        "39a8e716-7db1-484d-9b57-8ddd1842784c",                        [{"branchvalues":"total","customdata":[[18.0],[10.0],[8.0],[8.0],[2.0],[4.0],[9.0],[12.0],[1.0],[20.0],[6.0],[7.0],[78.0],[37.0],[46.0],[17.0],[17.0],[28.0],[3.0],[4.0],[3.0],[1.0],[19.0],[3.0],[27.0],[4.0],[4.0],[5.0],[4.0],[4.0],[112.0],[4.0],[1.0],[1.0],[1.0],[28.0],[2.0],[4.0],[3.0],[3.0],[7.0],[3.0],[139.0],[13.0],[7.75],[72.82315112540194],[11.235294117647058]],"domain":{"x":[0.0,1.0],"y":[0.0,1.0]},"hovertemplate":"labels=%{label}<br>count_sum=%{value}<br>parent=%{parent}<br>id=%{id}<br>count=%{color}<extra></extra>","ids":["low/Small lake biome","high/Small river biome","low/anthropogenic terrestrial biome","low/cropland biome","medium/cropland biome","low/dense settlement biome","medium/dense settlement biome","high/desert biome","low/flooded savanna","medium/forest biome","low/freshwater biome","medium/grassland biome","low/marine benthic biome","low/marine biome","low/marine coral reef biome","low/marine pelagic biome","low/marine reef biome","low/marine salt marsh biome","low/marine sediment","low/marine subtidal rocky reef biome","high/montane grasslands and shrubland biome","low/neritic bathypelagic zone biome","low/neritic epipelagic zone biome","medium/rangeland biome","low/subpolar coniferous forest biome","high/temperate coniferous forest biome","low/temperate coniferous forest biome","medium/temperate coniferous forest biome","high/temperate desert biome","high/temperate grassland biome","low/temperate mixed forest biome","low/temperate shrubland","medium/temperate shrubland biome","low/temperate woodland biome","medium/temperate woodland biome","low/tropical broadleaf forest biome","low/tropical desert biome","medium/tropical desert biome","low/tropical moist broadleaf forest","medium/tropical moist broadleaf forest","low/tundra biome","high/urban biome","low/urban biome","medium/urban biome","high","low","medium"],"labels":["Small lake biome","Small river biome","anthropogenic terrestrial biome","cropland biome","cropland biome","dense settlement biome","dense settlement biome","desert biome","flooded savanna","forest biome","freshwater biome","grassland biome","marine benthic biome","marine biome","marine coral reef biome","marine pelagic biome","marine reef biome","marine salt marsh biome","marine sediment","marine subtidal rocky reef biome","montane grasslands and shrubland biome","neritic bathypelagic zone biome","neritic epipelagic zone biome","rangeland biome","subpolar coniferous forest biome","temperate coniferous forest biome","temperate coniferous forest biome","temperate coniferous forest biome","temperate desert biome","temperate grassland biome","temperate mixed forest biome","temperate shrubland","temperate shrubland biome","temperate woodland biome","temperate woodland biome","tropical broadleaf forest biome","tropical desert biome","tropical desert biome","tropical moist broadleaf forest","tropical moist broadleaf forest","tundra biome","urban biome","urban biome","urban biome","high","low","medium"],"marker":{"coloraxis":"coloraxis","colors":[18.0,10.0,8.0,8.0,2.0,4.0,9.0,12.0,1.0,20.0,6.0,7.0,78.0,37.0,46.0,17.0,17.0,28.0,3.0,4.0,3.0,1.0,19.0,3.0,27.0,4.0,4.0,5.0,4.0,4.0,112.0,4.0,1.0,1.0,1.0,28.0,2.0,4.0,3.0,3.0,7.0,3.0,139.0,13.0,7.75,72.82315112540194,11.235294117647058]},"name":"","parents":["low","high","low","low","medium","low","medium","high","low","medium","low","medium","low","low","low","low","low","low","low","low","high","low","low","medium","low","high","low","medium","high","high","low","low","medium","low","medium","low","low","medium","low","medium","low","high","low","medium","","",""],"values":[18,10,8,8,2,4,9,12,1,20,6,7,78,37,46,17,17,28,3,4,3,1,19,3,27,4,4,5,4,4,112,4,1,1,1,28,2,4,3,3,7,3,139,13,40,622,68],"type":"treemap"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"coloraxis":{"colorbar":{"title":{"text":"count"}},"colorscale":[[0.0,"rgb(246, 210, 169)"],[0.16666666666666666,"rgb(245, 183, 142)"],[0.3333333333333333,"rgb(241, 156, 124)"],[0.5,"rgb(234, 129, 113)"],[0.6666666666666666,"rgb(221, 104, 108)"],[0.8333333333333334,"rgb(202, 82, 104)"],[1.0,"rgb(177, 63, 100)"]],"cmid":63.52054794520548},"legend":{"tracegroupgap":0},"margin":{"t":50,"l":25,"r":25,"b":25}},                        {"responsive": true}                    ).then(function(){
-
-var gd = document.getElementById('39a8e716-7db1-484d-9b57-8ddd1842784c');
+        </div><div class="output text_html"><div>                            <div id="819ed13e-d418-4f14-84ce-ed07ee6824f8" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("819ed13e-d418-4f14-84ce-ed07ee6824f8")) {                    Plotly.newPlot(                        "819ed13e-d418-4f14-84ce-ed07ee6824f8",                        [{"branchvalues":"total","customdata":[[18.0],[10.0],[8.0],[8.0],[2.0],[4.0],[9.0],[12.0],[1.0],[20.0],[6.0],[7.0],[78.0],[37.0],[46.0],[17.0],[17.0],[28.0],[3.0],[4.0],[3.0],[1.0],[19.0],[3.0],[27.0],[4.0],[4.0],[5.0],[4.0],[4.0],[112.0],[4.0],[1.0],[1.0],[1.0],[28.0],[2.0],[4.0],[3.0],[3.0],[7.0],[3.0],[139.0],[13.0],[7.75],[72.82315112540194],[11.235294117647058]],"domain":{"x":[0.0,1.0],"y":[0.0,1.0]},"hovertemplate":"labels=%{label}<br>count_sum=%{value}<br>parent=%{parent}<br>id=%{id}<br>count=%{color}<extra></extra>","ids":["low/Small lake biome","high/Small river biome","low/anthropogenic terrestrial biome","low/cropland biome","medium/cropland biome","low/dense settlement biome","medium/dense settlement biome","high/desert biome","low/flooded savanna","medium/forest biome","low/freshwater biome","medium/grassland biome","low/marine benthic biome","low/marine biome","low/marine coral reef biome","low/marine pelagic biome","low/marine reef biome","low/marine salt marsh biome","low/marine sediment","low/marine subtidal rocky reef biome","high/montane grasslands and shrubland biome","low/neritic bathypelagic zone biome","low/neritic epipelagic zone biome","medium/rangeland biome","low/subpolar coniferous forest biome","high/temperate coniferous forest biome","low/temperate coniferous forest biome","medium/temperate coniferous forest biome","high/temperate desert biome","high/temperate grassland biome","low/temperate mixed forest biome","low/temperate shrubland","medium/temperate shrubland biome","low/temperate woodland biome","medium/temperate woodland biome","low/tropical broadleaf forest biome","low/tropical desert biome","medium/tropical desert biome","low/tropical moist broadleaf forest","medium/tropical moist broadleaf forest","low/tundra biome","high/urban biome","low/urban biome","medium/urban biome","high","low","medium"],"labels":["Small lake biome","Small river biome","anthropogenic terrestrial biome","cropland biome","cropland biome","dense settlement biome","dense settlement biome","desert biome","flooded savanna","forest biome","freshwater biome","grassland biome","marine benthic biome","marine biome","marine coral reef biome","marine pelagic biome","marine reef biome","marine salt marsh biome","marine sediment","marine subtidal rocky reef biome","montane grasslands and shrubland biome","neritic bathypelagic zone biome","neritic epipelagic zone biome","rangeland biome","subpolar coniferous forest biome","temperate coniferous forest biome","temperate coniferous forest biome","temperate coniferous forest biome","temperate desert biome","temperate grassland biome","temperate mixed forest biome","temperate shrubland","temperate shrubland biome","temperate woodland biome","temperate woodland biome","tropical broadleaf forest biome","tropical desert biome","tropical desert biome","tropical moist broadleaf forest","tropical moist broadleaf forest","tundra biome","urban biome","urban biome","urban biome","high","low","medium"],"marker":{"coloraxis":"coloraxis","colors":[18.0,10.0,8.0,8.0,2.0,4.0,9.0,12.0,1.0,20.0,6.0,7.0,78.0,37.0,46.0,17.0,17.0,28.0,3.0,4.0,3.0,1.0,19.0,3.0,27.0,4.0,4.0,5.0,4.0,4.0,112.0,4.0,1.0,1.0,1.0,28.0,2.0,4.0,3.0,3.0,7.0,3.0,139.0,13.0,7.75,72.82315112540194,11.235294117647058]},"name":"","parents":["low","high","low","low","medium","low","medium","high","low","medium","low","medium","low","low","low","low","low","low","low","low","high","low","low","medium","low","high","low","medium","high","high","low","low","medium","low","medium","low","low","medium","low","medium","low","high","low","medium","","",""],"values":[18,10,8,8,2,4,9,12,1,20,6,7,78,37,46,17,17,28,3,4,3,1,19,3,27,4,4,5,4,4,112,4,1,1,1,28,2,4,3,3,7,3,139,13,40,622,68],"type":"treemap"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"coloraxis":{"colorbar":{"title":{"text":"count"}},"colorscale":[[0.0,"rgb(246, 210, 169)"],[0.16666666666666666,"rgb(245, 183, 142)"],[0.3333333333333333,"rgb(241, 156, 124)"],[0.5,"rgb(234, 129, 113)"],[0.6666666666666666,"rgb(221, 104, 108)"],[0.8333333333333334,"rgb(202, 82, 104)"],[1.0,"rgb(177, 63, 100)"]],"cmid":63.52054794520548},"legend":{"tracegroupgap":0},"margin":{"t":50,"l":25,"r":25,"b":25}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('819ed13e-d418-4f14-84ce-ed07ee6824f8');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -1551,7 +1422,7 @@ if (outputEl) {{
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./chapters"
         },
         predefinedOutput: true
@@ -1559,50 +1430,128 @@ if (outputEl) {{
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="01_importance_of_data_vis.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">1. </span>Importance of data visualization</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="01_importance_of_data_vis.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Importance of data visualization</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="03_matplotlib_manipulations.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="03_matplotlib_manipulations.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title"><span class="section-number">3. </span>Customizing plots with Matplotlib</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#environment-setup">2.1. Environment setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-the-data">2.2. Loading the data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-types">2.3. Plot types</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution">2.3.1. Distribution</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#histogram">2.3.1.1. Histogram</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#countplot">2.3.1.2. Countplot</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#box-plot">2.3.1.3. Box plot</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#violin-plot">2.3.1.4. Violin plot</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ridgeline-plot">2.3.1.5. Ridgeline plot</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relationship">2.3.2. Relationship</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#scatter-plot">2.3.2.1. Scatter plot</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bubble-plot">2.3.2.2. Bubble plot</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-map">2.3.2.3. Heat map</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#correlogram">2.3.2.4. Correlogram</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#composition">2.3.3. Composition</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bar-column-chart">2.3.3.1. Bar/Column Chart</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stacked-bar-column-plot">2.3.3.2. Stacked bar/column plot</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tree-map">2.3.3.3. Tree Map</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Dr. Michal Ziemski, Doriela Grabocka, and Dr. Nicholas Bokulich<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By Dr. Michal Ziemski, Doriela Grabocka, and Dr. Nicholas Bokulich
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

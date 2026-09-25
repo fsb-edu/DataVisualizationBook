@@ -1,114 +1,180 @@
 
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="../" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>3. Customizing plots with Matplotlib &#8212; Data Visualization for Food Scientists</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/general.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/general.css?v=8fc6f707" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/03_matplotlib_manipulations';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="shortcut icon" href="../_static/ethfavico.png"/>
+    <link rel="icon" href="../_static/ethfavico.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="4. Dimensionality reduction" href="04_dimensionality_reduction.html" />
     <link rel="prev" title="2. Chart types using Seaborn" href="02_chart_types.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
-    
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="00_intro.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../_static/eth_logo.svg" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Data Visualization for Food Scientists</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="../_static/eth_logo.svg" class="logo__image only-light" alt="Data Visualization for Food Scientists - Home"/>
+    <script>document.write(`<img src="../_static/eth_logo.svg" class="logo__image only-dark" alt="Data Visualization for Food Scientists - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -118,530 +184,301 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="01_importance_of_data_vis.html">
-   1. Importance of data visualization
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="02_chart_types.html">
-   2. Chart types using Seaborn
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   3. Customizing plots with Matplotlib
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="04_dimensionality_reduction.html">
-   4. Dimensionality reduction
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="05_dos.html">
-   5. DO’s and DON’Ts of data visualization
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="06_tutorial.html">
-   6. Tutorial: sample dataset
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="exercises/01_intro.html">
-   7. Exercises
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="exercises/02_exercises.html">
-     7.1. Exercises
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="exercises/03_solutions.html">
-     7.2. Solutions
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="08_bibliography.html">
-   8. References
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="01_importance_of_data_vis.html">1. Importance of data visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_chart_types.html">2. Chart types using Seaborn</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Customizing plots with Matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_dimensionality_reduction.html">4. Dimensionality reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_dos.html">5. DO’s and DON’Ts of data visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_tutorial.html">6. Tutorial: sample dataset</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="exercises/01_intro.html">7. Exercises</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="exercises/02_exercises.html">7.1. Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/03_solutions.html">7.2. Solutions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="08_bibliography.html">8. References</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://binder.let.ethz.ch/v2/gh/bokulich-lab/DataVisualizationBook/main?urlpath=tree/chapters/03_matplotlib_manipulations.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://colab.research.google.com/github/bokulich-lab/DataVisualizationBook/blob/main/chapters/03_matplotlib_manipulations.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Colab"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../_static/images/logo_colab.png">
-  </span>
-<span class="headerbtn__text-container">Colab</span>
-</a>
-
-      </li>
-      
-    </ul>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://binder.let.ethz.ch/v2/gh/bokulich-lab/DataVisualizationBook/main?urlpath=tree/chapters/03_matplotlib_manipulations.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/bokulich-lab/DataVisualizationBook/blob/main/chapters/03_matplotlib_manipulations.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
 </div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/bokulich-lab/DataVisualizationBook" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/bokulich-lab/DataVisualizationBook/issues/new?title=Issue%20on%20page%20%2Fchapters/03_matplotlib_manipulations.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/chapters/03_matplotlib_manipulations.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/bokulich-lab/DataVisualizationBook"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
 
-      </li>
-      
-      <li>
-        <a href="https://github.com/bokulich-lab/DataVisualizationBook/issues/new?title=Issue%20on%20page%20%2Fchapters/03_matplotlib_manipulations.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/chapters/03_matplotlib_manipulations.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </button>
-
-      </li>
+</div></div>
       
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
+    </div>
   
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
-
-    </div>
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#environment-setup">
-   3.1. Environment setup
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#creating-figures-and-subplots">
-   3.2. Creating figures and subplots
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#one-subplot">
-     3.2.1. One Subplot
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#many-subplots-horizontal-layout">
-     3.2.2. Many Subplots - Horizontal Layout
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#multiple-subplots-grid-layout">
-     3.2.3. Multiple Subplots - Grid Layout
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#gridspec">
-     3.2.4. Gridspec
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#adding-data-to-specific-subplots">
-   3.3. Adding data to specific subplots
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#a-single-plot">
-     3.3.1. A single plot
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#multiple-plots">
-     3.3.2. Multiple plots
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#modifying-elements-of-a-plot">
-   3.4. Modifying elements of a plot
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#axes-labels-and-title">
-     3.4.1. Axes’ labels and title
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#axes-ranges-ticks-and-tick-labels">
-     3.4.2. Axes’ ranges, ticks and tick labels
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#axis-scale">
-     3.4.3. Axis’ scale
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#zooming-in-out-in-a-plot">
-     3.4.4. Zooming in/out in a plot
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#color-maps">
-     3.4.5. Color Maps
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#legend-position-and-title">
-     3.4.6. Legend position and title
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#figure-title">
-     3.4.7. Figure Title
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#layout-of-subplots">
-     3.4.8. Layout of Subplots
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#axis-label-position-and-colorbars">
-     3.4.9. Axis label position and colorbars
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#little-plotting-exercise">
-   3.5. Little Plotting Exercise
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Customizing plots with Matplotlib</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#environment-setup">
-   3.1. Environment setup
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#creating-figures-and-subplots">
-   3.2. Creating figures and subplots
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#one-subplot">
-     3.2.1. One Subplot
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#many-subplots-horizontal-layout">
-     3.2.2. Many Subplots - Horizontal Layout
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#multiple-subplots-grid-layout">
-     3.2.3. Multiple Subplots - Grid Layout
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#gridspec">
-     3.2.4. Gridspec
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#adding-data-to-specific-subplots">
-   3.3. Adding data to specific subplots
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#a-single-plot">
-     3.3.1. A single plot
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#multiple-plots">
-     3.3.2. Multiple plots
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#modifying-elements-of-a-plot">
-   3.4. Modifying elements of a plot
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#axes-labels-and-title">
-     3.4.1. Axes’ labels and title
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#axes-ranges-ticks-and-tick-labels">
-     3.4.2. Axes’ ranges, ticks and tick labels
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#axis-scale">
-     3.4.3. Axis’ scale
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#zooming-in-out-in-a-plot">
-     3.4.4. Zooming in/out in a plot
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#color-maps">
-     3.4.5. Color Maps
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#legend-position-and-title">
-     3.4.6. Legend position and title
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#figure-title">
-     3.4.7. Figure Title
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#layout-of-subplots">
-     3.4.8. Layout of Subplots
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#axis-label-position-and-colorbars">
-     3.4.9. Axis label position and colorbars
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#little-plotting-exercise">
-   3.5. Little Plotting Exercise
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Customizing plots with Matplotlib</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#environment-setup">3.1. Environment setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-figures-and-subplots">3.2. Creating figures and subplots</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#one-subplot">3.2.1. One Subplot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#many-subplots-horizontal-layout">3.2.2. Many Subplots - Horizontal Layout</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-subplots-grid-layout">3.2.3. Multiple Subplots - Grid Layout</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gridspec">3.2.4. Gridspec</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-data-to-specific-subplots">3.3. Adding data to specific subplots</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-single-plot">3.3.1. A single plot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-plots">3.3.2. Multiple plots</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modifying-elements-of-a-plot">3.4. Modifying elements of a plot</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#axes-labels-and-title">3.4.1. Axes’ labels and title</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#axes-ranges-ticks-and-tick-labels">3.4.2. Axes’ ranges, ticks and tick labels</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#axis-scale">3.4.3. Axis’ scale</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zooming-in-out-in-a-plot">3.4.4. Zooming in/out in a plot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#color-maps">3.4.5. Color Maps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#legend-position-and-title">3.4.6. Legend position and title</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-title">3.4.7. Figure Title</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layout-of-subplots">3.4.8. Layout of Subplots</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#axis-label-position-and-colorbars">3.4.9. Axis label position and colorbars</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#little-plotting-exercise">3.5. Little Plotting Exercise</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="customizing-plots-with-matplotlib">
-<h1><span class="section-number">3. </span>Customizing plots with Matplotlib<a class="headerlink" href="#customizing-plots-with-matplotlib" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">3. </span>Customizing plots with Matplotlib<a class="headerlink" href="#customizing-plots-with-matplotlib" title="Link to this heading">#</a></h1>
 <p>Although <em>seaborn</em> generates good-looking figures out of the box, most of the time we need to introduce some adjustments. You saw already in the previous chapters that we could relabel axes and adjust their range or ticks by calling <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> functions directly to modify figures that we generated with <code class="docutils literal notranslate"><span class="pre">seaborn</span></code>. Here, we will review some basic concepts of <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> figures and learn how to adjust some of their elements to create custom figures.</p>
 <p>The two most important concepts to be aware of when using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> are the <strong>figure</strong> and <strong>axes</strong> objects:</p>
 <ul class="simple">
@@ -650,8 +487,13 @@ title="Print to PDF"
 </ul>
 <p><strong>Before you begin</strong>: Be sure to check out the official matplotlib cheat sheet (available <a class="reference external" href="https://matplotlib.org/cheatsheets/cheatsheets.pdf">here</a>) - it outlines all of the most useful functionalities discussed below and more!</p>
 <section id="environment-setup">
-<h2><span class="section-number">3.1. </span>Environment setup<a class="headerlink" href="#environment-setup" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">3.1. </span>Environment setup<a class="headerlink" href="#environment-setup" title="Link to this heading">#</a></h2>
 <div class="cell tag_hide-input docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell source</p>
+<p class="expanded admonition-title">Hide code cell source</p>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># for Google Colab</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
@@ -663,6 +505,7 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -678,14 +521,14 @@ title="Print to PDF"
 </div>
 </section>
 <section id="creating-figures-and-subplots">
-<h2><span class="section-number">3.2. </span>Creating figures and subplots<a class="headerlink" href="#creating-figures-and-subplots" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">3.2. </span>Creating figures and subplots<a class="headerlink" href="#creating-figures-and-subplots" title="Link to this heading">#</a></h2>
 <p>Let’s see now how to create a figure and its axes. Note: the following examples don’t have any data shown on the (sub)plots - this is to only show you how to create and refer to figures with one or more axes.</p>
 <p>Documentation you might want to check for further information:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://matplotlib.org/stable/gallery/subplots_axes_and_figures/subplots_demo.html">tutorial on creating multiple sublots</a></p></li>
 </ul>
 <section id="one-subplot">
-<h3><span class="section-number">3.2.1. </span>One Subplot<a class="headerlink" href="#one-subplot" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">3.2.1. </span>One Subplot<a class="headerlink" href="#one-subplot" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
@@ -693,11 +536,12 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03_matplotlib_manipulations_8_0.svg" src="../_images/03_matplotlib_manipulations_8_0.svg" /></div>
+<img alt="../_images/1e0be230294cded64ba4485fed8e0dc3b9d5baa37908a1534ff1fa913f05a9b3.svg" src="../_images/1e0be230294cded64ba4485fed8e0dc3b9d5baa37908a1534ff1fa913f05a9b3.svg" />
+</div>
 </div>
 </section>
 <section id="many-subplots-horizontal-layout">
-<h3><span class="section-number">3.2.2. </span>Many Subplots - Horizontal Layout<a class="headerlink" href="#many-subplots-horizontal-layout" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">3.2.2. </span>Many Subplots - Horizontal Layout<a class="headerlink" href="#many-subplots-horizontal-layout" title="Link to this heading">#</a></h3>
 <p>We can create multiple subplots by using the function <code class="docutils literal notranslate"><span class="pre">subplot</span></code> of the <code class="docutils literal notranslate"><span class="pre">pyplot</span></code>  module in <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>. Here we specify the size of the figure by passing a tuple in the form <code class="docutils literal notranslate"><span class="pre">(width,</span> <span class="pre">height)</span></code> to the <code class="docutils literal notranslate"><span class="pre">figsize</span></code> parameter. In addition, the <code class="docutils literal notranslate"><span class="pre">nrows</span></code> and <code class="docutils literal notranslate"><span class="pre">ncols</span></code> specify how many rows and how many columns the figure should have.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -706,11 +550,12 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03_matplotlib_manipulations_11_0.svg" src="../_images/03_matplotlib_manipulations_11_0.svg" /></div>
+<img alt="../_images/ec7ce39ddff11004c1edc70012ff5f4bc84f1daf13c0c36ac933b15fefc3688f.svg" src="../_images/ec7ce39ddff11004c1edc70012ff5f4bc84f1daf13c0c36ac933b15fefc3688f.svg" />
+</div>
 </div>
 </section>
 <section id="multiple-subplots-grid-layout">
-<h3><span class="section-number">3.2.3. </span>Multiple Subplots - Grid Layout<a class="headerlink" href="#multiple-subplots-grid-layout" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">3.2.3. </span>Multiple Subplots - Grid Layout<a class="headerlink" href="#multiple-subplots-grid-layout" title="Link to this heading">#</a></h3>
 <p>Here we can see an example where, instead of specifying the width and height of the figure, we specify the aspect ratio by setting <code class="docutils literal notranslate"><span class="pre">figsize</span> <span class="pre">=</span> <span class="pre">plt.figaspect(aspect_ratio)</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -719,11 +564,12 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03_matplotlib_manipulations_14_0.svg" src="../_images/03_matplotlib_manipulations_14_0.svg" /></div>
+<img alt="../_images/7aaffaa743ac6ddbd632738b3d6e6a2710bf6384a98f2d8221b3eabc96ccad9e.svg" src="../_images/7aaffaa743ac6ddbd632738b3d6e6a2710bf6384a98f2d8221b3eabc96ccad9e.svg" />
+</div>
 </div>
 </section>
 <section id="gridspec">
-<h3><span class="section-number">3.2.4. </span>Gridspec<a class="headerlink" href="#gridspec" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">3.2.4. </span>Gridspec<a class="headerlink" href="#gridspec" title="Link to this heading">#</a></h3>
 <p>Sometimes we may need a grid of plots where some subplots should span multiple rows or columns. The code below shows how to do this using a <code class="docutils literal notranslate"><span class="pre">gridspec</span></code>. Below you will find two examples: a vertical and a horizontal alignment. After creating the <code class="docutils literal notranslate"><span class="pre">GridSpec</span></code> object (line 5), we remove the subplots corresponding to the location of the subplot that will span some rows and some columns. The removal is done by specifying the correct rows and columns in the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop (line 7). Then, we need to add the subplot in the place of the removed subplots. We do this using the function <code class="docutils literal notranslate"><span class="pre">fig.add_subplot(gs[rows,</span> <span class="pre">columns])</span></code>, where <code class="docutils literal notranslate"><span class="pre">gs</span></code> is the Gridspace object created at the beginning. Note that <code class="docutils literal notranslate"><span class="pre">rows</span></code> and <code class="docutils literal notranslate"><span class="pre">columns</span></code> passed to the <code class="docutils literal notranslate"><span class="pre">gs</span></code> should correspond to the locations of the axes that we removed in the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop. Finally, we use the <code class="docutils literal notranslate"><span class="pre">annotate</span></code> method to add text to the subplot that spans some rows/columns.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -746,7 +592,8 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03_matplotlib_manipulations_17_0.svg" src="../_images/03_matplotlib_manipulations_17_0.svg" /></div>
+<img alt="../_images/c3ce0e1accbb9e0495a43dbfc4d2f8f54a92f8bb5b96072d75487cf2c8d9892d.svg" src="../_images/c3ce0e1accbb9e0495a43dbfc4d2f8f54a92f8bb5b96072d75487cf2c8d9892d.svg" />
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -769,7 +616,8 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03_matplotlib_manipulations_18_0.svg" src="../_images/03_matplotlib_manipulations_18_0.svg" /></div>
+<img alt="../_images/c031b16ef545e4f0f43bf60b36ffab57fb61bf1b1bcfdec6a4004ce4a698ae5c.svg" src="../_images/c031b16ef545e4f0f43bf60b36ffab57fb61bf1b1bcfdec6a4004ce4a698ae5c.svg" />
+</div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -781,7 +629,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="adding-data-to-specific-subplots">
-<h2><span class="section-number">3.3. </span>Adding data to specific subplots<a class="headerlink" href="#adding-data-to-specific-subplots" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">3.3. </span>Adding data to specific subplots<a class="headerlink" href="#adding-data-to-specific-subplots" title="Link to this heading">#</a></h2>
 <p>When you use <em>seaborn</em>, it will automatically create axes and figures for you so you don’t need to do any of the above. However, when you want to have better control over your plots you may want to first create your own figure with the desired properties and then place specific plots in its axes. To demonstrate, let’s generate some data that we will use in the plots later:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -856,7 +704,7 @@ title="Print to PDF"
 </div></div></div>
 </div>
 <section id="a-single-plot">
-<h3><span class="section-number">3.3.1. </span>A single plot<a class="headerlink" href="#a-single-plot" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">3.3.1. </span>A single plot<a class="headerlink" href="#a-single-plot" title="Link to this heading">#</a></h3>
 <p>As you can see from the code below, we can create a figure and the corresponding axes and then we connect the <strong>seaborn</strong> plot with the figure and axes created via the <code class="docutils literal notranslate"><span class="pre">ax</span></code> parameter inside the plot method of the <strong>seaborn</strong> library.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -866,11 +714,12 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03_matplotlib_manipulations_25_0.svg" src="../_images/03_matplotlib_manipulations_25_0.svg" /></div>
+<img alt="../_images/5e8d3197f4d34b7dff39e4b3018aa3259563ec7309729e05065cf725ad7da90c.svg" src="../_images/5e8d3197f4d34b7dff39e4b3018aa3259563ec7309729e05065cf725ad7da90c.svg" />
+</div>
 </div>
 </section>
 <section id="multiple-plots">
-<h3><span class="section-number">3.3.2. </span>Multiple plots<a class="headerlink" href="#multiple-plots" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">3.3.2. </span>Multiple plots<a class="headerlink" href="#multiple-plots" title="Link to this heading">#</a></h3>
 <p>When plotting more than one subplot, <code class="docutils literal notranslate"><span class="pre">axes</span></code> becomes a numpy array with the shape <code class="docutils literal notranslate"><span class="pre">(nrows,</span> <span class="pre">ncols)</span></code>. In this case, we need to select which subplot you want to use and pass this subplot to the plotting function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -884,7 +733,8 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03_matplotlib_manipulations_28_0.svg" src="../_images/03_matplotlib_manipulations_28_0.svg" /></div>
+<img alt="../_images/dbc64a68c741b8c365c6b2b8f3ee1c8af17d6b32fde6ad382b7f6265d3a43fd7.svg" src="../_images/dbc64a68c741b8c365c6b2b8f3ee1c8af17d6b32fde6ad382b7f6265d3a43fd7.svg" />
+</div>
 </div>
 <p>Below is an example when axes is a 2D array.</p>
 <div class="cell docutils container">
@@ -901,15 +751,16 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03_matplotlib_manipulations_30_0.svg" src="../_images/03_matplotlib_manipulations_30_0.svg" /></div>
+<img alt="../_images/90f63cedd2bbcfd91b32ee3b4bbf338c903d16009550fe93ae33e30a3969b816.svg" src="../_images/90f63cedd2bbcfd91b32ee3b4bbf338c903d16009550fe93ae33e30a3969b816.svg" />
+</div>
 </div>
 </section>
 </section>
 <section id="modifying-elements-of-a-plot">
-<h2><span class="section-number">3.4. </span>Modifying elements of a plot<a class="headerlink" href="#modifying-elements-of-a-plot" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">3.4. </span>Modifying elements of a plot<a class="headerlink" href="#modifying-elements-of-a-plot" title="Link to this heading">#</a></h2>
 <p>As you could see so far, we often need to adjust certain elements of a plot. Most of the attributes that we are usually interested in can be modified directly on the <code class="docutils literal notranslate"><span class="pre">Axes</span></code> object (the one that you passed to or received from a <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> plotting function). Adjustments that concern, e.g., how subplots relate to one another (like spacing between them) or other ones that have to do with the figure itself (like a figure title) can be set on the <code class="docutils literal notranslate"><span class="pre">Figure</span></code> object directly.</p>
 <section id="axes-labels-and-title">
-<h3><span class="section-number">3.4.1. </span>Axes’ labels and title<a class="headerlink" href="#axes-labels-and-title" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">3.4.1. </span>Axes’ labels and title<a class="headerlink" href="#axes-labels-and-title" title="Link to this heading">#</a></h3>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <div class="admonition note">
@@ -932,11 +783,12 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03_matplotlib_manipulations_35_0.svg" src="../_images/03_matplotlib_manipulations_35_0.svg" /></div>
+<img alt="../_images/afc5b800b097a952bc426e665dd25bad13280bb7fc410970eeca131a615c638c.svg" src="../_images/afc5b800b097a952bc426e665dd25bad13280bb7fc410970eeca131a615c638c.svg" />
+</div>
 </div>
 </section>
 <section id="axes-ranges-ticks-and-tick-labels">
-<h3><span class="section-number">3.4.2. </span>Axes’ ranges, ticks and tick labels<a class="headerlink" href="#axes-ranges-ticks-and-tick-labels" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">3.4.2. </span>Axes’ ranges, ticks and tick labels<a class="headerlink" href="#axes-ranges-ticks-and-tick-labels" title="Link to this heading">#</a></h3>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <div class="admonition note">
@@ -979,11 +831,12 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03_matplotlib_manipulations_38_0.svg" src="../_images/03_matplotlib_manipulations_38_0.svg" /></div>
+<img alt="../_images/ff99c39d1764bdc3ae22bd9e48d609bff1d265549a501159681796dbe91e5c2e.svg" src="../_images/ff99c39d1764bdc3ae22bd9e48d609bff1d265549a501159681796dbe91e5c2e.svg" />
+</div>
 </div>
 </section>
 <section id="axis-scale">
-<h3><span class="section-number">3.4.3. </span>Axis’ scale<a class="headerlink" href="#axis-scale" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">3.4.3. </span>Axis’ scale<a class="headerlink" href="#axis-scale" title="Link to this heading">#</a></h3>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <div class="admonition note">
@@ -1005,11 +858,12 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03_matplotlib_manipulations_41_0.svg" src="../_images/03_matplotlib_manipulations_41_0.svg" /></div>
+<img alt="../_images/14ebe07f69488c31b34d773df49912e60d65dcd283b78ae2d646be389762b8ec.svg" src="../_images/14ebe07f69488c31b34d773df49912e60d65dcd283b78ae2d646be389762b8ec.svg" />
+</div>
 </div>
 </section>
 <section id="zooming-in-out-in-a-plot">
-<h3><span class="section-number">3.4.4. </span>Zooming in/out in a plot<a class="headerlink" href="#zooming-in-out-in-a-plot" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">3.4.4. </span>Zooming in/out in a plot<a class="headerlink" href="#zooming-in-out-in-a-plot" title="Link to this heading">#</a></h3>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <div class="admonition note">
@@ -1049,11 +903,12 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03_matplotlib_manipulations_44_0.svg" src="../_images/03_matplotlib_manipulations_44_0.svg" /></div>
+<img alt="../_images/25073369494218acd64acd948ed4521bd02f33a05ca5f9447f93e3cc8095e77c.svg" src="../_images/25073369494218acd64acd948ed4521bd02f33a05ca5f9447f93e3cc8095e77c.svg" />
+</div>
 </div>
 </section>
 <section id="color-maps">
-<h3><span class="section-number">3.4.5. </span>Color Maps<a class="headerlink" href="#color-maps" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">3.4.5. </span>Color Maps<a class="headerlink" href="#color-maps" title="Link to this heading">#</a></h3>
 <p>There are many ways to specify colors when plotting. You can either use <a class="reference external" href="https://seaborn.pydata.org/tutorial/color_palettes.html"><em>color palettes</em></a> from the seaborn package or <a class="reference external" href="https://matplotlib.org/stable/tutorials/colors/colormaps.html"><em>color maps</em></a> from the matplotlib library. Below you will find some examples of how to apply both. Please consult respective documentation for more details on both approaches (see links below).</p>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
@@ -1084,7 +939,8 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03_matplotlib_manipulations_47_0.svg" src="../_images/03_matplotlib_manipulations_47_0.svg" /></div>
+<img alt="../_images/acdc10a46f3219cf5d38f9c027a25df6566556879f5c1a77760596935d054775.svg" src="../_images/acdc10a46f3219cf5d38f9c027a25df6566556879f5c1a77760596935d054775.svg" />
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1106,15 +962,16 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2150/382733206.py:9: MatplotlibDeprecationWarning: The get_cmap function was deprecated in Matplotlib 3.7 and will be removed two minor releases later. Use ``matplotlib.colormaps[name]`` or ``matplotlib.colormaps.get_cmap(obj)`` instead.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2378/382733206.py:9: MatplotlibDeprecationWarning: The get_cmap function was deprecated in Matplotlib 3.7 and will be removed two minor releases later. Use ``matplotlib.colormaps[name]`` or ``matplotlib.colormaps.get_cmap(obj)`` instead.
   colors = cm.get_cmap('plasma', 8).colors
 </pre></div>
 </div>
-<img alt="../_images/03_matplotlib_manipulations_48_1.svg" src="../_images/03_matplotlib_manipulations_48_1.svg" /></div>
+<img alt="../_images/9e070ea6ac038f61274177230361f108ca657056942e06fde3d815a337caf62e.svg" src="../_images/9e070ea6ac038f61274177230361f108ca657056942e06fde3d815a337caf62e.svg" />
+</div>
 </div>
 </section>
 <section id="legend-position-and-title">
-<h3><span class="section-number">3.4.6. </span>Legend position and title<a class="headerlink" href="#legend-position-and-title" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">3.4.6. </span>Legend position and title<a class="headerlink" href="#legend-position-and-title" title="Link to this heading">#</a></h3>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <div class="admonition note">
@@ -1143,11 +1000,12 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03_matplotlib_manipulations_51_0.svg" src="../_images/03_matplotlib_manipulations_51_0.svg" /></div>
+<img alt="../_images/0a55f27b1295cc393eff567416f99e821f498eeecf8d41ecc3da032cd7318809.svg" src="../_images/0a55f27b1295cc393eff567416f99e821f498eeecf8d41ecc3da032cd7318809.svg" />
+</div>
 </div>
 </section>
 <section id="figure-title">
-<h3><span class="section-number">3.4.7. </span>Figure Title<a class="headerlink" href="#figure-title" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">3.4.7. </span>Figure Title<a class="headerlink" href="#figure-title" title="Link to this heading">#</a></h3>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <div class="admonition note">
@@ -1175,11 +1033,12 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03_matplotlib_manipulations_54_0.svg" src="../_images/03_matplotlib_manipulations_54_0.svg" /></div>
+<img alt="../_images/c0fcfee8cdedd30bc5b94ea8e9f219b09ab581368a655baea07098e511be06bf.svg" src="../_images/c0fcfee8cdedd30bc5b94ea8e9f219b09ab581368a655baea07098e511be06bf.svg" />
+</div>
 </div>
 </section>
 <section id="layout-of-subplots">
-<h3><span class="section-number">3.4.8. </span>Layout of Subplots<a class="headerlink" href="#layout-of-subplots" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">3.4.8. </span>Layout of Subplots<a class="headerlink" href="#layout-of-subplots" title="Link to this heading">#</a></h3>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <div class="admonition note">
@@ -1204,11 +1063,12 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03_matplotlib_manipulations_57_0.svg" src="../_images/03_matplotlib_manipulations_57_0.svg" /></div>
+<img alt="../_images/0416003501e20e074d5bcb727a5f1c1525988f6371b98814c6ac0573c32a24cc.svg" src="../_images/0416003501e20e074d5bcb727a5f1c1525988f6371b98814c6ac0573c32a24cc.svg" />
+</div>
 </div>
 </section>
 <section id="axis-label-position-and-colorbars">
-<h3><span class="section-number">3.4.9. </span>Axis label position and colorbars<a class="headerlink" href="#axis-label-position-and-colorbars" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">3.4.9. </span>Axis label position and colorbars<a class="headerlink" href="#axis-label-position-and-colorbars" title="Link to this heading">#</a></h3>
 <p>Here we create a scatterplot out of a dataset with two points (1,1), (2,2). The argument <code class="docutils literal notranslate"><span class="pre">c</span></code> encodes the color of each of the points.</p>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
@@ -1233,12 +1093,13 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03_matplotlib_manipulations_60_0.svg" src="../_images/03_matplotlib_manipulations_60_0.svg" /></div>
+<img alt="../_images/ddd44767962592d9da97256cea3ef157ffb42b1345b32e86781debe75d92175e.svg" src="../_images/ddd44767962592d9da97256cea3ef157ffb42b1345b32e86781debe75d92175e.svg" />
+</div>
 </div>
 </section>
 </section>
 <section id="little-plotting-exercise">
-<h2><span class="section-number">3.5. </span>Little Plotting Exercise<a class="headerlink" href="#little-plotting-exercise" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">3.5. </span>Little Plotting Exercise<a class="headerlink" href="#little-plotting-exercise" title="Link to this heading">#</a></h2>
 <p>Time for a small exercise! It will allow you to practice some of the concepts we introduced in the chapters. We will use one of seaborn’s built-in datasets to create a simple visualization and customize it to our liking. The dataset contains diamond prices for approx. 54k diamonds with different properties.</p>
 <p>For the sake of this exercise we are only interested in three columns of this dataset: carat, price and cut. Your task is to:</p>
 <ul class="simple">
@@ -1366,7 +1227,12 @@ title="Print to PDF"
 </div>
 <p>To reveal the code solution and see what the plot could look like, unfold the cells below:</p>
 <div class="cell tag_hide-input tag_hide-output docutils container">
-<div class="cell_input docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell source</p>
+<p class="expanded admonition-title">Hide code cell source</p>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ideal</span> <span class="o">=</span> <span class="n">diamonds</span><span class="p">[</span><span class="n">diamonds</span><span class="p">[</span><span class="s1">'cut'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'Ideal'</span><span class="p">]</span>
 <span class="n">other</span> <span class="o">=</span> <span class="n">diamonds</span><span class="p">[</span><span class="n">diamonds</span><span class="p">[</span><span class="s1">'cut'</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">'Ideal'</span><span class="p">]</span>
 
@@ -1385,8 +1251,16 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+</details>
+<details class="admonition hide below-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell output</p>
+<p class="expanded admonition-title">Hide code cell output</p>
+</summary>
 <div class="cell_output docutils container">
-<img alt="../_images/03_matplotlib_manipulations_66_0.svg" src="../_images/03_matplotlib_manipulations_66_0.svg" /></div>
+<img alt="../_images/2d0f7877034fbcf9814277b12354efe6b369c624af5eeab7b7573615e4c40f60.svg" src="../_images/2d0f7877034fbcf9814277b12354efe6b369c624af5eeab7b7573615e4c40f60.svg" />
+</div>
+</details>
 </div>
 </section>
 </section>
@@ -1403,7 +1277,7 @@ title="Print to PDF"
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./chapters"
         },
         predefinedOutput: true
@@ -1411,50 +1285,128 @@ title="Print to PDF"
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="02_chart_types.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">2. </span>Chart types using Seaborn</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="02_chart_types.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Chart types using Seaborn</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="04_dimensionality_reduction.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="04_dimensionality_reduction.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title"><span class="section-number">4. </span>Dimensionality reduction</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#environment-setup">3.1. Environment setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-figures-and-subplots">3.2. Creating figures and subplots</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#one-subplot">3.2.1. One Subplot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#many-subplots-horizontal-layout">3.2.2. Many Subplots - Horizontal Layout</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-subplots-grid-layout">3.2.3. Multiple Subplots - Grid Layout</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gridspec">3.2.4. Gridspec</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-data-to-specific-subplots">3.3. Adding data to specific subplots</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-single-plot">3.3.1. A single plot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-plots">3.3.2. Multiple plots</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modifying-elements-of-a-plot">3.4. Modifying elements of a plot</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#axes-labels-and-title">3.4.1. Axes’ labels and title</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#axes-ranges-ticks-and-tick-labels">3.4.2. Axes’ ranges, ticks and tick labels</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#axis-scale">3.4.3. Axis’ scale</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zooming-in-out-in-a-plot">3.4.4. Zooming in/out in a plot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#color-maps">3.4.5. Color Maps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#legend-position-and-title">3.4.6. Legend position and title</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-title">3.4.7. Figure Title</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layout-of-subplots">3.4.8. Layout of Subplots</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#axis-label-position-and-colorbars">3.4.9. Axis label position and colorbars</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#little-plotting-exercise">3.5. Little Plotting Exercise</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Dr. Michal Ziemski, Doriela Grabocka, and Dr. Nicholas Bokulich<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By Dr. Michal Ziemski, Doriela Grabocka, and Dr. Nicholas Bokulich
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

@@ -1,114 +1,180 @@
 
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="../" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>6. Tutorial: sample dataset &#8212; Data Visualization for Food Scientists</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/general.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/general.css?v=8fc6f707" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/06_tutorial';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="shortcut icon" href="../_static/ethfavico.png"/>
+    <link rel="icon" href="../_static/ethfavico.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="7. Exercises" href="exercises/01_intro.html" />
     <link rel="prev" title="5. DO’s and DON’Ts of data visualization" href="05_dos.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
-    
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="00_intro.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../_static/eth_logo.svg" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Data Visualization for Food Scientists</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="../_static/eth_logo.svg" class="logo__image only-light" alt="Data Visualization for Food Scientists - Home"/>
+    <script>document.write(`<img src="../_static/eth_logo.svg" class="logo__image only-dark" alt="Data Visualization for Food Scientists - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -118,417 +184,296 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="01_importance_of_data_vis.html">
-   1. Importance of data visualization
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="02_chart_types.html">
-   2. Chart types using Seaborn
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="03_matplotlib_manipulations.html">
-   3. Customizing plots with Matplotlib
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="04_dimensionality_reduction.html">
-   4. Dimensionality reduction
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="05_dos.html">
-   5. DO’s and DON’Ts of data visualization
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   6. Tutorial: sample dataset
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="exercises/01_intro.html">
-   7. Exercises
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="exercises/02_exercises.html">
-     7.1. Exercises
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="exercises/03_solutions.html">
-     7.2. Solutions
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="08_bibliography.html">
-   8. References
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="01_importance_of_data_vis.html">1. Importance of data visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_chart_types.html">2. Chart types using Seaborn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_matplotlib_manipulations.html">3. Customizing plots with Matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_dimensionality_reduction.html">4. Dimensionality reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_dos.html">5. DO’s and DON’Ts of data visualization</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Tutorial: sample dataset</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="exercises/01_intro.html">7. Exercises</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="exercises/02_exercises.html">7.1. Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/03_solutions.html">7.2. Solutions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="08_bibliography.html">8. References</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://binder.let.ethz.ch/v2/gh/bokulich-lab/DataVisualizationBook/main?urlpath=tree/chapters/06_tutorial.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://colab.research.google.com/github/bokulich-lab/DataVisualizationBook/blob/main/chapters/06_tutorial.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Colab"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../_static/images/logo_colab.png">
-  </span>
-<span class="headerbtn__text-container">Colab</span>
-</a>
-
-      </li>
-      
-    </ul>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://binder.let.ethz.ch/v2/gh/bokulich-lab/DataVisualizationBook/main?urlpath=tree/chapters/06_tutorial.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/bokulich-lab/DataVisualizationBook/blob/main/chapters/06_tutorial.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
 </div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/bokulich-lab/DataVisualizationBook" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/bokulich-lab/DataVisualizationBook/issues/new?title=Issue%20on%20page%20%2Fchapters/06_tutorial.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/chapters/06_tutorial.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/bokulich-lab/DataVisualizationBook"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
 
-      </li>
-      
-      <li>
-        <a href="https://github.com/bokulich-lab/DataVisualizationBook/issues/new?title=Issue%20on%20page%20%2Fchapters/06_tutorial.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/chapters/06_tutorial.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </button>
-
-      </li>
+</div></div>
       
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
+    </div>
   
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
-
-    </div>
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#environment-setup">
-   6.1. Environment setup
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#loading-the-data">
-   6.2. Loading the data
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data-analysis">
-   6.3. Data analysis
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#number-of-ratings-per-manufacturer">
-     6.3.1. Number of ratings per manufacturer
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#average-rating-per-manufacturer">
-     6.3.2. Average rating per manufacturer
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#distribution-of-ratings-per-location-of-most-voted-manufacturers">
-     6.3.3. Distribution of ratings per location of most voted manufacturers
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#average-rating-per-bean-origin">
-     6.3.4. Average rating per bean origin
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#correlogram-of-cocoa-percentage-number-of-ingredients-and-rating">
-     6.3.5. Correlogram of cocoa percentage, number of ingredients and rating
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conclusion">
-   6.4. Conclusion
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Tutorial: sample dataset</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#environment-setup">
-   6.1. Environment setup
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#loading-the-data">
-   6.2. Loading the data
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data-analysis">
-   6.3. Data analysis
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#number-of-ratings-per-manufacturer">
-     6.3.1. Number of ratings per manufacturer
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#average-rating-per-manufacturer">
-     6.3.2. Average rating per manufacturer
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#distribution-of-ratings-per-location-of-most-voted-manufacturers">
-     6.3.3. Distribution of ratings per location of most voted manufacturers
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#average-rating-per-bean-origin">
-     6.3.4. Average rating per bean origin
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#correlogram-of-cocoa-percentage-number-of-ingredients-and-rating">
-     6.3.5. Correlogram of cocoa percentage, number of ingredients and rating
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conclusion">
-   6.4. Conclusion
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Tutorial: sample dataset</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#environment-setup">6.1. Environment setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-the-data">6.2. Loading the data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-analysis">6.3. Data analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#number-of-ratings-per-manufacturer">6.3.1. Number of ratings per manufacturer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#average-rating-per-manufacturer">6.3.2. Average rating per manufacturer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution-of-ratings-per-location-of-most-voted-manufacturers">6.3.3. Distribution of ratings per location of most voted manufacturers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#average-rating-per-bean-origin">6.3.4. Average rating per bean origin</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#correlogram-of-cocoa-percentage-number-of-ingredients-and-rating">6.3.5. Correlogram of cocoa percentage, number of ingredients and rating</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">6.4. Conclusion</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="tutorial-sample-dataset">
-<h1><span class="section-number">6. </span>Tutorial: sample dataset<a class="headerlink" href="#tutorial-sample-dataset" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">6. </span>Tutorial: sample dataset<a class="headerlink" href="#tutorial-sample-dataset" title="Link to this heading">#</a></h1>
 <p>In this chapter we are going to analyze the <a class="reference external" href="https://www.kaggle.com/datasets/evangower/chocolate-bar-ratings">Chocolate Bar Ratings</a> dataset. It contains ratings for over 2,500 chocolate bars from around the world with corresponding properties, e.g.: bean origin, cocoa content or number of ingredients. To get familiar with all teh available variables, head to the provided link and read the short introduction to the data.</p>
 <p>Our main focus will be to find the factors that affect the rating of those chocolate bars. To this end, we will use a combination of tools described in the previous chapters, which will, hopefully, allow you to practice a little what you’ve learnt so far.</p>
 <section id="environment-setup">
-<h2><span class="section-number">6.1. </span>Environment setup<a class="headerlink" href="#environment-setup" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">6.1. </span>Environment setup<a class="headerlink" href="#environment-setup" title="Link to this heading">#</a></h2>
 <div class="cell tag_hide-input docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell source</p>
+<p class="expanded admonition-title">Hide code cell source</p>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># for Google Colab</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
@@ -540,6 +485,7 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -570,7 +516,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="loading-the-data">
-<h2><span class="section-number">6.2. </span>Loading the data<a class="headerlink" href="#loading-the-data" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">6.2. </span>Loading the data<a class="headerlink" href="#loading-the-data" title="Link to this heading">#</a></h2>
 <p>Let’s begin by loading the data and examining which columns/variables are available:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -740,7 +686,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="data-analysis">
-<h2><span class="section-number">6.3. </span>Data analysis<a class="headerlink" href="#data-analysis" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">6.3. </span>Data analysis<a class="headerlink" href="#data-analysis" title="Link to this heading">#</a></h2>
 <p>To ensure that the comparisons will be relevant, we will consider only the <strong>top 30</strong> manufacturers that have received the most ratings. It is not fair to compare a manufacturer that has received 5 ratings with one that has received 50 ratings. In other words, the average ratings of these two manufacturers may not lead to relevant insights.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -757,7 +703,7 @@ title="Print to PDF"
 </div>
 </div>
 <section id="number-of-ratings-per-manufacturer">
-<h3><span class="section-number">6.3.1. </span>Number of ratings per manufacturer<a class="headerlink" href="#number-of-ratings-per-manufacturer" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">6.3.1. </span>Number of ratings per manufacturer<a class="headerlink" href="#number-of-ratings-per-manufacturer" title="Link to this heading">#</a></h3>
 <p>Let us start by checking how many ratings there are per manufacturer. This will help us get an insight later on when we compare the average ratings per manufacturer to see how relevant they will be.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -782,11 +728,12 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/06_tutorial_16_0.svg" src="../_images/06_tutorial_16_0.svg" /></div>
+<img alt="../_images/3732968729639a253ab914a4d3c4659892f57efcd4c03fdb3e17df5ec787854f.svg" src="../_images/3732968729639a253ab914a4d3c4659892f57efcd4c03fdb3e17df5ec787854f.svg" />
+</div>
 </div>
 </section>
 <section id="average-rating-per-manufacturer">
-<h3><span class="section-number">6.3.2. </span>Average rating per manufacturer<a class="headerlink" href="#average-rating-per-manufacturer" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">6.3.2. </span>Average rating per manufacturer<a class="headerlink" href="#average-rating-per-manufacturer" title="Link to this heading">#</a></h3>
 <p>Now, we can explore the distribution of ratings for every manufacturer using a <code class="docutils literal notranslate"><span class="pre">boxplot</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -808,11 +755,12 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/06_tutorial_19_0.svg" src="../_images/06_tutorial_19_0.svg" /></div>
+<img alt="../_images/d6311c530671f3c3aaca4f565c7336ff8799020e9c77d39710deab4ba8e53190.svg" src="../_images/d6311c530671f3c3aaca4f565c7336ff8799020e9c77d39710deab4ba8e53190.svg" />
+</div>
 </div>
 </section>
 <section id="distribution-of-ratings-per-location-of-most-voted-manufacturers">
-<h3><span class="section-number">6.3.3. </span>Distribution of ratings per location of most voted manufacturers<a class="headerlink" href="#distribution-of-ratings-per-location-of-most-voted-manufacturers" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">6.3.3. </span>Distribution of ratings per location of most voted manufacturers<a class="headerlink" href="#distribution-of-ratings-per-location-of-most-voted-manufacturers" title="Link to this heading">#</a></h3>
 <p>Similarly, we can look at the distribution of ratings per country where chocolate bars that received the most reviews came from. For a change, we can use a ridgeline plot:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -865,11 +813,12 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/06_tutorial_23_0.svg" src="../_images/06_tutorial_23_0.svg" /></div>
+<img alt="../_images/3f857782e671c83e408b4c73a8d95c13aa6d811cb85296014f44e4f29434b132.svg" src="../_images/3f857782e671c83e408b4c73a8d95c13aa6d811cb85296014f44e4f29434b132.svg" />
+</div>
 </div>
 </section>
 <section id="average-rating-per-bean-origin">
-<h3><span class="section-number">6.3.4. </span>Average rating per bean origin<a class="headerlink" href="#average-rating-per-bean-origin" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">6.3.4. </span>Average rating per bean origin<a class="headerlink" href="#average-rating-per-bean-origin" title="Link to this heading">#</a></h3>
 <p>Let’s now try to see whether the origin of beans has influence on the chocolate rating. We can use plot an average rating per bean origin using a world map - here, we will create an interactive visualization using the <a class="reference external" href="https://plotly.com/">plotly</a> library.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -997,9 +946,9 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
         });
         }
         </script>
-</div><div class="output text_html"><div>                            <div id="d5c94f2f-1980-4060-bcfe-1d6b950920b8" class="plotly-graph-div" style="height:500px; width:750px;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("d5c94f2f-1980-4060-bcfe-1d6b950920b8")) {                    Plotly.newPlot(                        "d5c94f2f-1980-4060-bcfe-1d6b950920b8",                        [{"lat":[11.23,35.86,0.19,-9.65,-0.23,15.87,21.52,14.06,-6.31,-18.77,18.97,-14.24,12.87,15.78,-0.8,1.85,3.92,-25.27,37.09,15.2,10.69,6.42,-6.37,17.19,18.74,-9.19,18.11,4.57,-16.29,23.63,32.29,-1.83,9.75,7.95,-15.38,12.88,8.54,-0.79,4.21,8.62,6.43,7.37,-13.76,0.19,1.37,-16.58,0.0,12.26,-4.04,0.59,21.91,13.79,9.08,13.91,23.7,7.87,7.55,8.46,12.98,0.19,14.64,18.22],"lon":[60.7,104.2,6.61,160.16,15.83,100.99,-77.78,108.28,143.96,46.87,-72.29,-51.93,-85.21,-90.23,11.61,120.53,-56.03,133.78,-95.71,-86.24,-61.22,-66.59,34.89,-88.5,-70.16,-75.02,-77.3,-74.3,-63.59,-102.55,32.29,-78.18,-83.75,-1.02,166.96,121.77,-80.78,113.92,101.98,0.82,-9.43,12.35,-172.1,6.61,32.29,179.41,0.0,-61.6,21.76,101.34,95.96,-88.9,8.68,-60.98,120.96,80.77,-5.55,-11.78,-61.29,6.61,-61.02,-66.59],"marker":{"color":"red","size":[30.0,26.04395604395604,26.04395604395604,24.395604395604398,20.109890109890102,19.450549450549442,19.12087912087912,19.12087912087912,18.791208791208785,18.46153846153846,18.46153846153846,18.131868131868124,18.131868131868124,18.131868131868124,17.802197802197803,17.802197802197803,17.802197802197803,17.802197802197803,17.472527472527478,17.472527472527478,17.472527472527478,17.142857142857142,17.142857142857142,17.142857142857142,16.813186813186817,16.15384615384616,16.15384615384616,16.15384615384616,15.4945054945055,15.16483516483516,14.83516483516484,14.83516483516484,14.505494505494502,13.846153846153841,13.516483516483518,13.516483516483518,13.18681318681318,13.18681318681318,12.527472527472522,12.197802197802199,12.197802197802199,12.197802197802199,12.197802197802199,11.868131868131863,11.868131868131863,11.538461538461538,10.87912087912088,10.549450549450542,9.56043956043956,9.56043956043956,9.56043956043956,9.56043956043956,9.56043956043956,7.912087912087918,5.604395604395601,5.604395604395601,4.945054945054942,1.3186813186813195,1.3186813186813195,1.3186813186813195,1.3186813186813195,0.0],"sizemode":"diameter"},"text":["Country: Tobago, Rating: 3.62","Country: China, Rating: 3.5","Country: Sao Tome & Principe, Rating: 3.5","Country: Solomon Islands, Rating: 3.45","Country: Congo, Rating: 3.32","Country: Thailand, Rating: 3.3","Country: Cuba, Rating: 3.29","Country: Vietnam, Rating: 3.29","Country: Papua New Guinea, Rating: 3.28","Country: Madagascar, Rating: 3.27","Country: Haiti, Rating: 3.27","Country: Brazil, Rating: 3.26","Country: Nicaragua, Rating: 3.26","Country: Guatemala, Rating: 3.26","Country: Gabon, Rating: 3.25","Country: Sulawesi, Rating: 3.25","Country: Suriname, Rating: 3.25","Country: Australia, Rating: 3.25","Country: U.S.A., Rating: 3.24","Country: Honduras, Rating: 3.24","Country: Trinidad, Rating: 3.24","Country: Venezuela, Rating: 3.23","Country: Tanzania, Rating: 3.23","Country: Belize, Rating: 3.23","Country: Dominican Republic, Rating: 3.22","Country: Peru, Rating: 3.2","Country: Jamaica, Rating: 3.2","Country: Colombia, Rating: 3.2","Country: Bolivia, Rating: 3.18","Country: Mexico, Rating: 3.17","Country: India, Rating: 3.16","Country: Ecuador, Rating: 3.16","Country: Costa Rica, Rating: 3.15","Country: Ghana, Rating: 3.13","Country: Vanuatu, Rating: 3.12","Country: Philippines, Rating: 3.12","Country: Panama, Rating: 3.11","Country: Indonesia, Rating: 3.11","Country: Malaysia, Rating: 3.09","Country: Togo, Rating: 3.08","Country: Liberia, Rating: 3.08","Country: Cameroon, Rating: 3.08","Country: Samoa, Rating: 3.08","Country: Sao Tome, Rating: 3.07","Country: Uganda, Rating: 3.07","Country: Fiji, Rating: 3.06","Country: Blend, Rating: 3.04","Country: Grenada, Rating: 3.03","Country: DR Congo, Rating: 3.0","Country: Sumatra, Rating: 3.0","Country: Burma, Rating: 3.0","Country: El Salvador, Rating: 3.0","Country: Nigeria, Rating: 3.0","Country: St. Lucia, Rating: 2.95","Country: Taiwan, Rating: 2.88","Country: Sri Lanka, Rating: 2.88","Country: Ivory Coast, Rating: 2.86","Country: Sierra Leone, Rating: 2.75","Country: St.Vincent-Grenadines, Rating: 2.75","Country: Principe, Rating: 2.75","Country: Martinique, Rating: 2.75","Country: Puerto Rico, Rating: 2.71"],"type":"scattergeo"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"title":{"text":"Chocolate rating per bean origin","x":0.5,"y":0.93},"margin":{"t":10,"b":10,"l":10,"r":10},"geo":{"projection":{"type":"equirectangular"},"showcountries":true},"width":750,"height":500},                        {"responsive": true}                    ).then(function(){
-
-var gd = document.getElementById('d5c94f2f-1980-4060-bcfe-1d6b950920b8');
+        </div><div class="output text_html"><div>                            <div id="95f0a2c6-324a-4b67-96e7-ae72801e0318" class="plotly-graph-div" style="height:500px; width:750px;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("95f0a2c6-324a-4b67-96e7-ae72801e0318")) {                    Plotly.newPlot(                        "95f0a2c6-324a-4b67-96e7-ae72801e0318",                        [{"lat":[11.23,35.86,0.19,-9.65,-0.23,15.87,21.52,14.06,-6.31,-18.77,18.97,-14.24,12.87,15.78,-0.8,1.85,3.92,-25.27,37.09,15.2,10.69,6.42,-6.37,17.19,18.74,-9.19,18.11,4.57,-16.29,23.63,32.29,-1.83,9.75,7.95,-15.38,12.88,8.54,-0.79,4.21,8.62,6.43,7.37,-13.76,0.19,1.37,-16.58,0.0,12.26,-4.04,0.59,21.91,13.79,9.08,13.91,23.7,7.87,7.55,8.46,12.98,0.19,14.64,18.22],"lon":[60.7,104.2,6.61,160.16,15.83,100.99,-77.78,108.28,143.96,46.87,-72.29,-51.93,-85.21,-90.23,11.61,120.53,-56.03,133.78,-95.71,-86.24,-61.22,-66.59,34.89,-88.5,-70.16,-75.02,-77.3,-74.3,-63.59,-102.55,32.29,-78.18,-83.75,-1.02,166.96,121.77,-80.78,113.92,101.98,0.82,-9.43,12.35,-172.1,6.61,32.29,179.41,0.0,-61.6,21.76,101.34,95.96,-88.9,8.68,-60.98,120.96,80.77,-5.55,-11.78,-61.29,6.61,-61.02,-66.59],"marker":{"color":"red","size":[30.0,26.04395604395604,26.04395604395604,24.395604395604398,20.109890109890102,19.450549450549442,19.12087912087912,19.12087912087912,18.791208791208785,18.46153846153846,18.46153846153846,18.131868131868124,18.131868131868124,18.131868131868124,17.802197802197803,17.802197802197803,17.802197802197803,17.802197802197803,17.472527472527478,17.472527472527478,17.472527472527478,17.142857142857142,17.142857142857142,17.142857142857142,16.813186813186817,16.15384615384616,16.15384615384616,16.15384615384616,15.4945054945055,15.16483516483516,14.83516483516484,14.83516483516484,14.505494505494502,13.846153846153841,13.516483516483518,13.516483516483518,13.18681318681318,13.18681318681318,12.527472527472522,12.197802197802199,12.197802197802199,12.197802197802199,12.197802197802199,11.868131868131863,11.868131868131863,11.538461538461538,10.87912087912088,10.549450549450542,9.56043956043956,9.56043956043956,9.56043956043956,9.56043956043956,9.56043956043956,7.912087912087918,5.604395604395601,5.604395604395601,4.945054945054942,1.3186813186813195,1.3186813186813195,1.3186813186813195,1.3186813186813195,0.0],"sizemode":"diameter"},"text":["Country: Tobago, Rating: 3.62","Country: China, Rating: 3.5","Country: Sao Tome & Principe, Rating: 3.5","Country: Solomon Islands, Rating: 3.45","Country: Congo, Rating: 3.32","Country: Thailand, Rating: 3.3","Country: Cuba, Rating: 3.29","Country: Vietnam, Rating: 3.29","Country: Papua New Guinea, Rating: 3.28","Country: Madagascar, Rating: 3.27","Country: Haiti, Rating: 3.27","Country: Brazil, Rating: 3.26","Country: Nicaragua, Rating: 3.26","Country: Guatemala, Rating: 3.26","Country: Gabon, Rating: 3.25","Country: Sulawesi, Rating: 3.25","Country: Suriname, Rating: 3.25","Country: Australia, Rating: 3.25","Country: U.S.A., Rating: 3.24","Country: Honduras, Rating: 3.24","Country: Trinidad, Rating: 3.24","Country: Venezuela, Rating: 3.23","Country: Tanzania, Rating: 3.23","Country: Belize, Rating: 3.23","Country: Dominican Republic, Rating: 3.22","Country: Peru, Rating: 3.2","Country: Jamaica, Rating: 3.2","Country: Colombia, Rating: 3.2","Country: Bolivia, Rating: 3.18","Country: Mexico, Rating: 3.17","Country: India, Rating: 3.16","Country: Ecuador, Rating: 3.16","Country: Costa Rica, Rating: 3.15","Country: Ghana, Rating: 3.13","Country: Vanuatu, Rating: 3.12","Country: Philippines, Rating: 3.12","Country: Panama, Rating: 3.11","Country: Indonesia, Rating: 3.11","Country: Malaysia, Rating: 3.09","Country: Togo, Rating: 3.08","Country: Liberia, Rating: 3.08","Country: Cameroon, Rating: 3.08","Country: Samoa, Rating: 3.08","Country: Sao Tome, Rating: 3.07","Country: Uganda, Rating: 3.07","Country: Fiji, Rating: 3.06","Country: Blend, Rating: 3.04","Country: Grenada, Rating: 3.03","Country: DR Congo, Rating: 3.0","Country: Sumatra, Rating: 3.0","Country: Burma, Rating: 3.0","Country: El Salvador, Rating: 3.0","Country: Nigeria, Rating: 3.0","Country: St. Lucia, Rating: 2.95","Country: Taiwan, Rating: 2.88","Country: Sri Lanka, Rating: 2.88","Country: Ivory Coast, Rating: 2.86","Country: Sierra Leone, Rating: 2.75","Country: St.Vincent-Grenadines, Rating: 2.75","Country: Principe, Rating: 2.75","Country: Martinique, Rating: 2.75","Country: Puerto Rico, Rating: 2.71"],"type":"scattergeo"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"title":{"text":"Chocolate rating per bean origin","x":0.5,"y":0.93},"margin":{"t":10,"b":10,"l":10,"r":10},"geo":{"projection":{"type":"equirectangular"},"showcountries":true},"width":750,"height":500},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('95f0a2c6-324a-4b67-96e7-ae72801e0318');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -1025,7 +974,7 @@ if (outputEl) {{
 </div>
 </section>
 <section id="correlogram-of-cocoa-percentage-number-of-ingredients-and-rating">
-<h3><span class="section-number">6.3.5. </span>Correlogram of cocoa percentage, number of ingredients and rating<a class="headerlink" href="#correlogram-of-cocoa-percentage-number-of-ingredients-and-rating" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">6.3.5. </span>Correlogram of cocoa percentage, number of ingredients and rating<a class="headerlink" href="#correlogram-of-cocoa-percentage-number-of-ingredients-and-rating" title="Link to this heading">#</a></h3>
 <p>To get a quick glimpse into how some variables may be correlated with the others, we can use a <em>correlogram</em>. This kind of visualization tries to compare each numerical variable in the dataset with every other one, generating a large grid of scatter plots. Additionally, on the diagonal you will always find a histogram illustrating the distribution of a given variable.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1041,7 +990,8 @@ if (outputEl) {{
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/06_tutorial_29_0.svg" src="../_images/06_tutorial_29_0.svg" /></div>
+<img alt="../_images/7b72e51803ed801756b965f13709bc9ba729752bfee3a11cd1cb3cfd00e52cd4.svg" src="../_images/7b72e51803ed801756b965f13709bc9ba729752bfee3a11cd1cb3cfd00e52cd4.svg" />
+</div>
 </div>
 <p>As you can see, there seems to be no correlation between any of the variables that were provided. Another way to get a more quantitative insight into potential correlations among variables is to visualize the correlation matrix as an annotated heat map. Conveniently, <a class="reference external" href="https://pandas.pydata.org/">pandas</a> can automatically generate such a matrix for us through the <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.corr.html">corr() method</a>:</p>
 <div class="cell docutils container">
@@ -1066,13 +1016,14 @@ if (outputEl) {{
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/06_tutorial_31_0.svg" src="../_images/06_tutorial_31_0.svg" /></div>
+<img alt="../_images/cb05c0af4ed3922a25d7341a6346fb20a0ca9ee61bb9a4aecdd57cfed451e441.svg" src="../_images/cb05c0af4ed3922a25d7341a6346fb20a0ca9ee61bb9a4aecdd57cfed451e441.svg" />
+</div>
 </div>
 <p>Again, as we saw on the scatter plots already, there seems to be very little to no correlation between any of the analyzed variables.</p>
 </section>
 </section>
 <section id="conclusion">
-<h2><span class="section-number">6.4. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">6.4. </span>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
 <p>This brings us to the end of this tutorial. We hope that after reviewing all the material included in this book you will feel more comfortable when generating your own visualizations in Python. Moreover, the final exercise in this chapter should have given you some ideas as to what you could look into when analyzing any dataset in the future. You can always use this book as a reference when plotting - do not hesitate, however, to explore other kinds of visualizations! Sometimes you may discover intersting insights into your own data by doing something slightly less conventional ;) Good luck!</p>
 <p>In the last, and final, section you will find some exercises which should allow you to practice the concepts discussed in this book - have fun!</p>
 </section>
@@ -1090,7 +1041,7 @@ if (outputEl) {{
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./chapters"
         },
         predefinedOutput: true
@@ -1098,50 +1049,113 @@ if (outputEl) {{
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="05_dos.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">5. </span>DO’s and DON’Ts of data visualization</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="05_dos.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>DO’s and DON’Ts of data visualization</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="exercises/01_intro.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="exercises/01_intro.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title"><span class="section-number">7. </span>Exercises</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#environment-setup">6.1. Environment setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-the-data">6.2. Loading the data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-analysis">6.3. Data analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#number-of-ratings-per-manufacturer">6.3.1. Number of ratings per manufacturer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#average-rating-per-manufacturer">6.3.2. Average rating per manufacturer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution-of-ratings-per-location-of-most-voted-manufacturers">6.3.3. Distribution of ratings per location of most voted manufacturers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#average-rating-per-bean-origin">6.3.4. Average rating per bean origin</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#correlogram-of-cocoa-percentage-number-of-ingredients-and-rating">6.3.5. Correlogram of cocoa percentage, number of ingredients and rating</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">6.4. Conclusion</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Dr. Michal Ziemski, Doriela Grabocka, and Dr. Nicholas Bokulich<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By Dr. Michal Ziemski, Doriela Grabocka, and Dr. Nicholas Bokulich
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
