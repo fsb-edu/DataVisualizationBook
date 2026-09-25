@@ -407,16 +407,16 @@ title="Print to PDF"
 <section id="recreating-the-book">
 <h2>Recreating the book<a class="headerlink" href="#recreating-the-book" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
-<li><p>Make sure you have <a class="reference external" href="https://python-poetry.org/">Poetry</a> available on your system.</p></li>
+<li><p>Install <a class="reference external" href="https://docs.astral.sh/uv/">uv</a>. The project’s <code class="docutils literal notranslate"><span class="pre">.python-version</span></code> selects Python 3.10, which uv can install if needed.</p></li>
 <li><p>Clone this repository and create the required environment:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">install</span></code> if you only want to re-create the book</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">install</span> <span class="pre">--with</span> <span class="pre">dev</span></code> if you want to re-create the book and open individual chapters using JupyterLab</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">sync</span> <span class="pre">--locked</span> <span class="pre">--no-dev</span></code> to build the book</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">sync</span> <span class="pre">--locked</span></code> to also install JupyterLab for opening individual chapters</p></li>
 </ul>
 </li>
 <li><p>To render the book, execute the following command:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">run</span> <span class="pre">jupyter-book</span> <span class="pre">build</span> <span class="pre">--all</span> <span class="pre">.</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">run</span> <span class="pre">--locked</span> <span class="pre">--no-dev</span> <span class="pre">jupyter-book</span> <span class="pre">build</span> <span class="pre">--all</span> <span class="pre">.</span></code></p></li>
 </ul>
 </li>
 <li><p>Navigate to the <code class="docutils literal notranslate"><span class="pre">_build/html</span></code> folder and open <code class="docutils literal notranslate"><span class="pre">index.html</span></code> in your browser.</p></li>

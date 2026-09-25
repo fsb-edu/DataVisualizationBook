@@ -549,36 +549,36 @@ title="Print to PDF"
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># for Google Colab</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="k">if</span> <span class="s1">&#39;COLAB_JUPYTER_IP&#39;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">:</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="k">if</span> <span class="s1">'COLAB_JUPYTER_IP'</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">:</span>
     <span class="o">!</span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/bokulich-lab/DataVisualizationBook.git<span class="w"> </span>book
 
-    <span class="kn">from</span> <span class="nn">book.utils</span> <span class="kn">import</span> <span class="n">utils</span>
-    <span class="n">utils</span><span class="o">.</span><span class="n">ensure_packages</span><span class="p">(</span><span class="s1">&#39;book/requirements.txt&#39;</span><span class="p">)</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">book.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">utils</span>
+    <span class="n">utils</span><span class="o">.</span><span class="n">ensure_packages</span><span class="p">(</span><span class="s1">'book/requirements.txt'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
-<span class="c1"># this is to silence pandas&#39; warnings</span>
-<span class="kn">import</span> <span class="nn">warnings</span>
-<span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
-<span class="o">%</span><span class="k">config</span> InlineBackend.figure_format=&#39;svg&#39;
+<span class="c1"># this is to silence pandas' warnings</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">'ignore'</span><span class="p">)</span>
+<span class="o">%</span><span class="k">config</span> InlineBackend.figure_format='svg'
 
-<span class="n">FONT_FAMILY</span> <span class="o">=</span> <span class="s1">&#39;DejaVu Sans&#39;</span>
+<span class="n">FONT_FAMILY</span> <span class="o">=</span> <span class="s1">'DejaVu Sans'</span>
 <span class="n">FONT_SCALE</span> <span class="o">=</span> <span class="mf">1.3</span>
 
 <span class="c1"># for Google Colab</span>
-<span class="k">if</span> <span class="s1">&#39;COLAB_JUPYTER_IP&#39;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">:</span>
-    <span class="n">data_dir</span> <span class="o">=</span> <span class="s1">&#39;book/chapters/data&#39;</span>
+<span class="k">if</span> <span class="s1">'COLAB_JUPYTER_IP'</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">:</span>
+    <span class="n">data_dir</span> <span class="o">=</span> <span class="s1">'book/chapters/data'</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="n">data_dir</span> <span class="o">=</span> <span class="s1">&#39;../data&#39;</span>
+    <span class="n">data_dir</span> <span class="o">=</span> <span class="s1">'../data'</span>
 </pre></div>
 </div>
 </div>
@@ -611,7 +611,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load main dataset</span>
-<span class="n">cereals_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">data_dir</span><span class="si">}</span><span class="s1">/cereal.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+<span class="n">cereals_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">data_dir</span><span class="si">}</span><span class="s1">/cereal.csv'</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">','</span><span class="p">)</span>
 <span class="n">cereals_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -756,7 +756,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load dataset that maps manufacturer letter codes to their names</span>
-<span class="n">manufacturers_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">data_dir</span><span class="si">}</span><span class="s1">/manufacturers.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">manufacturers_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">data_dir</span><span class="si">}</span><span class="s1">/manufacturers.csv'</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">manufacturers_df</span>
 </pre></div>
 </div>
@@ -827,7 +827,7 @@ title="Print to PDF"
     <span class="n">cereals_df</span><span class="p">,</span> <span class="n">manufacturers_df</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="n">cereals_df</span><span class="o">.</span><span class="n">mfr</span><span class="p">,</span> <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span>
 <span class="p">)</span>
 <span class="c1"># remove duplicated column</span>
-<span class="n">cereals</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;key_0&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">cereals</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">'key_0'</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">cereals</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -984,20 +984,20 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">(</span>
-    <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="s1">&#39;font.family&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">FONT_FAMILY</span><span class="p">]},</span> 
-    <span class="n">style</span><span class="o">=</span><span class="s1">&#39;white&#39;</span>
+    <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">'figure.figsize'</span><span class="p">:</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="s1">'font.family'</span><span class="p">:</span> <span class="p">[</span><span class="n">FONT_FAMILY</span><span class="p">]},</span> 
+    <span class="n">style</span><span class="o">=</span><span class="s1">'white'</span>
 <span class="p">)</span>
-<span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">plotting_context</span><span class="p">(</span><span class="s2">&quot;notebook&quot;</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="mf">0.9</span><span class="p">):</span>
-    <span class="c1"># seaborn&#39;s countplot</span>
+<span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">plotting_context</span><span class="p">(</span><span class="s2">"notebook"</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="mf">0.9</span><span class="p">):</span>
+    <span class="c1"># seaborn's countplot</span>
     <span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span>
-        <span class="n">data</span><span class="o">=</span><span class="n">cereals</span><span class="p">[[</span><span class="s1">&#39;company_name&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">]],</span>
-        <span class="n">y</span><span class="o">=</span><span class="s1">&#39;company_name&#39;</span><span class="p">,</span>
-        <span class="n">color</span><span class="o">=</span><span class="s1">&#39;dodgerblue&#39;</span> 
+        <span class="n">data</span><span class="o">=</span><span class="n">cereals</span><span class="p">[[</span><span class="s1">'company_name'</span><span class="p">,</span> <span class="s1">'name'</span><span class="p">]],</span>
+        <span class="n">y</span><span class="o">=</span><span class="s1">'company_name'</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="s1">'dodgerblue'</span> 
     <span class="p">)</span>
 
     <span class="c1"># display the number of products for each company</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">bar_label</span><span class="p">(</span><span class="n">ax</span><span class="o">.</span><span class="n">containers</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Number of products per company&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'Number of products per company'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1010,7 +1010,7 @@ title="Print to PDF"
 <p>Plot the <strong>distribution of ratings per company</strong> checking at the same time if there are any <strong>outliers</strong>. You can find the necessary data in the <code class="docutils literal notranslate"><span class="pre">data</span></code> DataFrame.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">cereals</span><span class="p">[[</span><span class="s1">&#39;company_name&#39;</span><span class="p">,</span> <span class="s1">&#39;rating&#39;</span><span class="p">]]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">cereals</span><span class="p">[[</span><span class="s1">'company_name'</span><span class="p">,</span> <span class="s1">'rating'</span><span class="p">]]</span>
 </pre></div>
 </div>
 </div>
@@ -1018,19 +1018,19 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">(</span>
-    <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="s1">&#39;font.family&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">FONT_FAMILY</span><span class="p">]},</span> 
-    <span class="n">style</span><span class="o">=</span><span class="s1">&#39;white&#39;</span>
+    <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">'figure.figsize'</span><span class="p">:</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="s1">'font.family'</span><span class="p">:</span> <span class="p">[</span><span class="n">FONT_FAMILY</span><span class="p">]},</span> 
+    <span class="n">style</span><span class="o">=</span><span class="s1">'white'</span>
 <span class="p">)</span>
-<span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">plotting_context</span><span class="p">(</span><span class="s2">&quot;notebook&quot;</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="n">FONT_SCALE</span><span class="p">):</span>
-    <span class="c1"># seaborn&#39;s boxplot</span>
+<span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">plotting_context</span><span class="p">(</span><span class="s2">"notebook"</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="n">FONT_SCALE</span><span class="p">):</span>
+    <span class="c1"># seaborn's boxplot</span>
     <span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span>
         <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span>
-        <span class="n">x</span><span class="o">=</span><span class="s1">&#39;rating&#39;</span><span class="p">,</span>
-        <span class="n">y</span><span class="o">=</span><span class="s1">&#39;company_name&#39;</span><span class="p">,</span>
-        <span class="n">color</span><span class="o">=</span><span class="s1">&#39;dodgerblue&#39;</span><span class="p">,</span>
+        <span class="n">x</span><span class="o">=</span><span class="s1">'rating'</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=</span><span class="s1">'company_name'</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="s1">'dodgerblue'</span><span class="p">,</span>
     <span class="p">)</span>
     
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Cereal rating per company&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'Cereal rating per company'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1044,7 +1044,7 @@ title="Print to PDF"
 <p>Find and visualize the <strong>mean ratings per product</strong>. You will find the necessary data in the <code class="docutils literal notranslate"><span class="pre">data</span></code> DataFrame.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">cereals</span><span class="p">[[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;rating&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">cereals</span><span class="p">[[</span><span class="s1">'name'</span><span class="p">,</span> <span class="s1">'rating'</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'name'</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1052,19 +1052,19 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">(</span>
-    <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="s1">&#39;font.family&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">FONT_FAMILY</span><span class="p">]},</span> 
-    <span class="n">style</span><span class="o">=</span><span class="s1">&#39;white&#39;</span>
+    <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">'figure.figsize'</span><span class="p">:</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="s1">'font.family'</span><span class="p">:</span> <span class="p">[</span><span class="n">FONT_FAMILY</span><span class="p">]},</span> 
+    <span class="n">style</span><span class="o">=</span><span class="s1">'white'</span>
 <span class="p">)</span>
-<span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">plotting_context</span><span class="p">(</span><span class="s2">&quot;notebook&quot;</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="mf">0.7</span><span class="p">):</span>
-    <span class="c1"># seaborn&#39;s countplot</span>
+<span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">plotting_context</span><span class="p">(</span><span class="s2">"notebook"</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="mf">0.7</span><span class="p">):</span>
+    <span class="c1"># seaborn's countplot</span>
     <span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span>
         <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span>
-        <span class="n">y</span><span class="o">=</span><span class="s1">&#39;name&#39;</span><span class="p">,</span>
-        <span class="n">x</span><span class="o">=</span><span class="s1">&#39;rating&#39;</span><span class="p">,</span>
-        <span class="n">order</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;rating&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
-        <span class="n">color</span><span class="o">=</span><span class="s1">&#39;dodgerblue&#39;</span>
+        <span class="n">y</span><span class="o">=</span><span class="s1">'name'</span><span class="p">,</span>
+        <span class="n">x</span><span class="o">=</span><span class="s1">'rating'</span><span class="p">,</span>
+        <span class="n">order</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">'rating'</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="s1">'dodgerblue'</span>
     <span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Average rating per product&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'Average rating per product'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1077,7 +1077,7 @@ title="Print to PDF"
 <p>Find if there is a <strong>correlation between any of the numerical features</strong> we have in the dataset. Again, you will find the data needed in the <code class="docutils literal notranslate"><span class="pre">data</span></code> DataFrame.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">cereals</span><span class="p">[[</span><span class="s1">&#39;calories&#39;</span><span class="p">,</span> <span class="s1">&#39;protein&#39;</span><span class="p">,</span> <span class="s1">&#39;fat&#39;</span><span class="p">,</span> <span class="s1">&#39;sodium&#39;</span><span class="p">,</span> <span class="s1">&#39;fiber&#39;</span><span class="p">,</span> <span class="s1">&#39;carbo&#39;</span><span class="p">,</span> <span class="s1">&#39;sugars&#39;</span><span class="p">,</span> <span class="s1">&#39;potass&#39;</span><span class="p">,</span> <span class="s1">&#39;rating&#39;</span><span class="p">]]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">cereals</span><span class="p">[[</span><span class="s1">'calories'</span><span class="p">,</span> <span class="s1">'protein'</span><span class="p">,</span> <span class="s1">'fat'</span><span class="p">,</span> <span class="s1">'sodium'</span><span class="p">,</span> <span class="s1">'fiber'</span><span class="p">,</span> <span class="s1">'carbo'</span><span class="p">,</span> <span class="s1">'sugars'</span><span class="p">,</span> <span class="s1">'potass'</span><span class="p">,</span> <span class="s1">'rating'</span><span class="p">]]</span>
 </pre></div>
 </div>
 </div>
@@ -1085,15 +1085,15 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">(</span>
-    <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;font.family&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">FONT_FAMILY</span><span class="p">]},</span> 
-    <span class="n">style</span><span class="o">=</span><span class="s1">&#39;white&#39;</span>
+    <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">'font.family'</span><span class="p">:</span> <span class="p">[</span><span class="n">FONT_FAMILY</span><span class="p">]},</span> 
+    <span class="n">style</span><span class="o">=</span><span class="s1">'white'</span>
 <span class="p">)</span>
 
-<span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">plotting_context</span><span class="p">(</span><span class="s2">&quot;notebook&quot;</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="mf">0.8</span><span class="p">):</span> 
+<span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">plotting_context</span><span class="p">(</span><span class="s2">"notebook"</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="mf">0.8</span><span class="p">):</span> 
     <span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span>
-        <span class="n">data</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;scatter&quot;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;Set2&quot;</span><span class="p">,</span> 
-        <span class="n">height</span><span class="o">=</span><span class="mf">1.2</span><span class="p">,</span> <span class="n">plot_kws</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;s&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">},</span>
-        <span class="n">diag_kind</span><span class="o">=</span><span class="s1">&#39;kde&#39;</span>
+        <span class="n">data</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">"scatter"</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">"Set2"</span><span class="p">,</span> 
+        <span class="n">height</span><span class="o">=</span><span class="mf">1.2</span><span class="p">,</span> <span class="n">plot_kws</span><span class="o">=</span><span class="p">{</span><span class="s2">"s"</span><span class="p">:</span> <span class="mi">15</span><span class="p">},</span>
+        <span class="n">diag_kind</span><span class="o">=</span><span class="s1">'kde'</span>
     <span class="p">)</span>
 </pre></div>
 </div>
@@ -1108,7 +1108,7 @@ title="Print to PDF"
 <p>Your next task is to find and visualize these correlations in a more <strong>quantitative</strong> way. The data will be ready for you in the <code class="docutils literal notranslate"><span class="pre">data</span></code> DataFrame, you will only have to find the correct visualization method and supply the correct arguments to the function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">cereals</span><span class="p">[[</span><span class="s1">&#39;fiber&#39;</span><span class="p">,</span> <span class="s1">&#39;potass&#39;</span><span class="p">,</span> <span class="s1">&#39;sugars&#39;</span><span class="p">,</span> <span class="s1">&#39;calories&#39;</span><span class="p">,</span><span class="s1">&#39;rating&#39;</span><span class="p">]]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">cereals</span><span class="p">[[</span><span class="s1">'fiber'</span><span class="p">,</span> <span class="s1">'potass'</span><span class="p">,</span> <span class="s1">'sugars'</span><span class="p">,</span> <span class="s1">'calories'</span><span class="p">,</span><span class="s1">'rating'</span><span class="p">]]</span>
 </pre></div>
 </div>
 </div>
@@ -1116,28 +1116,28 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">(</span>
-    <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">:(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="s1">&#39;font.family&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">FONT_FAMILY</span><span class="p">]},</span> 
-    <span class="n">style</span><span class="o">=</span><span class="s1">&#39;white&#39;</span>
+    <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">'figure.figsize'</span><span class="p">:(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="s1">'font.family'</span><span class="p">:</span> <span class="p">[</span><span class="n">FONT_FAMILY</span><span class="p">]},</span> 
+    <span class="n">style</span><span class="o">=</span><span class="s1">'white'</span>
 <span class="p">)</span>
 
-<span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">plotting_context</span><span class="p">(</span><span class="s2">&quot;notebook&quot;</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="n">FONT_SCALE</span><span class="p">):</span>
+<span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">plotting_context</span><span class="p">(</span><span class="s2">"notebook"</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="n">FONT_SCALE</span><span class="p">):</span>
     <span class="n">correlation_matrix</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
     <span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span>
         <span class="n">data</span><span class="o">=</span><span class="n">correlation_matrix</span><span class="p">,</span>
-        <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Blues&#39;</span><span class="p">,</span>
+        <span class="n">cmap</span><span class="o">=</span><span class="s1">'Blues'</span><span class="p">,</span>
         <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
         <span class="n">square</span><span class="o">=</span><span class="kc">True</span>
     <span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span>
         <span class="n">ax</span><span class="o">.</span><span class="n">get_xticklabels</span><span class="p">(),</span>
         <span class="n">rotation</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span>
-        <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">&#39;right&#39;</span>
+        <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">'right'</span>
     <span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">(</span>
         <span class="n">ax</span><span class="o">.</span><span class="n">get_yticklabels</span><span class="p">(),</span>
         <span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
     <span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Correlation matrix&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'Correlation matrix'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1149,17 +1149,17 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># here you can find an alternative solution with a diagonal correlation matrix</span>
 
 <span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span>
-    <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">:(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="s1">&#39;font.family&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">FONT_FAMILY</span><span class="p">]},</span> 
-    <span class="n">style</span><span class="o">=</span><span class="s1">&#39;white&#39;</span>
+    <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">'figure.figsize'</span><span class="p">:(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="s1">'font.family'</span><span class="p">:</span> <span class="p">[</span><span class="n">FONT_FAMILY</span><span class="p">]},</span> 
+    <span class="n">style</span><span class="o">=</span><span class="s1">'white'</span>
 <span class="p">)</span>
 
-<span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">plotting_context</span><span class="p">(</span><span class="s2">&quot;notebook&quot;</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="n">FONT_SCALE</span><span class="p">):</span>
+<span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">plotting_context</span><span class="p">(</span><span class="s2">"notebook"</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="n">FONT_SCALE</span><span class="p">):</span>
     <span class="n">correlation_matrix</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
     <span class="c1"># Generate a mask to cover the upper triangle</span>
     <span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">triu</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones_like</span><span class="p">(</span><span class="n">correlation_matrix</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">))</span>
     <span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span>
         <span class="n">data</span><span class="o">=</span><span class="n">correlation_matrix</span><span class="p">,</span>
-        <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Blues&#39;</span><span class="p">,</span>
+        <span class="n">cmap</span><span class="o">=</span><span class="s1">'Blues'</span><span class="p">,</span>
         <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
         <span class="n">square</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
         <span class="n">mask</span><span class="o">=</span><span class="n">mask</span>
@@ -1167,13 +1167,13 @@ title="Print to PDF"
     <span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span>
         <span class="n">ax</span><span class="o">.</span><span class="n">get_xticklabels</span><span class="p">(),</span>
         <span class="n">rotation</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span>
-        <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">&#39;right&#39;</span>
+        <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">'right'</span>
     <span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">(</span>
         <span class="n">ax</span><span class="o">.</span><span class="n">get_yticklabels</span><span class="p">(),</span>
         <span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
     <span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Correlation matrix&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'Correlation matrix'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1186,7 +1186,7 @@ title="Print to PDF"
 <p>Using a scatterplot, plot the <strong>potassium amount changes w.r.t. the fiber amount and the rating</strong>. Notice that this requires you to plot three numerical variables at the same time. The data to be used is ready for you in the <code class="docutils literal notranslate"><span class="pre">data</span></code> DataFrame.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">cereals</span><span class="p">[[</span><span class="s1">&#39;potass&#39;</span><span class="p">,</span> <span class="s1">&#39;fiber&#39;</span><span class="p">,</span> <span class="s1">&#39;rating&#39;</span><span class="p">]]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">cereals</span><span class="p">[[</span><span class="s1">'potass'</span><span class="p">,</span> <span class="s1">'fiber'</span><span class="p">,</span> <span class="s1">'rating'</span><span class="p">]]</span>
 </pre></div>
 </div>
 </div>
@@ -1194,22 +1194,22 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span>
-    <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">:(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="s1">&#39;font.family&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">FONT_FAMILY</span><span class="p">]},</span> 
-    <span class="n">style</span><span class="o">=</span><span class="s1">&#39;white&#39;</span>
+    <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">'figure.figsize'</span><span class="p">:(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="s1">'font.family'</span><span class="p">:</span> <span class="p">[</span><span class="n">FONT_FAMILY</span><span class="p">]},</span> 
+    <span class="n">style</span><span class="o">=</span><span class="s1">'white'</span>
 <span class="p">)</span>
 
-<span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">plotting_context</span><span class="p">(</span><span class="s2">&quot;notebook&quot;</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="n">FONT_SCALE</span><span class="p">):</span>
+<span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">plotting_context</span><span class="p">(</span><span class="s2">"notebook"</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="n">FONT_SCALE</span><span class="p">):</span>
     <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 
     <span class="n">sc</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
         <span class="n">data</span><span class="o">.</span><span class="n">fiber</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">potass</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">rating</span><span class="p">,</span> 
-        <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;coolwarm&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">75</span>
+        <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">"coolwarm"</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">75</span>
     <span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Fiber&#39;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Potassium&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'Fiber'</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'Potassium'</span><span class="p">)</span>
     
     <span class="n">cbar</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">sc</span><span class="p">)</span>
-    <span class="n">cbar</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s2">&quot;Rating&quot;</span><span class="p">)</span>
+    <span class="n">cbar</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s2">"Rating"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1223,7 +1223,7 @@ title="Print to PDF"
 <p>You might find some useful information <a class="reference external" href="https://matplotlib.org/stable/gallery/lines_bars_and_markers/scatter_with_legend.html#sphx-glr-gallery-lines-bars-and-markers-scatter-with-legend-py">here</a> and <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html#matplotlib.pyplot.scatter">here</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">cereals</span><span class="p">[[</span><span class="s1">&#39;potass&#39;</span><span class="p">,</span> <span class="s1">&#39;fiber&#39;</span><span class="p">,</span> <span class="s1">&#39;sugars&#39;</span><span class="p">,</span> <span class="s1">&#39;rating&#39;</span><span class="p">]]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">cereals</span><span class="p">[[</span><span class="s1">'potass'</span><span class="p">,</span> <span class="s1">'fiber'</span><span class="p">,</span> <span class="s1">'sugars'</span><span class="p">,</span> <span class="s1">'rating'</span><span class="p">]]</span>
 </pre></div>
 </div>
 </div>
@@ -1232,27 +1232,27 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># write your code here</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">(</span>
-    <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">:(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="s1">&#39;font.family&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">FONT_FAMILY</span><span class="p">]},</span> 
-    <span class="n">style</span><span class="o">=</span><span class="s1">&#39;white&#39;</span>
+    <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">'figure.figsize'</span><span class="p">:(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="s1">'font.family'</span><span class="p">:</span> <span class="p">[</span><span class="n">FONT_FAMILY</span><span class="p">]},</span> 
+    <span class="n">style</span><span class="o">=</span><span class="s1">'white'</span>
 <span class="p">)</span>
 
-<span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">plotting_context</span><span class="p">(</span><span class="s2">&quot;notebook&quot;</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="n">FONT_SCALE</span><span class="p">):</span>
+<span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">plotting_context</span><span class="p">(</span><span class="s2">"notebook"</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="n">FONT_SCALE</span><span class="p">):</span>
     <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 
     <span class="c1"># multiply the amount of sugar by 15 two make it more obvious from the chart</span>
     <span class="n">sc</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
         <span class="n">data</span><span class="o">.</span><span class="n">fiber</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">potass</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">15</span><span class="o">*</span><span class="n">data</span><span class="o">.</span><span class="n">sugars</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">rating</span><span class="p">,</span> 
-        <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;coolwarm&quot;</span>
+        <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">"coolwarm"</span>
     <span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Fiber&#39;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Potassium&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'Fiber'</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'Potassium'</span><span class="p">)</span>
     <span class="n">cbar</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">sc</span><span class="p">)</span>
-    <span class="n">cbar</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s2">&quot;Rating&quot;</span><span class="p">)</span>
+    <span class="n">cbar</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s2">"Rating"</span><span class="p">)</span>
 
     <span class="c1"># these two lines are used to determine the position of the legend</span>
-    <span class="n">handles</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">legend_elements</span><span class="p">(</span><span class="n">prop</span><span class="o">=</span><span class="s2">&quot;sizes&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
+    <span class="n">handles</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">legend_elements</span><span class="p">(</span><span class="n">prop</span><span class="o">=</span><span class="s2">"sizes"</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
     <span class="n">legend2</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span>
-        <span class="n">handles</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper left&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Sugar amount&quot;</span><span class="p">,</span> 
+        <span class="n">handles</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">"upper left"</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">"Sugar amount"</span><span class="p">,</span> 
         <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.25</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">borderaxespad</span><span class="o">=</span><span class="mi">0</span>
     <span class="p">)</span>
 </pre></div>
@@ -1265,19 +1265,19 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># an alternative solution with seaborn</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">(</span>
-    <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">:(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="s1">&#39;font.family&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">FONT_FAMILY</span><span class="p">]},</span> 
-    <span class="n">style</span><span class="o">=</span><span class="s1">&#39;white&#39;</span>
+    <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">'figure.figsize'</span><span class="p">:(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="s1">'font.family'</span><span class="p">:</span> <span class="p">[</span><span class="n">FONT_FAMILY</span><span class="p">]},</span> 
+    <span class="n">style</span><span class="o">=</span><span class="s1">'white'</span>
 <span class="p">)</span>
 
-<span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">plotting_context</span><span class="p">(</span><span class="s2">&quot;notebook&quot;</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="n">FONT_SCALE</span><span class="p">):</span>
+<span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">plotting_context</span><span class="p">(</span><span class="s2">"notebook"</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="n">FONT_SCALE</span><span class="p">):</span>
     <span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span>
-        <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;fiber&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;potass&quot;</span><span class="p">,</span> 
-        <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;rating&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="s2">&quot;sugars&quot;</span><span class="p">,</span> <span class="n">sizes</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">200</span><span class="p">)</span>
+        <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">"fiber"</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">"potass"</span><span class="p">,</span> 
+        <span class="n">hue</span><span class="o">=</span><span class="s2">"rating"</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="s2">"sugars"</span><span class="p">,</span> <span class="n">sizes</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">200</span><span class="p">)</span>
     <span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Fiber&#39;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Potassium&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'Fiber'</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'Potassium'</span><span class="p">)</span>
     <span class="c1"># this line here is for determining the position of the legend</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.02</span><span class="p">,</span> <span class="mf">0.925</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">,</span> <span class="n">borderaxespad</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.02</span><span class="p">,</span> <span class="mf">0.925</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="s1">'upper left'</span><span class="p">,</span> <span class="n">borderaxespad</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

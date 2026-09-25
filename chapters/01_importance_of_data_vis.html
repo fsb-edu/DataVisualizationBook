@@ -457,23 +457,23 @@ title="Print to PDF"
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># for Google Colab</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="k">if</span> <span class="s1">&#39;COLAB_JUPYTER_IP&#39;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">:</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="k">if</span> <span class="s1">'COLAB_JUPYTER_IP'</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">:</span>
     <span class="o">!</span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/bokulich-lab/DataVisualizationBook.git<span class="w"> </span>book
 
-    <span class="kn">from</span> <span class="nn">book.utils</span> <span class="kn">import</span> <span class="n">utils</span>
-    <span class="n">utils</span><span class="o">.</span><span class="n">ensure_packages</span><span class="p">(</span><span class="s1">&#39;book/requirements.txt&#39;</span><span class="p">)</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">book.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">utils</span>
+    <span class="n">utils</span><span class="o">.</span><span class="n">ensure_packages</span><span class="p">(</span><span class="s1">'book/requirements.txt'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
 
-<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="kn">import</span> <span class="n">stats</span>
 
-<span class="o">%</span><span class="k">config</span> InlineBackend.figure_format=&#39;svg&#39;
+<span class="o">%</span><span class="k">config</span> InlineBackend.figure_format='svg'
 <span class="o">%</span><span class="k">matplotlib</span> inline
 </pre></div>
 </div>
@@ -485,7 +485,7 @@ title="Print to PDF"
 <p>The <em>seaborn</em> library provides a method to read in this dataset directly:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">quartet</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s2">&quot;anscombe&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">quartet</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s2">"anscombe"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -558,7 +558,7 @@ title="Print to PDF"
 <p>We can now explore the summary metrics of the data. Let’s look at the mean, standard deviation, and linear regression calculations. To achieve this, we can use pandas’ <em>groupby</em> method, which allows us to “group” the data points according to the indicated variable - in our case, “dataset”. We can then use the resulting object to calculate some summary statistics on all the groups.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">quartet_grouped</span> <span class="o">=</span> <span class="n">quartet</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;dataset&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">quartet_grouped</span> <span class="o">=</span> <span class="n">quartet</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'dataset'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -685,14 +685,14 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># fit a linear regression model for each dataset</span>
 
-<span class="k">for</span> <span class="n">ds</span> <span class="ow">in</span> <span class="n">quartet</span><span class="p">[</span><span class="s1">&#39;dataset&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span>
-    <span class="n">dataset</span> <span class="o">=</span> <span class="n">quartet</span><span class="p">[</span><span class="n">quartet</span><span class="p">[</span><span class="s1">&#39;dataset&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">ds</span><span class="p">]</span>
-    <span class="n">res</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">linregress</span><span class="p">(</span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">],</span> <span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">])</span>
+<span class="k">for</span> <span class="n">ds</span> <span class="ow">in</span> <span class="n">quartet</span><span class="p">[</span><span class="s1">'dataset'</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span>
+    <span class="n">dataset</span> <span class="o">=</span> <span class="n">quartet</span><span class="p">[</span><span class="n">quartet</span><span class="p">[</span><span class="s1">'dataset'</span><span class="p">]</span> <span class="o">==</span> <span class="n">ds</span><span class="p">]</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">linregress</span><span class="p">(</span><span class="n">dataset</span><span class="p">[</span><span class="s1">'x'</span><span class="p">],</span> <span class="n">dataset</span><span class="p">[</span><span class="s1">'y'</span><span class="p">])</span>
     <span class="nb">print</span><span class="p">(</span>
-        <span class="sa">f</span><span class="s1">&#39;Dataset </span><span class="si">{</span><span class="n">ds</span><span class="si">}</span><span class="s1">:&#39;</span>
-        <span class="sa">f</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">y=</span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">slope</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s1">x+</span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">intercept</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span>
-        <span class="sa">f</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">R-coeff=</span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">rvalue</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span>
-        <span class="sa">f</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Correlation-coeff=</span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">rvalue</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span>
+        <span class="sa">f</span><span class="s1">'Dataset </span><span class="si">{</span><span class="n">ds</span><span class="si">}</span><span class="s1">:'</span>
+        <span class="sa">f</span><span class="s1">'</span><span class="se">\t</span><span class="s1">y=</span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">slope</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s1">x+</span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">intercept</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s1">'</span>
+        <span class="sa">f</span><span class="s1">'</span><span class="se">\t</span><span class="s1">R-coeff=</span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">rvalue</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s1">'</span>
+        <span class="sa">f</span><span class="s1">'</span><span class="se">\t</span><span class="s1">Correlation-coeff=</span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">rvalue</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s1">'</span>
     <span class="p">)</span>
 </pre></div>
 </div>
@@ -710,11 +710,11 @@ Dataset IV:	y=0.5x+3.002	R-coeff=0.667	Correlation-coeff=0.817
 <p>Let’s try to look at the data using a scatter plot, including a regression line (automatically calculated by the <code class="docutils literal notranslate"><span class="pre">lmplot</span></code> function):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">plotting_context</span><span class="p">(</span><span class="s2">&quot;notebook&quot;</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="mf">1.2</span><span class="p">),</span> <span class="n">sns</span><span class="o">.</span><span class="n">axes_style</span><span class="p">(</span><span class="s1">&#39;white&#39;</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">sns</span><span class="o">.</span><span class="n">plotting_context</span><span class="p">(</span><span class="s2">"notebook"</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="mf">1.2</span><span class="p">),</span> <span class="n">sns</span><span class="o">.</span><span class="n">axes_style</span><span class="p">(</span><span class="s1">'white'</span><span class="p">):</span>
     <span class="n">g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">lmplot</span><span class="p">(</span>
-        <span class="n">x</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s2">&quot;dataset&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">quartet</span><span class="p">,</span> <span class="n">ci</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-        <span class="n">col_wrap</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">scatter_kws</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;s&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;#0D62A3&#39;</span><span class="p">},</span>
-        <span class="n">line_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;linewidth&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;#A30905&#39;</span><span class="p">,</span> <span class="s1">&#39;alpha&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">},</span>
+        <span class="n">x</span><span class="o">=</span><span class="s2">"x"</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">"y"</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s2">"dataset"</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">quartet</span><span class="p">,</span> <span class="n">ci</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">col_wrap</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">scatter_kws</span><span class="o">=</span><span class="p">{</span><span class="s2">"s"</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s1">'color'</span><span class="p">:</span> <span class="s1">'#0D62A3'</span><span class="p">},</span>
+        <span class="n">line_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">'linewidth'</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">'color'</span><span class="p">:</span> <span class="s1">'#A30905'</span><span class="p">,</span> <span class="s1">'alpha'</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">},</span>
     <span class="p">)</span>
     <span class="n">g</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">22</span><span class="p">))</span>
 </pre></div>
