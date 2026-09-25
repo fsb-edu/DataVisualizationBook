@@ -8,30 +8,20 @@ authors = [
     { name = "Nicholas Bokulich", email = "nicholas.bokulich@hest.ethz.ch" },
 ]
 readme = "README.md"
-requires-python = ">=3.9,<3.11"
+requires-python = ">=3.10,<3.11"
 dependencies = [
-    "jupyter-book==0.13.1",
+    "jupyter-book>=1.0.3,<2",
     "matplotlib==3.7.1",
-    "numpy<=1.24",
+    "numpy>=1.24.1,<2",
     "pandas<2",
     "plotly==5.9.0",
-    "seaborn==0.12.1",
-    "umap-learn==0.5.3",
-    "numba==0.56.3",
-    "setuptools==67.8.0",
+    "seaborn>=0.13.2,<0.14",
+    "umap-learn>=0.5.9,<0.6",
+    "numba>=0.61,<0.62",
 ]
 
 [dependency-groups]
-dev = ["jupyterlab"]
+dev = ["jupyterlab>=4.5.7,<5"]
 
 [tool.uv]
 package = false
-constraint-dependencies = [
-    "gitpython==3.1.59",
-    "lxml==4.9.2",
-    "sphinxcontrib-applehelp==1.0.4",
-    "sphinxcontrib-devhelp==1.0.2",
-    "sphinxcontrib-htmlhelp==2.0.1",
-    "sphinxcontrib-qthelp==1.0.3",
-    "sphinxcontrib-serializinghtml==1.1.5",
-]

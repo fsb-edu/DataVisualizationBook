@@ -4,6 +4,9 @@ on:
   push:
     branches:
     - main
+  pull_request:
+    branches:
+    - main
 
 jobs:
   deploy-book:
@@ -20,6 +23,11 @@ jobs:
     - name: Install dependencies
       run: uv sync --locked --no-dev
 
+    - name: Audit locked dependencies
+      run: |
+        uv export --locked --all-groups --no-hashes --no-emit-project --quiet --output-file /tmp/book-requirements.txt
+        uvx --python 3.10 --from pip-audit==2.10.1 pip-audit --disable-pip --no-deps -r /tmp/book-requirements.txt
+
     - name: Build the book
       run: uv run --locked --no-dev jupyter-book build --all .
 
@@ -31,6 +39,7 @@ jobs:
         fi
 
     - name: GitHub Pages action
+      if: github.event_name == 'push'
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
