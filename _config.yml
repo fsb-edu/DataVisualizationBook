@@ -41,6 +41,9 @@ html:
 
 sphinx:
   config:
+    exclude_patterns:
+    - .venv
+    - _build
     bibtex_reference_style: author_year
     bibtex_bibfiles: 
     - "references.bib"

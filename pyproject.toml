@@ -1,24 +1,37 @@
-[tool.poetry]
-name = "Data Visualization for Food Scientists"
+[project]
+name = "data-visualization-for-food-scientists"
 version = "0.1.0"
 description = "Jupyter Book for teaching data visualization to Food Scientists"
 authors = [
-    "Michal Ziemski <mziemski@ethz.ch>",
-    "Doriela Grabocka <dgrabocka@student.ethz.ch>",
-    "Nicholas Bokulich <nicholas.bokulich@hest.ethz.ch"
+    { name = "Michal Ziemski", email = "mziemski@ethz.ch" },
+    { name = "Doriela Grabocka", email = "dgrabocka@student.ethz.ch" },
+    { name = "Nicholas Bokulich", email = "nicholas.bokulich@hest.ethz.ch" },
 ]
 readme = "README.md"
+requires-python = ">=3.9,<3.11"
+dependencies = [
+    "jupyter-book==0.13.1",
+    "matplotlib==3.7.1",
+    "numpy<=1.24",
+    "pandas<2",
+    "plotly==5.9.0",
+    "seaborn==0.12.1",
+    "umap-learn==0.5.3",
+    "numba==0.56.3",
+    "setuptools==67.8.0",
+]
 
-[tool.poetry.dependencies]
-python = "^3.9.0"
-jupyter-book = "0.13.1"
-matplotlib = "^3.4.3"
-numpy = "<=1.24"
-pandas = "<2"
-plotly = "5.9.0"
-seaborn = "0.12.1"
-umap-learn = "0.5.3"
-numba = "0.56.3"
+[dependency-groups]
+dev = ["jupyterlab"]
 
-[tool.poetry.group.dev.dependencies]
-jupyterlab = "*"
+[tool.uv]
+package = false
+constraint-dependencies = [
+    "gitpython==3.1.59",
+    "lxml==4.9.2",
+    "sphinxcontrib-applehelp==1.0.4",
+    "sphinxcontrib-devhelp==1.0.2",
+    "sphinxcontrib-htmlhelp==2.0.1",
+    "sphinxcontrib-qthelp==1.0.3",
+    "sphinxcontrib-serializinghtml==1.1.5",
+]
